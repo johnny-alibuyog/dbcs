@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8C775C8-7E44-43AC-8AC6-83EC3924FDB4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CooperativeSystem.Sandbox</RootNamespace>
+    <AssemblyName>CooperativeSystem.Sandbox</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrayList.cs" />
+    <Compile Include="DividendRepository.cs" />
+    <Compile Include="DomainDriven.cs" />
+    <Compile Include="Models\DividendModels\CapitalShare.cs" />
+    <Compile Include="Models\DividendModels\DividendShareItem.cs" />
+    <Compile Include="Models\DividendModels\DividendComputation.cs" />
+    <Compile Include="Models\DividendModels\Member.cs" />
+    <Compile Include="Models\DividendModels\YearlyDividends.cs" />
+    <Compile Include="Models\QuarterlyInterestModels\AverageDailyBalance.cs" />
+    <Compile Include="Models\QuarterlyInterestModels\Member.cs" />
+    <Compile Include="Models\QuarterlyInterestModels\Month.cs" />
+    <Compile Include="Models\QuarterlyInterestModels\Quarter.cs" />
+    <Compile Include="Models\QuarterlyInterestModels\QuarterlyInterest.cs" />
+    <Compile Include="Models\QuarterlyInterestModels\QuarterlyInterestComputation.cs" />
+    <Compile Include="Models\QuarterlyInterestModels\SavingsDeposit.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\DividendModels\ModelDiagram.cd" />
+    <None Include="Models\QuarterlyInterestModels\QuarterlyInterestDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CooperativeSystem.Service\CooperativeSystem.Service.csproj">
+      <Project>{1ECC862C-118C-4EF6-92EC-7EF6BBE35234}</Project>
+      <Name>CooperativeSystem.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

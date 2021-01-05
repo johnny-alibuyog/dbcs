@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CooperativeSystem_v9">
+</Property><Property Name="Solution File" Value="D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem_v9.sln">
+</Property><Property Name="Date" Value="Monday, August 16, 2010">
+</Property><Property Name="Time" Value="18:38 PM">
+</Property><Property Name="Log Number" Value="6">
+</Property></Properties><Event ErrorLevel="0" Project="CooperativeSystem.UI" Source="CooperativeSystem.UI\CooperativeSystem.UI.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CooperativeSystem.UI" Source="CooperativeSystem.UI\CooperativeSystem.UI.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CooperativeSystem.Service" Source="CooperativeSystem.Service\CooperativeSystem.Service.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CooperativeSystem.Service" Source="CooperativeSystem.Service\CooperativeSystem.Service.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CooperativeSystem.Test" Source="CooperativeSystem.Test\CooperativeSystem.Test.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CooperativeSystem.Test" Source="CooperativeSystem.Test\CooperativeSystem.Test.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CooperativeSystem_v9.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CooperativeSystem_v9.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CooperativeSystem.UI" Source="CooperativeSystem.UI\CooperativeSystem.UI.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="CooperativeSystem.Service" Source="CooperativeSystem.Service\CooperativeSystem.Service.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="3" Project="" Source="CooperativeSystem.vsmdi" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CooperativeSystem.vsmdi" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="3" Project="" Source="CooperativeSystem1.vsmdi" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CooperativeSystem1.vsmdi" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="3" Project="" Source="CooperativeSystem2.vsmdi" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CooperativeSystem2.vsmdi" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="3" Project="" Source="CooperativeSystem3.vsmdi" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CooperativeSystem3.vsmdi" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="3" Project="" Source="CooperativeSystem4.vsmdi" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CooperativeSystem4.vsmdi" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="3" Project="" Source="CooperativeSystem5.vsmdi" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CooperativeSystem5.vsmdi" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="3" Project="" Source="LocalTestRun.testrunconfig" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="LocalTestRun.testrunconfig" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="0" Project="CooperativeSystem.Test" Source="CooperativeSystem.Test\CooperativeSystem.Test.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

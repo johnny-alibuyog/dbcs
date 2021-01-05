@@ -1,0 +1,22 @@
+_UpgradeReport_Files
+_ReSharper.CooperativeSystem
+/CooperativeSystem.Service/bin
+/CooperativeSystem.Service/obj
+/CooperativeSystem.Sandbox/obj
+/CooperativeSystem.Sandbox/bin
+/packages
+/CooperativeSystem.Sandbox/WindowsApplication1/bin/Debug/WindowsApplication1.exe
+/CooperativeSystem.Sandbox/WindowsApplication1/bin/Debug/WindowsApplication1.pdb
+/CooperativeSystem.Sandbox/WindowsApplication1/bin/Debug/WindowsApplication1.xml
+/CooperativeSystem.Sandbox/WindowsApplication1/obj/x86/Debug/DesignTimeResolveAssemblyReferences.cache
+/CooperativeSystem.Sandbox/WindowsApplication1/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/CooperativeSystem.Sandbox/WindowsApplication1/obj/x86/Debug/GenerateResource.read.1.tlog
+/CooperativeSystem.Sandbox/WindowsApplication1/obj/x86/Debug/GenerateResource.write.1.tlog
+/CooperativeSystem.Sandbox/WindowsApplication1/obj/x86/Debug/TempPE/My Project.Resources.Designer.vb.dll
+/CooperativeSystem.Sandbox/WindowsApplication1/obj/x86/Debug/WindowsApplication1.Resources.resources
+/CooperativeSystem.Sandbox/WindowsApplication1/obj/x86/Debug/WindowsApplication1.exe
+/CooperativeSystem.Sandbox/WindowsApplication1/obj/x86/Debug/WindowsApplication1.pdb
+/CooperativeSystem.Sandbox/WindowsApplication1/obj/x86/Debug/WindowsApplication1.vbproj.FileListAbsolute.txt
+/CooperativeSystem.Sandbox/WindowsApplication1/obj/x86/Debug/WindowsApplication1.xml
+/CooperativeSystem.UI/obj
+/CooperativeSystem.UI/bin

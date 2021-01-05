@@ -1,0 +1,61 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="private" priority="0" />
+      <Item value="readonly" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="const" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="DataSource" priority="0" />
+      <Item value="Items" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox+ObjectCollection">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="1ECC862C-118C-4EF6-92EC-7EF6BBE35234/d:Presenters/d:Loans/f:LoanPaymentPresenter.cs" caret="617" fromTop="25" />
+      <File id="1ECC862C-118C-4EF6-92EC-7EF6BBE35234/d:Presenters/d:Loans/f:LoanAssessmentRepository.cs" caret="508" fromTop="7" />
+      <File id="1ECC862C-118C-4EF6-92EC-7EF6BBE35234/d:Presenters/d:Reports/d:MemberPeriodicalBalanceSummaries/d:YearlyBalances/f:YearlyBalanceReportPresenter.cs" caret="2601" fromTop="4" />
+      <File id="1ECC862C-118C-4EF6-92EC-7EF6BBE35234/d:Presenters/d:Loans/f:ILoanAssessmentView.cs" caret="471" fromTop="15" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/d:Loans/f:LoanAssessmentView.Designer.cs" caret="83" fromTop="2" />
+      <File id="1ECC862C-118C-4EF6-92EC-7EF6BBE35234/d:Presenters/d:Loans/f:LoanAssessmentPresenter.cs" caret="619" fromTop="4" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/f:CashDisbursementView.cs" caret="9251" fromTop="10" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/d:Loans/f:LoanAssessmentView.cs" caret="9502" fromTop="87" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="1ECC862C-118C-4EF6-92EC-7EF6BBE35234/d:Presenters/d:Loans/f:LoanPaymentPresenter.cs" caret="369" fromTop="9" />
+      <File id="1ECC862C-118C-4EF6-92EC-7EF6BBE35234/d:Presenters/d:Loans/f:LoanPaymentPresenter.cs" caret="617" fromTop="0" />
+      <File id="1ECC862C-118C-4EF6-92EC-7EF6BBE35234/d:Presenters/d:Loans/f:LoanAssessmentRepository.cs" caret="904" fromTop="15" />
+      <File id="1ECC862C-118C-4EF6-92EC-7EF6BBE35234/d:Presenters/d:Loans/f:LoanAssessmentRepository.cs" caret="508" fromTop="7" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/d:Loans/f:LoanAssessmentView.cs" caret="75" fromTop="2" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/d:Loans/f:LoanAssessmentView.cs" caret="9162" fromTop="23" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/d:Loans/f:LoanAssessmentView.cs" caret="1391" fromTop="15" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/d:Loans/f:LoanAssessmentView.cs" caret="2006" fromTop="24" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/d:Loans/f:LoanAssessmentView.cs" caret="8972" fromTop="15" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/d:Loans/f:LoanAssessmentView.cs" caret="8729" fromTop="21" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/d:Loans/f:LoanAssessmentView.cs" caret="1138" fromTop="4" />
+      <File id="7D09963E-1EBE-4989-851D-76480F7AC330/d:Views/d:Loans/f:LoanAssessmentView.cs" caret="644" fromTop="15" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

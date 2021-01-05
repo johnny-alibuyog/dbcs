@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CooperativeSystem.Sandbox.Models.QuarterlyInterestModels.Member">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAEAAAQAAAAAAAAAAAAAAAAQAAAAAg=</HashCode>
+      <FileName>Models\QuarterlyInterestModels\Member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CooperativeSystem.Sandbox.Models.QuarterlyInterestModels.Month">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\QuarterlyInterestModels\Month.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CooperativeSystem.Sandbox.Models.QuarterlyInterestModels.Quarter">
+    <Position X="2" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAACAEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\QuarterlyInterestModels\Quarter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Months" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CooperativeSystem.Sandbox.Models.QuarterlyInterestModels.QuarterlyInterest">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\QuarterlyInterestModels\QuarterlyInterest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="QuarterlyInterestComputations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CooperativeSystem.Sandbox.Models.QuarterlyInterestModels.QuarterlyInterestComputation">
+    <Position X="5" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\QuarterlyInterestModels\QuarterlyInterestComputation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Member" />
+      <Property Name="Quarter" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AverageDailyBalances" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CooperativeSystem.Sandbox.Models.QuarterlyInterestModels.AverageDailyBalance">
+    <Position X="5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAgAAAAAAA=</HashCode>
+      <FileName>Models\QuarterlyInterestModels\AverageDailyBalance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

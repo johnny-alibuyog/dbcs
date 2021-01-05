@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1ECC862C-118C-4EF6-92EC-7EF6BBE35234}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CooperativeSystem.Service</RootNamespace>
+    <AssemblyName>CooperativeSystem.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Adjustment.cs" />
+    <Compile Include="Models\CapitalShare.cs" />
+    <Compile Include="Models\CapitalShareAdjustment.cs" />
+    <Compile Include="Models\CashDisbursement.cs" />
+    <Compile Include="Models\CashReceipt.cs" />
+    <Compile Include="Models\CollegeInsurancePlan.cs" />
+    <Compile Include="Models\CooperativeSystemModel.cs">
+      <DependentUpon>CooperativeSystemModel.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CooperativeSystemModel.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CooperativeSystemModel.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DeathAidFund.cs" />
+    <Compile Include="Models\DelinquentFineReceipt.cs" />
+    <Compile Include="Models\Dependent.cs" />
+    <Compile Include="Models\DividendComputation.cs" />
+    <Compile Include="Models\DividendPatronageRatio.cs" />
+    <Compile Include="Models\DividendShareItem.cs" />
+    <Compile Include="Models\LatePaymentFineReceipt.cs" />
+    <Compile Include="Models\Loan.cs" />
+    <Compile Include="Models\LoanAdjustment.cs" />
+    <Compile Include="Models\LoanDeductionType.cs" />
+    <Compile Include="Models\MaritalStatus.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\MembershipCategory.cs" />
+    <Compile Include="Models\Month.cs" />
+    <Compile Include="Models\PaymentMode.cs" />
+    <Compile Include="Models\PensionPlan.cs" />
+    <Compile Include="Models\PensionPlanAvailOption.cs" />
+    <Compile Include="Models\AccountStatus.cs" />
+    <Compile Include="Models\Projections\AdjustmentModel.cs" />
+    <Compile Include="Models\Projections\CIPModel.cs" />
+    <Compile Include="Models\Projections\DependentModel.cs" />
+    <Compile Include="Models\Projections\DisbursementModel.cs" />
+    <Compile Include="Models\Projections\EducationalAttainmentModel.cs" />
+    <Compile Include="Models\Projections\InterestRebateModel.cs" />
+    <Compile Include="Models\Projections\LoanAssessmentModel.cs" />
+    <Compile Include="Models\Projections\LoanLookupModel.cs" />
+    <Compile Include="Models\Projections\LoanReceiptModel.cs" />
+    <Compile Include="Models\Projections\MemberInquiryDetailsModel.cs" />
+    <Compile Include="Models\Projections\MemberInquiryListingModel.cs" />
+    <Compile Include="Models\Projections\MemberListingModel.cs" />
+    <Compile Include="Models\Projections\PaymentModeModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Projections\ReceiptLookupModel.cs" />
+    <Compile Include="Models\Projections\ReceiptModel.cs" />
+    <Compile Include="Models\Projections\RelationListingModel.cs" />
+    <Compile Include="Models\Projections\TimeDepositWithdrawalAssessmentModel.cs" />
+    <Compile Include="Models\Projections\TransactionModel.cs" />
+    <Compile Include="Models\Projections\UserListingModel.cs" />
+    <Compile Include="Models\QuarterlyInterest.cs" />
+    <Compile Include="Models\QuarterlyInterestComputation.cs" />
+    <Compile Include="Models\Relation.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\SavingsDeposit.cs" />
+    <Compile Include="Models\SavingsDepositAjustment.cs" />
+    <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\ServiceCategory.cs" />
+    <Compile Include="Models\SexType.cs" />
+    <Compile Include="Models\TimeDeposit.cs" />
+    <Compile Include="Models\TimeDepositAdjustment.cs" />
+    <Compile Include="Models\TimeDepositDisbursement.cs" />
+    <Compile Include="Models\TimeDepositReceipt.cs" />
+    <Compile Include="Models\TransactionDetail.cs" />
+    <Compile Include="Models\TulunganFund.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserCategory.cs" />
+    <Compile Include="Models\YearlyDividend.cs" />
+    <Compile Include="Models\YearlyPatronage.cs" />
+    <Compile Include="Presenters\AdjustmentPresenter.cs" />
+    <Compile Include="Presenters\IPostingView.cs" />
+    <Compile Include="Presenters\ITask.cs" />
+    <Compile Include="Presenters\Loans\AgingLoanTask.cs" />
+    <Compile Include="Presenters\Loans\DelinquentLoanTask.cs" />
+    <Compile Include="Presenters\Loans\IInterestRebateView.cs" />
+    <Compile Include="Presenters\Loans\ILoanAssessmentReportView.cs" />
+    <Compile Include="Presenters\Loans\ILoanSettingsView.cs" />
+    <Compile Include="Presenters\Loans\InterestRebatePresenter.cs" />
+    <Compile Include="Presenters\Loans\IPastLoansView.cs" />
+    <Compile Include="Presenters\Loans\IPatronageRefundView.cs" />
+    <Compile Include="Presenters\Loans\LoanAssessmentReportModel.cs" />
+    <Compile Include="Presenters\Loans\LoanPaymentPresenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presenters\Loans\LoanSettingsPresenter.cs" />
+    <Compile Include="Presenters\Loans\PastLoansPresenter.cs" />
+    <Compile Include="Presenters\Lookups\DeathAidFundTypes\DeathAidFundTypeCodes.cs" />
+    <Compile Include="Presenters\Lookups\Roles\RoleCodes.cs" />
+    <Compile Include="Presenters\Members\IEducationalAttainmentView.cs" />
+    <Compile Include="Presenters\MiscellaneousIncomes\IMiscellaneousIncomeCashDisbursementView.cs" />
+    <Compile Include="Presenters\MiscellaneousIncomes\IMiscellaneousIncomeCashReceiptView.cs" />
+    <Compile Include="Presenters\MiscellaneousIncomes\IMiscellaneousIncomeAdjustmentView.cs" />
+    <Compile Include="Presenters\MiscellaneousIncomes\MiscellaneousIncomeAdjustmentPresenter.cs" />
+    <Compile Include="Presenters\MiscellaneousIncomes\MiscellaneousIncomeCashReceiptPresenter.cs" />
+    <Compile Include="Presenters\MiscellaneousIncomes\MiscellaneousIncomeDisbursementPresenter.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\Calculators\AmortizationCalculator.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\CIPAdjustmentItem.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\CIPAdjustmentPresenter.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\CIPWithdrawalAssessmentModel.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\ICIPAdjustmentView.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\Calculators\AmortizationCalculator.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\IPensionPlanPaymentView.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\PensionPlanPaymentPresenter.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\PensionPlanWithdrawalAssessmentModel.cs" />
+    <Compile Include="Presenters\PostingPresenter.cs" />
+    <Compile Include="Presenters\Reports\Adjustments\AdjustmentTemplate.cs" />
+    <Compile Include="Presenters\Reports\Adjustments\DailyAdjustments\DailyAdjustment.cs" />
+    <Compile Include="Presenters\Reports\Adjustments\DailyAdjustments\DailyAdjustmentReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\Adjustments\DailyAdjustments\IDailyAdjustmentReportView.cs" />
+    <Compile Include="Presenters\Reports\Adjustments\MonthlyAdjustments\IMonthlyAdjustmentReportView.cs" />
+    <Compile Include="Presenters\Reports\Adjustments\MonthlyAdjustments\MonthlyAdjustment.cs" />
+    <Compile Include="Presenters\Reports\Adjustments\MonthlyAdjustments\MonthlyAdjustmentReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\Adjustments\YearlyAdjustments\IYearlyAdjustmentReportView.cs" />
+    <Compile Include="Presenters\Reports\Adjustments\YearlyAdjustments\YearlyAdjustment.cs" />
+    <Compile Include="Presenters\Reports\Adjustments\YearlyAdjustments\YearlyAdjustmentReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\AgingLoans\AgingLoanModel.cs" />
+    <Compile Include="Presenters\Reports\AgingLoans\AgingLoansHistoryPresenter.cs" />
+    <Compile Include="Presenters\Reports\AgingLoans\AgingLoansReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\AgingLoans\IAgingLoansHistoryView.cs" />
+    <Compile Include="Presenters\Reports\AgingLoans\IAgingLoansReportView.cs" />
+    <Compile Include="Presenters\Reports\CashFlows\CashFlowTemplate.cs" />
+    <Compile Include="Presenters\Reports\CashFlows\MonthlyCashFlows\IMonthlyCashFlowView.cs" />
+    <Compile Include="Presenters\Reports\CashFlows\MonthlyCashFlows\MonthlyCashFlow.cs" />
+    <Compile Include="Presenters\Reports\CashFlows\MonthlyCashFlows\MonthlyCashFlowPresenter.cs" />
+    <Compile Include="Presenters\Reports\DelinquentAccounts\DelinquentLoansHistoryPresenter.cs" />
+    <Compile Include="Presenters\Reports\DelinquentAccounts\IDelinquentLoansHistoryView.cs" />
+    <Compile Include="Presenters\Reports\Disbursements\DailyDisbursements\DailyDisbursement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presenters\Reports\Disbursements\DailyDisbursements\DailyDisbursementReportPresenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presenters\Reports\Disbursements\DailyDisbursements\IDailyDisbursementReportView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presenters\Reports\FilterType.cs" />
+    <Compile Include="Presenters\Reports\IndividualLedgersRevision\Account.cs" />
+    <Compile Include="Presenters\Reports\IndividualLedgersRevision\IIndividualLedgerRevisionReportView.cs" />
+    <Compile Include="Presenters\Reports\IndividualLedgersRevision\IIndividualLedgerRevisionView.cs" />
+    <Compile Include="Presenters\Reports\IndividualLedgersRevision\IndividualLedgerRevisionPresenter.cs.cs" />
+    <Compile Include="Presenters\Reports\IndividualLedgers\IIndividualLedgerReportView.cs" />
+    <Compile Include="Presenters\Reports\IndividualLedgers\IIndividualLedgerView.cs" />
+    <Compile Include="Presenters\Reports\IndividualLedgers\IndividualLedgerPresenter.cs" />
+    <Compile Include="Presenters\Reports\IndividualLedgers\LoanAccount.cs" />
+    <Compile Include="Presenters\Reports\IndividualLedgers\SavingsAccount.cs" />
+    <Compile Include="Presenters\Reports\MemberBalanceSummaries\IMemberBalanceSummariesReportView.cs" />
+    <Compile Include="Presenters\Reports\MemberBalanceSummaries\MemberBalanceSummaryItem.cs" />
+    <Compile Include="Presenters\Reports\MemberBalanceSummaries\IMemberBalanceSummariesView.cs" />
+    <Compile Include="Presenters\Reports\MemberBalanceSummaries\MemberBalanceSummariesPresenter.cs" />
+    <Compile Include="Models\Projections\MemberLookupModel.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\IPeriodicalBalanceService.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\PeriodicalBalance.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\IPeriodicalBalancesView.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\MonthlyBalances\IMonthlyBalanceReportView.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\MonthlyBalances\MonthlyBalanceReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\PeriodicalBalancePresenter.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\QuarterlyBalances\IQuarterlyBalanceReportView.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\QuarterlyBalances\QuarterlyBalanceReportPersenter.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\PeriodicalBalanceService.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\YearlyBalances\IYearlyBalanceReportView.cs" />
+    <Compile Include="Presenters\Reports\MemberPeriodicalBalanceSummaries\YearlyBalances\YearlyBalanceReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\MembersInformations\IMembersInformationsReportView.cs" />
+    <Compile Include="Presenters\Reports\MembersInformations\MembersInformationsReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\MembersInformations\MembersInformationsReportModel.cs" />
+    <Compile Include="Presenters\Reports\MemberSummaries\IMemberSummaryReportView.cs" />
+    <Compile Include="Presenters\Reports\MemberSummaries\MemberSummaryItem.cs" />
+    <Compile Include="Presenters\Reports\MemberSummaries\MemberSummaryReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\MiscellaneousIncomes\MiscellaneousIncomeItem.cs" />
+    <Compile Include="Presenters\Reports\MiscellaneousIncomes\IMiscellaneousIncomeReportView.cs" />
+    <Compile Include="Presenters\Reports\MiscellaneousIncomes\MiscellaneousIncomeReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\MiscellaneousIncomes\MiscellaneousIncomeType.cs" />
+    <Compile Include="Presenters\Reports\Notices\INoticeReportView.cs" />
+    <Compile Include="Presenters\Reports\Notices\NoticeReportItem.cs" />
+    <Compile Include="Presenters\Reports\Notices\NoticeReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\Notices\NoticeType.cs" />
+    <Compile Include="Presenters\Reports\ServicesTemplate.cs" />
+    <Compile Include="Presenters\Reports\WithdrawnMembers\IWithdrawnMembersReportView.cs" />
+    <Compile Include="Presenters\Reports\WithdrawnMembers\WithdrawnMemberModel.cs" />
+    <Compile Include="Presenters\Reports\WithdrawnMembers\WithdrawnMemberReportPresenter.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\DividendDistributionItem.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\DividendDistributionPresenter.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\DividendDepositorySelectionPresenter.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\DividendDistributionSummaryItem.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\IDividendDepositorySelectionView.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\IDividendDistributionSummaryReportView.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\IDividendDistributionView.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\IPatronageRefundSummaryReportView.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\IPatronageRefundView.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\IRefundRatioView.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\PatronageRefundItem.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\PatronageRefundPresenter.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\PatronageRefundSummaryItem.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\RefundRatioPresenter.cs" />
+    <Compile Include="Presenters\Savings\INetSurplusView.cs" />
+    <Compile Include="Presenters\Savings\NetSurplusPresenter.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\IQuarterlyInterestComputationView.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\QuarterlyInterestComputationItem.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\QuarterlyInterestComputationPresenter.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\TimeDepositWithdrawalAssessmentModel.cs" />
+    <Compile Include="Presenters\SpecialFunds\DeathAidFund\DeathAidFundConfigurationPresenter.cs" />
+    <Compile Include="Presenters\SpecialFunds\DeathAidFund\DeathAidFundTransaction.cs" />
+    <Compile Include="Presenters\SpecialFunds\DeathAidFund\DeathAidFundSummaryPresenter.cs" />
+    <Compile Include="Presenters\SpecialFunds\DeathAidFund\DeathAidFundWithdrawalAssessmentItem.cs" />
+    <Compile Include="Presenters\SpecialFunds\DeathAidFund\DeathAidFundWithdrawalAssessmentPresenter.cs" />
+    <Compile Include="Presenters\SpecialFunds\DeathAidFund\IDeathAidFundConfigurationView.cs" />
+    <Compile Include="Presenters\SpecialFunds\DeathAidFund\IDeathAidFundWithdrawalAssessmentView.cs" />
+    <Compile Include="Presenters\SpecialFunds\DeathAidFund\IDeathAidFundSummaryView.cs" />
+    <Compile Include="Presenters\SpecialFunds\DeathAidFund\IWithdrawalAssessmentSummaryReport.cs" />
+    <Compile Include="Presenters\SpecialFunds\TulunganFund\ITulunganFundSettingsView.cs" />
+    <Compile Include="Presenters\SpecialFunds\TulunganFund\ITulunganFundSummaryView.cs" />
+    <Compile Include="Presenters\SpecialFunds\TulunganFund\ITulunganFundWithdrawalAssessmentView.cs" />
+    <Compile Include="Presenters\SpecialFunds\TulunganFund\TulunganFundSettingsPresenter.cs" />
+    <Compile Include="Presenters\SpecialFunds\TulunganFund\TulunganFundSummaryPresenter.cs" />
+    <Compile Include="Presenters\SpecialFunds\TulunganFund\TulunganFundTransaction.cs" />
+    <Compile Include="Presenters\SpecialFunds\TulunganFund\TulunganFundWithdrawalAssessmentPresenter.cs" />
+    <Compile Include="Presenters\Users\IManagerApprovalView.cs" />
+    <Compile Include="Presenters\Users\ManagerApprovalPresenter.cs" />
+    <Compile Include="Utilities\ConfigurationUtilities\ConfigurationHelper.cs" />
+    <Compile Include="Utilities\PredicateBuilder.cs" />
+    <Compile Include="Utilities\SequenceGenerators\AdjustmentVoucherGenerator.cs" />
+    <Compile Include="Presenters\CashDisbursementPresenter.cs" />
+    <Compile Include="Presenters\CashReceiptPresenter.cs" />
+    <Compile Include="Presenters\DataContextFactory.cs" />
+    <Compile Include="Utilities\SequenceGenerators\CashDisbursementVoucherGenerator.cs" />
+    <Compile Include="Presenters\IAdjustmentView.cs" />
+    <Compile Include="Presenters\ICashDisbursementView.cs" />
+    <Compile Include="Presenters\ICashReceiptView.cs" />
+    <Compile Include="Presenters\IDataContextFactory.cs" />
+    <Compile Include="Presenters\IDetailsView.cs" />
+    <Compile Include="Presenters\Loans\Calculators\AmortizationCalculators\AddOnCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\AmortizationCalculators\AmortizationCalculatorFactory.cs" />
+    <Compile Include="Presenters\Loans\Calculators\AmortizationCalculators\DeductedCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\AmortizationCalculators\IAmortizationCalculator.cs" />
+    <Compile Include="Presenters\Loans\ILoanSummaryView.cs" />
+    <Compile Include="Presenters\IRepository.cs" />
+    <Compile Include="Presenters\Loans\ApplianceLoan\IServiceRateView.cs" />
+    <Compile Include="Presenters\Loans\ApplianceLoan\ServiceRatePreseter.cs" />
+    <Compile Include="Presenters\Loans\Calculators\LoanAssessmentCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\MaxLoanAmountCalculators\ApplianceLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\MaxLoanAmountCalculators\EasyLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\MaxLoanAmountCalculators\EmergencyLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\MaxLoanAmountCalculators\EquityLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\MaxLoanAmountCalculators\MaxLoanAmountCalculatorFactory.cs" />
+    <Compile Include="Presenters\Loans\Calculators\MaxLoanAmountCalculators\MaxLoanAmountCalculatorTemplate.cs" />
+    <Compile Include="Presenters\Loans\Calculators\MaxLoanAmountCalculators\PensionLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\MaxLoanAmountCalculators\RegularLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\NetAmountDueCalculators\AddOnCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\NetAmountDueCalculators\DeductedCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\NetAmountDueCalculators\INetAmountDueCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\NetAmountDueCalculators\NetAmountDueCalculatorFactory.cs" />
+    <Compile Include="Presenters\Loans\Calculators\ServiceFeeCalculators\ApplianceLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\ServiceFeeCalculators\EasyLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\ServiceFeeCalculators\EmergencyLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\ServiceFeeCalculators\EquityLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\ServiceFeeCalculators\PensionLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\ServiceFeeCalculators\RegularLoanCalculator.cs" />
+    <Compile Include="Presenters\Loans\Calculators\ServiceFeeCalculators\ServiceFee.cs" />
+    <Compile Include="Presenters\Loans\Calculators\ServiceFeeCalculators\ServiceFeeCalculatorFactory.cs" />
+    <Compile Include="Presenters\Loans\Calculators\ServiceFeeCalculators\ServiceFeeCalculatorTemplate.cs" />
+    <Compile Include="Presenters\Loans\EasyLoan\IServiceRateView.cs" />
+    <Compile Include="Presenters\Loans\EasyLoan\ServiceRatePreseter.cs" />
+    <Compile Include="Presenters\Loans\ILoanPaymentView.cs" />
+    <Compile Include="Presenters\Loans\LoanAssessmentRepository.cs" />
+    <Compile Include="Presenters\Loans\LoanAssessmentPresenter.cs" />
+    <Compile Include="Presenters\Loans\DTILoan\IServiceRateView.cs" />
+    <Compile Include="Presenters\Loans\DTILoan\ServiceRatePresenter.cs" />
+    <Compile Include="Presenters\Loans\EmergencyLoan\IServiceRateView.cs" />
+    <Compile Include="Presenters\Loans\EmergencyLoan\ServiceRatePreseter.cs" />
+    <Compile Include="Presenters\Loans\ILoanAssessmentView.cs" />
+    <Compile Include="Presenters\Loans\LoanSummaryPresenter.cs" />
+    <Compile Include="Presenters\Loans\LoanInterestRateAdapter.cs" />
+    <Compile Include="Presenters\Loans\ILoanServiceRatesView.cs" />
+    <Compile Include="Presenters\Loans\LoanServiceRatesPresenter.cs" />
+    <Compile Include="Presenters\Lookups\AccountStatuses\AccountStatusCodes.cs" />
+    <Compile Include="Presenters\Lookups\LoanDeductionTypes\LoanDeductionTypeCodes.cs" />
+    <Compile Include="Presenters\Lookups\MaritalStatuses\MaritalStatusCodes.cs" />
+    <Compile Include="Presenters\Lookups\MembershipCategories\MembershipCategoryCodes.cs" />
+    <Compile Include="Presenters\Lookups\PaymentModes\PaymentModeCodes.cs" />
+    <Compile Include="Presenters\Lookups\PensionPlanAvailOptions\PensionPlanAvailOptionCodes.cs" />
+    <Compile Include="Presenters\Lookups\ServiceCategories\ServiceCategoryCodes.cs" />
+    <Compile Include="Presenters\Lookups\Services\IServicesAdapter.cs" />
+    <Compile Include="Presenters\Lookups\Services\ServiceCodes.cs" />
+    <Compile Include="Presenters\Lookups\SexTypes\SexTypeCodes.cs" />
+    <Compile Include="Presenters\Lookups\GracePeriods\GracePeriodAdapter.cs" />
+    <Compile Include="Presenters\Lookups\GracePeriods\GracePeriodPresenter.cs" />
+    <Compile Include="Presenters\Lookups\GracePeriods\IGracePeriodView.cs" />
+    <Compile Include="Presenters\Lookups\MembershipCategoryServices\MembershipCategoryServicesAdapter.cs" />
+    <Compile Include="Presenters\Lookups\Relations\IRelationListingView.cs" />
+    <Compile Include="Presenters\Lookups\Relations\IRelationView.cs" />
+    <Compile Include="Presenters\Lookups\Relations\RelationListingPresenter.cs" />
+    <Compile Include="Presenters\Lookups\Relations\RelationPresenter.cs" />
+    <Compile Include="Presenters\Lookups\UserCategories\UserCategoryCodes.cs" />
+    <Compile Include="Presenters\Members\AccountNumberGenerator.cs" />
+    <Compile Include="Presenters\Members\AvailedServicesAdapter.cs" />
+    <Compile Include="Presenters\Members\DependentPresenter.cs" />
+    <Compile Include="Presenters\Lookups\Services\ServicesFetcherExtentions.cs" />
+    <Compile Include="Presenters\Members\IAvailedServicesView.cs" />
+    <Compile Include="Presenters\Members\IDependentView.cs" />
+    <Compile Include="Presenters\Members\IMemberInquiryDetailsView.cs" />
+    <Compile Include="Presenters\Members\IMemberInquiryListingView.cs" />
+    <Compile Include="Presenters\Members\IMemberListingView.cs" />
+    <Compile Include="Presenters\Members\IMemberView.cs" />
+    <Compile Include="Presenters\Members\MemberInquiryDetailsPresenter.cs" />
+    <Compile Include="Presenters\Members\MemberInquiryListingPresernter.cs" />
+    <Compile Include="Presenters\Members\MemberListingPresenter.cs" />
+    <Compile Include="Presenters\Members\MemberPresenter.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\Calculators\EnrollmentCalculator.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\Calculators\PayablePlanDetails.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\Calculators\PayablePlanCalculator.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\CIPSummaryPresenter.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\CIPPaymentPresenter.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\CIPSettingsPresenter.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\CIPWithdrawalAssessmentPresenter.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\CIPEnrollmentPresenter.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\ICIPPaymentView.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\ICIPSummaryView.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\ICIPSettingsView.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\ICIPWithdrawalAssessmentView.cs" />
+    <Compile Include="Presenters\Plans\CollegeInsurancePlan\ICIPEnrollmentView.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\AvailOptionPresenter.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\AvailOptionSetterPersenter.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\AvailOptionListingPresenter.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\IAvailOptionView.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\IAvailOptionSetterView.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\IAvailOptionListingView.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\IPensionPlanEnrollmentView.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\IPensionPlanSettingsView.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\IPensionPlanWithdrawalAssessmentView.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\IPensionPlanSummaryView.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\PensionPlanSummaryPresenter.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\PensionPlanEnrollmentPresenter.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\PensionPlanSettingsPresenter.cs" />
+    <Compile Include="Presenters\Plans\PensionPlan\PensionPlanWithdrawalAssessmentPresenter.cs" />
+    <Compile Include="Presenters\PresenterTemplate.cs" />
+    <Compile Include="Presenters\GenericRepository.cs" />
+    <Compile Include="Utilities\SequenceGenerators\CashReceiptNumberGenerator.cs" />
+    <Compile Include="Presenters\Reports\CashFlows\YearlyCashFlows\YearlyCashFlow.cs" />
+    <Compile Include="Presenters\Reports\CashFlows\YearlyCashFlows\YearlyCashFlowReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\CashFlows\YearlyCashFlows\IYearlyCashFlowReportView.cs" />
+    <Compile Include="Presenters\Reports\Collections\CollectionTemplate.cs" />
+    <Compile Include="Presenters\Reports\Collections\DailyCollections\DailyCollection.cs" />
+    <Compile Include="Presenters\Reports\Collections\DailyCollections\DailyCollectionReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\Collections\DailyCollections\IDailyCollectionReportView.cs" />
+    <Compile Include="Presenters\Reports\Collections\MonthlyCollections\IMonthlyCollectionReportView.cs" />
+    <Compile Include="Presenters\Reports\Collections\YearlyCollections\IYearlyCollectionReportView.cs" />
+    <Compile Include="Presenters\Reports\Collections\MonthlyCollections\MonthlyCollection.cs" />
+    <Compile Include="Presenters\Reports\Collections\YearlyCollections\YearlyCollection.cs" />
+    <Compile Include="Presenters\Reports\Collections\MonthlyCollections\MonthlyCollectionReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\Collections\YearlyCollections\YearlyCollectionReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\DelinquentAccounts\DelinquentAccount.cs" />
+    <Compile Include="Presenters\Reports\DelinquentAccounts\DelinquentAccountReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\DelinquentAccounts\IDelinquentAccountReportView.cs" />
+    <Compile Include="Presenters\Reports\Disbursements\DisbursementTemplate.cs" />
+    <Compile Include="Presenters\Reports\Disbursements\MonthlyDisbursements\IMonthlyDisbursementReportView.cs" />
+    <Compile Include="Presenters\Reports\Disbursements\MonthlyDisbursements\MonthlyDisbursement.cs" />
+    <Compile Include="Presenters\Reports\Disbursements\MonthlyDisbursements\MonthlyDisbursementReportPresenter.cs" />
+    <Compile Include="Presenters\Reports\Disbursements\YearlyDisbursements\IYearlyDisbursementReportView.cs" />
+    <Compile Include="Presenters\Reports\Disbursements\YearlyDisbursements\YearlyDisbursement.cs" />
+    <Compile Include="Presenters\Reports\Disbursements\YearlyDisbursements\YearlyDisbursementReportPresenter.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\CapitalShareTransaction.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\CapitalShareSummaryPresenter.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\CapitalShareMinimumAmountPresenter.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\CapitalShareWithdrawalAssessmentPresenter.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\ICapitalShareSummaryView.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\ICapitalShareMinimumAmountView.cs" />
+    <Compile Include="Presenters\Savings\CapitalShare\ICapitalShareWithdrawalAssessmentView.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\IInterestRateView.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\InterestRatePresenter.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\ISavingsDepositMaintainingBalanceView.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\ISavingsDepositWithdrawalAssessmentView.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\ISavingsDepositSummaryView.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\SavingsDepositTransaction.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\SavingsDepositMaintainingBalancePresenter.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\SavingsDepositWithdrawalAssessmentPresenter.cs" />
+    <Compile Include="Presenters\Savings\SavingsDeposit\SavingsDepositSummaryPresenter.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\Calculators\InterestRateCalculator.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\Calculators\MaturedTimeDeposit.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\Calculators\MaturedTimeDepositCalculator.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\ITimeDepositMinimumAmountView.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\TimeDepositTransaction.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\IInterestRateView.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\InterestRatePresenter.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\ITimeDepositDepositView.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\ITimeDepositSummaryView.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\TimeDepositDepositPresenter.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\TimeDepositSummaryPresenter.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\TimeDepositMinimumAmountPresenter.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\TimeDepositWithdrawalAssessmentPresenter.cs" />
+    <Compile Include="Presenters\Savings\TimeDeposit\ITimeDepositWithdrawalAssessmentView.cs" />
+    <Compile Include="Presenters\Users\ILoginView.cs" />
+    <Compile Include="Presenters\Users\IUserListingView.cs" />
+    <Compile Include="Presenters\Users\IUserView.cs" />
+    <Compile Include="Presenters\Users\LoginPresenter.cs" />
+    <Compile Include="Presenters\Users\UserListingPresenter.cs" />
+    <Compile Include="Presenters\Users\UserPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\ObjectContextExtentions.cs" />
+    <Compile Include="Utilities\HelperExtentions.cs" />
+    <Compile Include="Utilities\Logs\ErrorLogger.cs" />
+    <Compile Include="Utilities\Logs\ILogger.cs" />
+    <Compile Include="Utilities\SequenceGenerators\GeneratorTemplate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Models\CooperativeSystemModel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CooperativeSystemModel.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Models\CooperativeSystemModel.dbml.layout">
+      <DependentUpon>CooperativeSystemModel.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Plans.CollegeInsurancePlan.CIPWithdrawalAssessmentModel.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.Disbursements.DailyDisbursements.DailyDisbursement.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.SpecialFunds.DeathAidFund.DeathAidFundWithdrawalAssessmentItem.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presenters\Loans\RegularLoan\" />
+    <Folder Include="Presenters\Savings\CapitalShare\Calculators\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="user_membership_create_script.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

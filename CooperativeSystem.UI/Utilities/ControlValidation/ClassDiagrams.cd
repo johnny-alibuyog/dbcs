@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CooperativeSystem.UI.Views.Utilities.ControlValidation.MaskedTextBoxDecorator">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CQAQAAAAAAAgAAAEAAYAgAAAAAAAAAAAAAAwQAgAAAg=</HashCode>
+      <FileName>Utilities\ControlValidation\MaskedTextBoxDecorator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CooperativeSystem.UI.Views.Utilities.ControlValidation.TextBoxDecorator" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAQAAAAAAAkAAAEAAYAAAAChEAAAAAAAAAwQAgAAAg=</HashCode>
+      <FileName>Utilities\ControlValidation\TextBoxDecorator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CooperativeSystem.UI.Views.Utilities.ControlValidation.ComboBoxDecorator">
+    <Position X="0.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CQAQAAAAAAAgAAAEEAYAAAAAAAAAAAAAAAAwQAgAAAg=</HashCode>
+      <FileName>Utilities\ControlValidation\ComboBoxDecorator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CooperativeSystem.UI.Views.Utilities.ControlValidation.ControlValidator">
+    <Position X="3.25" Y="5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="CooperativeSystem.UI.Views.Utilities.ControlValidation.ControlValidator.ErrorHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Utilities\ControlValidation\ControlValidator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAABCAQAgAAAAAAAAAAQQ=</HashCode>
+      <FileName>Utilities\ControlValidation\ControlValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CooperativeSystem.UI.Views.Utilities.ControlValidation.IValidatable">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAQAAAAAAAgAAAAAAIAAAAAAAAAAAAAAAAQAAgAAAA=</HashCode>
+      <FileName>Utilities\ControlValidation\IValidatable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="CooperativeSystem.UI.Views.Utilities.ControlValidation.InputType">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACEACAAAAAAAAAAAgAACCAIAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Utilities\ControlValidation\IValidatable.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

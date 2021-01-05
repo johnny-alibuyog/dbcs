@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CooperativeSystem.Sandbox.Models.DividendModels.YearlyDividends">
+    <Position X="0.5" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACABAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Models\DividendModels\YearlyDividends.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DividendComputations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CooperativeSystem.Sandbox.Models.DividendModels.DividendComputation">
+    <Position X="4.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAgAAIAACAAAAIAgAAQAAAAACAAEg=</HashCode>
+      <FileName>Models\DividendModels\DividendComputation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Member" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="DividendShareItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CooperativeSystem.Sandbox.Models.DividendModels.Member">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAIAAAAMAAEQAAAAAAAAAAAAQAAAAAAAAAg=</HashCode>
+      <FileName>Models\DividendModels\Member.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CapitalShares" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CooperativeSystem.Sandbox.Models.DividendModels.DividendShareItem">
+    <Position X="8.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAQAAAAAAAAAAAABAgAAAgAAAAAAAABCACACAAAAAA=</HashCode>
+      <FileName>Models\DividendModels\DividendShareItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CooperativeSystem.Sandbox.Models.DividendModels.CapitalShare">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAABAgAAACAAAAAAAABAABAAAAAAAA=</HashCode>
+      <FileName>Models\DividendModels\CapitalShare.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

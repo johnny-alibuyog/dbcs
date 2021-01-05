@@ -1,0 +1,1504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D09963E-1EBE-4989-851D-76480F7AC330}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CooperativeSystem.UI</RootNamespace>
+    <AssemblyName>CooperativeSystem.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CooperativeSystem.UI.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ControlValidation\ComboBoxDecorator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\ControlValidation\ControlValidator.cs" />
+    <Compile Include="Utilities\ControlValidation\Factory.cs" />
+    <Compile Include="Utilities\ControlValidation\IValidatable.cs" />
+    <Compile Include="Utilities\ControlValidation\MaskedTextBoxDecorator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\ControlValidation\TextBoxDecorator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\PropertyComparer.cs" />
+    <Compile Include="Utilities\SearchableSortableBindingList.cs" />
+    <Compile Include="Utilities\SyncronizeInvokeExtensions.cs" />
+    <Compile Include="Utilities\TabPageHelper.cs" />
+    <Compile Include="Views\AdjustmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdjustmentView.Designer.cs">
+      <DependentUpon>AdjustmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashDisbursementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CashDisbursementView.designer.cs">
+      <DependentUpon>CashDisbursementView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CashReceiptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CashReceiptView.designer.cs">
+      <DependentUpon>CashReceiptView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormTemplate.designer.cs">
+      <DependentUpon>FormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\ApplianceLoan\ServiceRateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\ApplianceLoan\ServiceRateView.Designer.cs">
+      <DependentUpon>ServiceRateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\DTILoan\ServiceRateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\DTILoan\ServiceRateView.Designer.cs">
+      <DependentUpon>ServiceRateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\EasyLoan\ServiceRateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\EasyLoan\ServiceRateView.Designer.cs">
+      <DependentUpon>ServiceRateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\EmergencyLoan\ServiceRateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\EmergencyLoan\ServiceRateView.Designer.cs">
+      <DependentUpon>ServiceRateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\Factories\IServiceRateFormFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\Factories\ServiceRateFormFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\InterestRebateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\InterestRebateView.Designer.cs">
+      <DependentUpon>InterestRebateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\LoanAssessmentReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\LoanAssessmentReportView.Designer.cs">
+      <DependentUpon>LoanAssessmentReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\LoanAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\LoanAssessmentView.Designer.cs">
+      <DependentUpon>LoanAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\LoanPaymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\LoanPaymentView.Designer.cs">
+      <DependentUpon>LoanPaymentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\LoanServiceRateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\LoanServiceRateView.Designer.cs">
+      <DependentUpon>LoanServiceRateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\LoanSettingsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\LoanSettingsView.Designer.cs">
+      <DependentUpon>LoanSettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\LoansSummaryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\LoansSummaryView.Designer.cs">
+      <DependentUpon>LoansSummaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\LoanType.cs" />
+    <Compile Include="Views\Loans\PastLoansView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\PastLoansView.Designer.cs">
+      <DependentUpon>PastLoansView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loans\ServiceRateFormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Loans\ServiceRateFormTemplate.Designer.cs">
+      <DependentUpon>ServiceRateFormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lookups\GracePeriodView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Lookups\GracePeriodView.Designer.cs">
+      <DependentUpon>GracePeriodView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lookups\RelationListingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Lookups\RelationListingView.Designer.cs">
+      <DependentUpon>RelationListingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lookups\RelationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Lookups\RelationView.Designer.cs">
+      <DependentUpon>RelationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenance\ActionType.cs" />
+    <Compile Include="Views\Maintenance\DetailsFormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenance\DetailsFormTemplate.Designer.cs">
+      <DependentUpon>DetailsFormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenance\Factories\IListingFormFactory.cs" />
+    <Compile Include="Views\Maintenance\Factories\ListingFormFactory.cs" />
+    <Compile Include="Views\Maintenance\ListingFormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Maintenance\ListingFormTemplate.Designer.cs">
+      <DependentUpon>ListingFormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Maintenance\RegistrationType.cs" />
+    <Compile Include="Views\MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainView.designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Member\AvailedServicesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Member\AvailedServicesView.Designer.cs">
+      <DependentUpon>AvailedServicesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Member\DependentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Member\DependentView.Designer.cs">
+      <DependentUpon>DependentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Member\EducationalAttainmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Member\EducationalAttainmentView.Designer.cs">
+      <DependentUpon>EducationalAttainmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Member\MemberInqueryEventArgs.cs" />
+    <Compile Include="Views\Member\MemberInquiryDetailsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Member\MemberInquiryDetailsView.Designer.cs">
+      <DependentUpon>MemberInquiryDetailsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Member\MemberInquiryListingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Member\MemberInquiryListingView.Designer.cs">
+      <DependentUpon>MemberInquiryListingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Member\MemberListingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Member\MemberListingView.Designer.cs">
+      <DependentUpon>MemberListingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Member\MemberView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Member\MemberView.Designer.cs">
+      <DependentUpon>MemberView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MiscellaneousIncomes\MiscellaneousIncomeAdjustmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MiscellaneousIncomes\MiscellaneousIncomeAdjustmentView.Designer.cs">
+      <DependentUpon>MiscellaneousIncomeAdjustmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MiscellaneousIncomes\MiscellaneousIncomeCashDisbursementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MiscellaneousIncomes\MiscellaneousIncomeCashDisbursementView.Designer.cs">
+      <DependentUpon>MiscellaneousIncomeCashDisbursementView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MiscellaneousIncomes\MiscellaneousIncomeCashReceiptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MiscellaneousIncomes\MiscellaneousIncomeCashReceiptView.Designer.cs">
+      <DependentUpon>MiscellaneousIncomeCashReceiptView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPAdjustmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPAdjustmentView.Designer.cs">
+      <DependentUpon>CIPAdjustmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPEnrollmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPEnrollmentView.Designer.cs">
+      <DependentUpon>CIPEnrollmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPPaymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPPaymentView.Designer.cs">
+      <DependentUpon>CIPPaymentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPSettingsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPSettingsView.Designer.cs">
+      <DependentUpon>CIPSettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPSummaryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPSummaryView.Designer.cs">
+      <DependentUpon>CIPSummaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPWithdrawalAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\CollegeInsurancePlan\CIPWithdrawalAssessmentView.Designer.cs">
+      <DependentUpon>CIPWithdrawalAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\PaymentFormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\PaymentFormTemplate.Designer.cs">
+      <DependentUpon>PaymentFormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\AvailOptionListingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\AvailOptionListingView.Designer.cs">
+      <DependentUpon>AvailOptionListingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\AvailOptionSetterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\AvailOptionSetterView.Designer.cs">
+      <DependentUpon>AvailOptionSetterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\AvailOptionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\AvailOptionView.Designer.cs">
+      <DependentUpon>AvailOptionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\PensionPlanEnrollmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\PensionPlanEnrollmentView.Designer.cs">
+      <DependentUpon>PensionPlanEnrollmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\PensionPlanPaymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\PensionPlanPaymentView.Designer.cs">
+      <DependentUpon>PensionPlanPaymentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\PensionPlanSettingsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\PensionPlanSettingsView.Designer.cs">
+      <DependentUpon>PensionPlanSettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\PensionPlanSummaryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\PensionPlanSummaryView.Designer.cs">
+      <DependentUpon>PensionPlanSummaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\PensionPlanWithdrawalAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\PensionPlan\PensionPlanWithdrawalAssessmentView.Designer.cs">
+      <DependentUpon>PensionPlanWithdrawalAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\PlanType.cs" />
+    <Compile Include="Views\Plans\SummaryTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\SummaryTemplate.Designer.cs">
+      <DependentUpon>SummaryTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plans\WithdrawalAssessmentFormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Plans\WithdrawalAssessmentFormTemplate.Designer.cs">
+      <DependentUpon>WithdrawalAssessmentFormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PostingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PostingView.Designer.cs">
+      <DependentUpon>PostingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProgressView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProgressView.Designer.cs">
+      <DependentUpon>ProgressView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Adjustments\AdjustmentsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Adjustments\AdjustmentsView.Designer.cs">
+      <DependentUpon>AdjustmentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Adjustments\DailyAdjustments\DailyAdjustmentReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Adjustments\DailyAdjustments\DailyAdjustmentReportView.Designer.cs">
+      <DependentUpon>DailyAdjustmentReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Adjustments\MonthlyAdjustments\MonthlyAdjustmentReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Adjustments\MonthlyAdjustments\MonthlyAdjustmentReportView.Designer.cs">
+      <DependentUpon>MonthlyAdjustmentReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Adjustments\YearlyAdjustments\YearlyAdjustmentReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Adjustments\YearlyAdjustments\YearlyAdjustmentReportView.Designer.cs">
+      <DependentUpon>YearlyAdjustmentReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\AgingLoans\AgingLoansByDaysReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\AgingLoans\AgingLoansByDaysReportView.Designer.cs">
+      <DependentUpon>AgingLoansByDaysReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\AgingLoans\AgingLoansHistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\AgingLoans\AgingLoansHistoryView.Designer.cs">
+      <DependentUpon>AgingLoansHistoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\AgingLoans\AgingLoansReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\AgingLoans\AgingLoansReportView.Designer.cs">
+      <DependentUpon>AgingLoansReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\CashFlows\CashFlowsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\CashFlows\CashFlowsView.Designer.cs">
+      <DependentUpon>CashFlowsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\CashFlows\MonthlyCashFlows\MonthlyCashFlowReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\CashFlows\MonthlyCashFlows\MonthlyCashFlowReportView.Designer.cs">
+      <DependentUpon>MonthlyCashFlowReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\CashFlows\YearlyCashFlows\YearlyCashFlowReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\CashFlows\YearlyCashFlows\YearlyCashFlowReportView.Designer.cs">
+      <DependentUpon>YearlyCashFlowReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Collections\CollectionsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Collections\CollectionsView.Designer.cs">
+      <DependentUpon>CollectionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Collections\DailyCollections\DailyCollectionReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Collections\DailyCollections\DailyCollectionReportView.Designer.cs">
+      <DependentUpon>DailyCollectionReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Collections\MonthlyCollections\MonthlyCollectionReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Collections\MonthlyCollections\MonthlyCollectionReportView.Designer.cs">
+      <DependentUpon>MonthlyCollectionReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Collections\YearlyCollections\YearlyCollectionReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Collections\YearlyCollections\YearlyCollectionReportView.Designer.cs">
+      <DependentUpon>YearlyCollectionReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\DelinquentAccounts\DelinquentAccountReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\DelinquentAccounts\DelinquentAccountReportView.Designer.cs">
+      <DependentUpon>DelinquentAccountReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\DelinquentAccounts\DelinquentLoansHistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\DelinquentAccounts\DelinquentLoansHistoryView.Designer.cs">
+      <DependentUpon>DelinquentLoansHistoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Disbursements\DailyDisbursements\DailyDisbursementReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Disbursements\DailyDisbursements\DailyDisbursementReportView.Designer.cs">
+      <DependentUpon>DailyDisbursementReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Disbursements\DisbursementsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Disbursements\DisbursementsView.Designer.cs">
+      <DependentUpon>DisbursementsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Disbursements\MonthlyDisbursements\MonthlyDisbursementReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Disbursements\MonthlyDisbursements\MonthlyDisbursementReportView.Designer.cs">
+      <DependentUpon>MonthlyDisbursementReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Disbursements\YearlyDisbursements\YearlyDisbursementReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Disbursements\YearlyDisbursements\YearlyDisbursementReportView.Designer.cs">
+      <DependentUpon>YearlyDisbursementReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\IndividualLedgersRevision\IndividualLedgerRevisionReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\IndividualLedgersRevision\IndividualLedgerRevisionReportView.Designer.cs">
+      <DependentUpon>IndividualLedgerRevisionReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\IndividualLedgersRevision\IndividualLedgerRevisionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\IndividualLedgersRevision\IndividualLedgerRevisionView.Designer.cs">
+      <DependentUpon>IndividualLedgerRevisionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\IndividualLedgers\IndividualLedgerReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\IndividualLedgers\IndividualLedgerReportView.Designer.cs">
+      <DependentUpon>IndividualLedgerReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\IndividualLedgers\IndividualLedgerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\IndividualLedgers\IndividualLedgerView.Designer.cs">
+      <DependentUpon>IndividualLedgerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MemberBalanceSummaries\MemberBalanceSummariesReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MemberBalanceSummaries\MemberBalanceSummariesReportView.Designer.cs">
+      <DependentUpon>MemberBalanceSummariesReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MemberBalanceSummaries\MemberBalanceSummariesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MemberBalanceSummaries\MemberBalanceSummariesView.Designer.cs">
+      <DependentUpon>MemberBalanceSummariesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MemberPeriodicalBalanceSummaries\MonthlyBalances\MonthlyBalanceReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MemberPeriodicalBalanceSummaries\MonthlyBalances\MonthlyBalanceReportView.Designer.cs">
+      <DependentUpon>MonthlyBalanceReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MemberPeriodicalBalanceSummaries\PeriodicalBalancesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MemberPeriodicalBalanceSummaries\PeriodicalBalancesView.Designer.cs">
+      <DependentUpon>PeriodicalBalancesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MemberPeriodicalBalanceSummaries\QuarterlyBalances\QuarterlyBalanceReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MemberPeriodicalBalanceSummaries\QuarterlyBalances\QuarterlyBalanceReportView.Designer.cs">
+      <DependentUpon>QuarterlyBalanceReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MemberPeriodicalBalanceSummaries\YearlyBalances\YearlyBalanceReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MemberPeriodicalBalanceSummaries\YearlyBalances\YearlyBalanceReportView.Designer.cs">
+      <DependentUpon>YearlyBalanceReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MembersInformations\MembersInformationsReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MembersInformations\MembersInformationsReportView.Designer.cs">
+      <DependentUpon>MembersInformationsReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MemberSummaries\MemberSummaryReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MemberSummaries\MemberSummaryReportView.Designer.cs">
+      <DependentUpon>MemberSummaryReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\MiscellaneousIncomes\MiscellaneousIncomeReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\MiscellaneousIncomes\MiscellaneousIncomeReportView.Designer.cs">
+      <DependentUpon>MiscellaneousIncomeReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\Notices\NoticeReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\Notices\NoticeReportView.Designer.cs">
+      <DependentUpon>NoticeReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\ReportViewTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\ReportViewTemplate.Designer.cs">
+      <DependentUpon>ReportViewTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Reports\WithdrawnMembers\WithdrawnMembersReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Reports\WithdrawnMembers\WithdrawnMembersReportView.Designer.cs">
+      <DependentUpon>WithdrawnMembersReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\CapitalShareMinimumAmountView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\CapitalShareMinimumAmountView.Designer.cs">
+      <DependentUpon>CapitalShareMinimumAmountView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\CapitalShareSummaryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\CapitalShareSummaryView.Designer.cs">
+      <DependentUpon>CapitalShareSummaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\CapitalShareWithdrawalAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\CapitalShareWithdrawalAssessmentView.Designer.cs">
+      <DependentUpon>CapitalShareWithdrawalAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\DepositView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\DepositView.Designer.cs">
+      <DependentUpon>DepositView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\DividendDepositorySelectionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\DividendDepositorySelectionView.Designer.cs">
+      <DependentUpon>DividendDepositorySelectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\DividendDistributionSummaryReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\DividendDistributionSummaryReportView.Designer.cs">
+      <DependentUpon>DividendDistributionSummaryReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\DividendDistributionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\DividendDistributionView.Designer.cs">
+      <DependentUpon>DividendDistributionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\PatronageRefundSummaryReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\PatronageRefundSummaryReportView.Designer.cs">
+      <DependentUpon>PatronageRefundSummaryReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\PatronageRefundView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\PatronageRefundView.Designer.cs">
+      <DependentUpon>PatronageRefundView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\RefundRatioView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\RefundRatioView.Designer.cs">
+      <DependentUpon>RefundRatioView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\WithdrawalAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\CapitalShare\WithdrawalAssessmentView.Designer.cs">
+      <DependentUpon>WithdrawalAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\DepositFormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\DepositFormTemplate.Designer.cs">
+      <DependentUpon>DepositFormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\Factories\DepositFormFactory.cs" />
+    <Compile Include="Views\Savings\Factories\IDepositFormFactory.cs" />
+    <Compile Include="Views\Savings\Factories\IInterestRateFormFactory.cs" />
+    <Compile Include="Views\Savings\Factories\InterestRateFormFactory.cs" />
+    <Compile Include="Views\Savings\Factories\IWithdrawalAssementFormFactory.cs" />
+    <Compile Include="Views\Savings\Factories\WithdrawalAssementFormFactory.cs" />
+    <Compile Include="Views\Savings\InterestRateFormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\InterestRateFormTemplate.Designer.cs">
+      <DependentUpon>InterestRateFormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\NetSurplusView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\NetSurplusView.Designer.cs">
+      <DependentUpon>NetSurplusView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\DepositView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\DepositView.Designer.cs">
+      <DependentUpon>DepositView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\InterestRateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\InterestRateView.Designer.cs">
+      <DependentUpon>InterestRateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\QuarterlyInterestComputationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\QuarterlyInterestComputationView.Designer.cs">
+      <DependentUpon>QuarterlyInterestComputationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\SavingsDepositMaintainingBalanceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\SavingsDepositMaintainingBalanceView.Designer.cs">
+      <DependentUpon>SavingsDepositMaintainingBalanceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\SavingsDepositSummaryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\SavingsDepositSummaryView.Designer.cs">
+      <DependentUpon>SavingsDepositSummaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\SavingsDepositWithdrawalAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\SavingsDepositWithdrawalAssessmentView.Designer.cs">
+      <DependentUpon>SavingsDepositWithdrawalAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\WithdrawalAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsDeposit\WithdrawalAssessmentView.Designer.cs">
+      <DependentUpon>WithdrawalAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsSummaryTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsSummaryTemplate.Designer.cs">
+      <DependentUpon>SavingsSummaryTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\SavingsType.cs" />
+    <Compile Include="Views\Savings\TimeDeposit\DepositView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\DepositView.Designer.cs">
+      <DependentUpon>DepositView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\InterestRateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\InterestRateView.Designer.cs">
+      <DependentUpon>InterestRateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\TimeDepositDepositView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\TimeDepositDepositView.Designer.cs">
+      <DependentUpon>TimeDepositDepositView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\TimeDepositMinimumAmountView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\TimeDepositMinimumAmountView.Designer.cs">
+      <DependentUpon>TimeDepositMinimumAmountView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\TimeDepositSummaryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\TimeDepositSummaryView.Designer.cs">
+      <DependentUpon>TimeDepositSummaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\TimeDepositWithdrawalAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\TimeDepositWithdrawalAssessmentView.Designer.cs">
+      <DependentUpon>TimeDepositWithdrawalAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\WidrawalAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\TimeDeposit\WidrawalAssessmentView.Designer.cs">
+      <DependentUpon>WidrawalAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Savings\WithdrawalAssessmentFormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Savings\WithdrawalAssessmentFormTemplate.Designer.cs">
+      <DependentUpon>WithdrawalAssessmentFormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\ContributionFormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\ContributionFormTemplate.Designer.cs">
+      <DependentUpon>ContributionFormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\DeathAidFund\ContributionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\DeathAidFund\ContributionView.Designer.cs">
+      <DependentUpon>ContributionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\DeathAidFund\DeathAidFundConfigurationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\DeathAidFund\DeathAidFundConfigurationView.Designer.cs">
+      <DependentUpon>DeathAidFundConfigurationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\DeathAidFund\DeathAidFundSummaryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\DeathAidFund\DeathAidFundSummaryView.Designer.cs">
+      <DependentUpon>DeathAidFundSummaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\DeathAidFund\DeathAidFundWithdrawalAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\DeathAidFund\DeathAidFundWithdrawalAssessmentView.Designer.cs">
+      <DependentUpon>DeathAidFundWithdrawalAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\DeathAidFund\WithdrawalAssessmentSummaryReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\DeathAidFund\WithdrawalAssessmentSummaryReportView.Designer.cs">
+      <DependentUpon>WithdrawalAssessmentSummaryReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\SpecialFundsSummaryTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\SpecialFundsSummaryTemplate.Designer.cs">
+      <DependentUpon>SpecialFundsSummaryTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\SpecialFundType.cs" />
+    <Compile Include="Views\SpecialFunds\TulunganFund\ContributionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\TulunganFund\ContributionView.Designer.cs">
+      <DependentUpon>ContributionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\TulunganFund\TulunganFundSettingsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\TulunganFund\TulunganFundSettingsView.Designer.cs">
+      <DependentUpon>TulunganFundSettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\TulunganFund\TulunganFundSummaryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\TulunganFund\TulunganFundSummaryView.Designer.cs">
+      <DependentUpon>TulunganFundSummaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\TulunganFund\TulunganFundWithdrawalAssessmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\TulunganFund\TulunganFundWithdrawalAssessmentView.Designer.cs">
+      <DependentUpon>TulunganFundWithdrawalAssessmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\WithdrawalAssessmentFormTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SpecialFunds\WithdrawalAssessmentFormTemplate.Designer.cs">
+      <DependentUpon>WithdrawalAssessmentFormTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControlTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControlTemplate.Designer.cs">
+      <DependentUpon>UserControlTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\User\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\ManagerApprovalView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\User\ManagerApprovalView.Designer.cs">
+      <DependentUpon>ManagerApprovalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\SplashScreenProvider.cs" />
+    <Compile Include="Views\User\SplashScreenView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\User\SplashScreenView.Designer.cs">
+      <DependentUpon>SplashScreenView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserListingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserListingView.Designer.cs">
+      <DependentUpon>UserListingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\User\UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Utilities\ControlValidation\TextBoxDecorator.resx">
+      <DependentUpon>TextBoxDecorator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdjustmentView.resx">
+      <DependentUpon>AdjustmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CashDisbursementView.resx">
+      <DependentUpon>CashDisbursementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CashReceiptView.resx">
+      <DependentUpon>CashReceiptView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTemplate.resx">
+      <DependentUpon>FormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\ApplianceLoan\ServiceRateView.resx">
+      <DependentUpon>ServiceRateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\DTILoan\ServiceRateView.resx">
+      <DependentUpon>ServiceRateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\EasyLoan\ServiceRateView.resx">
+      <DependentUpon>ServiceRateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\EmergencyLoan\ServiceRateView.resx">
+      <DependentUpon>ServiceRateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\InterestRebateView.resx">
+      <DependentUpon>InterestRebateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\LoanAssessmentReport.rdlc" />
+    <EmbeddedResource Include="Views\Loans\LoanAssessmentReportView.resx">
+      <DependentUpon>LoanAssessmentReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\LoanAssessmentView.resx">
+      <DependentUpon>LoanAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\LoanPaymentView.resx">
+      <DependentUpon>LoanPaymentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\LoanServiceRateView.resx">
+      <DependentUpon>LoanServiceRateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\LoanSettingsView.resx">
+      <DependentUpon>LoanSettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\LoansSummaryView.resx">
+      <DependentUpon>LoansSummaryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\PastLoansView.resx">
+      <DependentUpon>PastLoansView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Loans\ServiceRateFormTemplate.resx">
+      <DependentUpon>ServiceRateFormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Lookups\GracePeriodView.resx">
+      <DependentUpon>GracePeriodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Lookups\RelationView.resx">
+      <DependentUpon>RelationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenance\DetailsFormTemplate.resx">
+      <DependentUpon>DetailsFormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Maintenance\ListingFormTemplate.resx">
+      <DependentUpon>ListingFormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Member\AvailedServicesView.resx">
+      <DependentUpon>AvailedServicesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Member\DependentView.resx">
+      <DependentUpon>DependentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Member\EducationalAttainmentView.resx">
+      <DependentUpon>EducationalAttainmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Member\MemberInquiryDetailsView.resx">
+      <DependentUpon>MemberInquiryDetailsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Member\MemberInquiryListingView.resx">
+      <DependentUpon>MemberInquiryListingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Member\MemberListingView.resx">
+      <DependentUpon>MemberListingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Member\MemberView.resx">
+      <DependentUpon>MemberView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MiscellaneousIncomes\MiscellaneousIncomeAdjustmentView.resx">
+      <DependentUpon>MiscellaneousIncomeAdjustmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MiscellaneousIncomes\MiscellaneousIncomeCashDisbursementView.resx">
+      <DependentUpon>MiscellaneousIncomeCashDisbursementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MiscellaneousIncomes\MiscellaneousIncomeCashReceiptView.resx">
+      <DependentUpon>MiscellaneousIncomeCashReceiptView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\CollegeInsurancePlan\CIPAdjustmentView.resx">
+      <DependentUpon>CIPAdjustmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\CollegeInsurancePlan\CIPEnrollmentView.resx">
+      <DependentUpon>CIPEnrollmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\CollegeInsurancePlan\CIPPaymentView.resx">
+      <DependentUpon>CIPPaymentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\CollegeInsurancePlan\CIPSettingsView.resx">
+      <DependentUpon>CIPSettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\CollegeInsurancePlan\CIPSummaryView.resx">
+      <DependentUpon>CIPSummaryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\CollegeInsurancePlan\CIPWithdrawalAssessmentView.resx">
+      <DependentUpon>CIPWithdrawalAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\PaymentFormTemplate.resx">
+      <DependentUpon>PaymentFormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\PensionPlan\AvailOptionSetterView.resx">
+      <DependentUpon>AvailOptionSetterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\PensionPlan\AvailOptionView.resx">
+      <DependentUpon>AvailOptionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\PensionPlan\PensionPlanEnrollmentView.resx">
+      <DependentUpon>PensionPlanEnrollmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\PensionPlan\PensionPlanPaymentView.resx">
+      <DependentUpon>PensionPlanPaymentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\PensionPlan\PensionPlanSettingsView.resx">
+      <DependentUpon>PensionPlanSettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\PensionPlan\PensionPlanSummaryView.resx">
+      <DependentUpon>PensionPlanSummaryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\PensionPlan\PensionPlanWithdrawalAssessmentView.resx">
+      <DependentUpon>PensionPlanWithdrawalAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\SummaryTemplate.resx">
+      <DependentUpon>SummaryTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Plans\WithdrawalAssessmentFormTemplate.resx">
+      <DependentUpon>WithdrawalAssessmentFormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PostingView.resx">
+      <DependentUpon>PostingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProgressView.resx">
+      <DependentUpon>ProgressView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Adjustments\AdjustmentsView.resx">
+      <DependentUpon>AdjustmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Adjustments\AgingLoansReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Adjustments\DailyAdjustments\DailyAdjustmentReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Adjustments\DailyAdjustments\DailyAdjustmentReportView.resx">
+      <DependentUpon>DailyAdjustmentReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Adjustments\MonthlyAdjustments\MonthlyAdjustmentReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Adjustments\MonthlyAdjustments\MonthlyAdjustmentReportView.resx">
+      <DependentUpon>MonthlyAdjustmentReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Adjustments\YearlyAdjustments\YearlyAdjustmentReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Adjustments\YearlyAdjustments\YearlyAdjustmentReportView.resx">
+      <DependentUpon>YearlyAdjustmentReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\AgingLoans\AgingLoansByDaysReportView.resx">
+      <DependentUpon>AgingLoansByDaysReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\AgingLoans\AgingLoansHistoryView.resx">
+      <DependentUpon>AgingLoansHistoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\AgingLoans\AgingLoansReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\AgingLoans\AgingLoansByDaysReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\AgingLoans\AgingLoansReportView.resx">
+      <DependentUpon>AgingLoansReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\CashFlows\CashFlowsView.resx">
+      <DependentUpon>CashFlowsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\CashFlows\MonthlyCashFlows\MonthlyCashFlowReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\CashFlows\MonthlyCashFlows\MonthlyCashFlowReportView.resx">
+      <DependentUpon>MonthlyCashFlowReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\CashFlows\YearlyCashFlows\YearlyCashFlowReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\CashFlows\YearlyCashFlows\YearlyCashFlowReportView.resx">
+      <DependentUpon>YearlyCashFlowReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Collections\CollectionsView.resx">
+      <DependentUpon>CollectionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Collections\DailyCollections\DailyCollectionReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Collections\DailyCollections\DailyCollectionReportView.resx">
+      <DependentUpon>DailyCollectionReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Collections\MonthlyCollections\MonthlyCollectionReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Collections\MonthlyCollections\MonthlyCollectionReportView.resx">
+      <DependentUpon>MonthlyCollectionReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Collections\YearlyCollections\YearlyCollectionReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Collections\YearlyCollections\YearlyCollectionReportView.resx">
+      <DependentUpon>YearlyCollectionReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\DelinquentAccounts\DelinquentAccountReport.back.rdlc" />
+    <EmbeddedResource Include="Views\Reports\DelinquentAccounts\DelinquentAccountReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\DelinquentAccounts\DelinquentAccountReportView.resx">
+      <DependentUpon>DelinquentAccountReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\DelinquentAccounts\DelinquentLoansHistoryView.resx">
+      <DependentUpon>DelinquentLoansHistoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Disbursements\DailyDisbursements\DailyDisbursementReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Disbursements\DailyDisbursements\DailyDisbursementReportView.resx">
+      <DependentUpon>DailyDisbursementReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Disbursements\DisbursementsView.resx">
+      <DependentUpon>DisbursementsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Disbursements\MonthlyDisbursements\MonthlyDisbursementReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Disbursements\MonthlyDisbursements\MonthlyDisbursementReportView.resx">
+      <DependentUpon>MonthlyDisbursementReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Disbursements\YearlyDisbursements\YearlyDisbursementReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Disbursements\YearlyDisbursements\YearlyDisbursementReportView.resx">
+      <DependentUpon>YearlyDisbursementReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\IndividualLedgersRevision\IndividualLedgerRevisionReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\IndividualLedgersRevision\IndividualLedgerRevisionReportView.resx">
+      <DependentUpon>IndividualLedgerRevisionReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\IndividualLedgersRevision\IndividualLedgerRevisionView.resx">
+      <DependentUpon>IndividualLedgerRevisionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\IndividualLedgers\IndividualLedgerReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\IndividualLedgers\IndividualLedgerReportView.resx">
+      <DependentUpon>IndividualLedgerReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\IndividualLedgers\IndividualLedgerView.resx">
+      <DependentUpon>IndividualLedgerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\MemberBalanceSummaries\MemberBalanceSummariesReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\MemberBalanceSummaries\MemberBalanceSummariesReportView.resx">
+      <DependentUpon>MemberBalanceSummariesReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\MemberBalanceSummaries\MemberBalanceSummariesView.resx">
+      <DependentUpon>MemberBalanceSummariesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\MemberPeriodicalBalanceSummaries\MonthlyBalances\MonthlyBalanceReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\MemberPeriodicalBalanceSummaries\MonthlyBalances\MonthlyBalanceReportView.resx">
+      <DependentUpon>MonthlyBalanceReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\MemberPeriodicalBalanceSummaries\PeriodicalBalancesView.resx">
+      <DependentUpon>PeriodicalBalancesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\MemberPeriodicalBalanceSummaries\QuarterlyBalances\QuarterlyBalanceReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\MemberPeriodicalBalanceSummaries\QuarterlyBalances\QuarterlyBalanceReportView.resx">
+      <DependentUpon>QuarterlyBalanceReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\MemberPeriodicalBalanceSummaries\YearlyBalances\YearlyBalanceReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\MemberPeriodicalBalanceSummaries\YearlyBalances\YearlyBalanceReportView.resx">
+      <DependentUpon>YearlyBalanceReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\MembersInformations\MembersInformationsReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\MembersInformations\MembersInformationsReportView.resx">
+      <DependentUpon>MembersInformationsReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\MemberSummaries\MemberSummaryReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\MemberSummaries\MemberSummaryReportView.resx">
+      <DependentUpon>MemberSummaryReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\MiscellaneousIncomes\MiscellaneousIncomeReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\MiscellaneousIncomes\MiscellaneousIncomeReportView.resx">
+      <DependentUpon>MiscellaneousIncomeReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Notices\FinalNoticeReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Notices\FirstNoticeReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\Notices\NoticeReportView.resx">
+      <DependentUpon>NoticeReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\Notices\SecondNoticeReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\ReportViewTemplate.resx">
+      <DependentUpon>ReportViewTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Reports\WithdrawnMembers\WithdrawnMembersReport.rdlc" />
+    <EmbeddedResource Include="Views\Reports\WithdrawnMembers\WithdrawnMembersReportView.resx">
+      <DependentUpon>WithdrawnMembersReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\CapitalShareMinimumAmountView.resx">
+      <DependentUpon>CapitalShareMinimumAmountView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\CapitalShareSummaryView.resx">
+      <DependentUpon>CapitalShareSummaryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\CapitalShareWithdrawalAssessmentView.resx">
+      <DependentUpon>CapitalShareWithdrawalAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\DepositView.resx">
+      <DependentUpon>DepositView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\DividendDepositorySelectionView.resx">
+      <DependentUpon>DividendDepositorySelectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\DividendDistributionReport.rdlc" />
+    <EmbeddedResource Include="Views\Savings\CapitalShare\DividendDistributionSummaryReport.rdlc" />
+    <EmbeddedResource Include="Views\Savings\CapitalShare\DividendDistributionSummaryReportView.resx">
+      <DependentUpon>DividendDistributionSummaryReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\DividendDistributionView.resx">
+      <DependentUpon>DividendDistributionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\PatronageRefundReport.rdlc" />
+    <EmbeddedResource Include="Views\Savings\CapitalShare\PatronageRefundSummaryReport.rdlc" />
+    <EmbeddedResource Include="Views\Savings\CapitalShare\PatronageRefundSummaryReportView.resx">
+      <DependentUpon>PatronageRefundSummaryReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\PatronageRefundView.resx">
+      <DependentUpon>PatronageRefundView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\RefundRatioView.resx">
+      <DependentUpon>RefundRatioView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\CapitalShare\WithdrawalAssessmentView.resx">
+      <DependentUpon>WithdrawalAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\DepositFormTemplate.resx">
+      <DependentUpon>DepositFormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\InterestRateFormTemplate.resx">
+      <DependentUpon>InterestRateFormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\NetSurplusView.resx">
+      <DependentUpon>NetSurplusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\SavingsDeposit\DepositView.resx">
+      <DependentUpon>DepositView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\SavingsDeposit\InterestRateView.resx">
+      <DependentUpon>InterestRateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\SavingsDeposit\QuarterlyInterestComputationReport.rdlc" />
+    <EmbeddedResource Include="Views\Savings\SavingsDeposit\QuarterlyInterestComputationView.resx">
+      <DependentUpon>QuarterlyInterestComputationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\SavingsDeposit\SavingsDepositMaintainingBalanceView.resx">
+      <DependentUpon>SavingsDepositMaintainingBalanceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\SavingsDeposit\SavingsDepositSummaryView.resx">
+      <DependentUpon>SavingsDepositSummaryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\SavingsDeposit\SavingsDepositWithdrawalAssessmentView.resx">
+      <DependentUpon>SavingsDepositWithdrawalAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\SavingsDeposit\WithdrawalAssessmentView.resx">
+      <DependentUpon>WithdrawalAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\SavingsSummaryTemplate.resx">
+      <DependentUpon>SavingsSummaryTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\TimeDeposit\DepositView.resx">
+      <DependentUpon>DepositView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\TimeDeposit\InterestRateView.resx">
+      <DependentUpon>InterestRateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\TimeDeposit\TimeDepositDepositView.resx">
+      <DependentUpon>TimeDepositDepositView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\TimeDeposit\TimeDepositMinimumAmountView.resx">
+      <DependentUpon>TimeDepositMinimumAmountView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\TimeDeposit\TimeDepositSummaryView.resx">
+      <DependentUpon>TimeDepositSummaryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\TimeDeposit\TimeDepositWithdrawalAssessmentView.resx">
+      <DependentUpon>TimeDepositWithdrawalAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\TimeDeposit\WidrawalAssessmentView.resx">
+      <DependentUpon>WidrawalAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Savings\WithdrawalAssessmentFormTemplate.resx">
+      <DependentUpon>WithdrawalAssessmentFormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\ContributionFormTemplate.resx">
+      <DependentUpon>ContributionFormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\DeathAidFund\ContributionView.resx">
+      <DependentUpon>ContributionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\DeathAidFund\DeathAidFundConfigurationView.resx">
+      <DependentUpon>DeathAidFundConfigurationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\DeathAidFund\DeathAidFundSummaryView.resx">
+      <DependentUpon>DeathAidFundSummaryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\DeathAidFund\DeathAidFundWithdrawalAssessmentView.resx">
+      <DependentUpon>DeathAidFundWithdrawalAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\DeathAidFund\WithdrawalAssessmentSummaryReport.rdlc" />
+    <EmbeddedResource Include="Views\SpecialFunds\DeathAidFund\WithdrawalAssessmentSummaryReportView.resx">
+      <DependentUpon>WithdrawalAssessmentSummaryReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\SpecialFundsSummaryTemplate.resx">
+      <DependentUpon>SpecialFundsSummaryTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\TulunganFund\ContributionView.resx">
+      <DependentUpon>ContributionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\TulunganFund\TulunganFundSettingsView.resx">
+      <DependentUpon>TulunganFundSettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\TulunganFund\TulunganFundSummaryView.resx">
+      <DependentUpon>TulunganFundSummaryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\TulunganFund\TulunganFundWithdrawalAssessmentView.resx">
+      <DependentUpon>TulunganFundWithdrawalAssessmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SpecialFunds\WithdrawalAssessmentFormTemplate.resx">
+      <DependentUpon>WithdrawalAssessmentFormTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControlTemplate.resx">
+      <DependentUpon>UserControlTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\ManagerApprovalView.resx">
+      <DependentUpon>ManagerApprovalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\SplashScreenView.resx">
+      <DependentUpon>SplashScreenView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\User\UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Loans.LoanAssessmentReportModel.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Plans.CollegeInsurancePlan.CIPAdjustmentItem.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.Adjustments.DailyAdjustments.DailyAdjustment.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.Adjustments.YearlyAdjustments.YearlyAdjustment.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.AgingLoans.AgingLoanModel.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.Disbursements.DailyDisbursements.DailyDisbursement.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.Disbursements.MonthlyDisbursements.MonthlyDisbursement.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.Disbursements.YearlyDisbursements.YearlyDisbursement.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.IndividualLedgersRevision.Account.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.MemberBalanceSummaries.MemberBalanceSummaryItem.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.MemberPeriodicalBalanceSummaries.PeriodicalBalance.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.MembersInformations.MembersInformationsReportModel.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.MemberSummaries.MemberSummaryItem.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.MiscellaneousIncomes.MiscellaneousIncomeItem.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.Notices.NoticeReportItem.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Reports.WithdrawnMembers.WithdrawnMemberModel.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Savings.CapitalShare.DividendDistributionSummaryItem.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.Savings.CapitalShare.PatronageRefundSummaryItem.datasource" />
+    <None Include="Properties\DataSources\CooperativeSystem.Service.Presenters.SpecialFunds.DeathAidFund.DeathAidFundWithdrawalAssessmentItem.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Utilities\ControlValidation\ClassDiagrams.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Loans\EquityLoan\" />
+    <Folder Include="Views\Loans\PensionLoan\" />
+    <Folder Include="Views\Loans\RegularLoan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CooperativeSystem.Service\CooperativeSystem.Service.csproj">
+      <Project>{1ECC862C-118C-4EF6-92EC-7EF6BBE35234}</Project>
+      <Name>CooperativeSystem.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CooperativeLog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DummyIDPicture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secrecy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteuser.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <None Include="Resources\loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

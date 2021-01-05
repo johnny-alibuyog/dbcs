@@ -1,0 +1,10 @@
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\ConsoleApplication1\bin\Debug\ConsoleApplication1.xml
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.Resources.resources
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\ConsoleApplication1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\ConsoleApplication1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.xml
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb

@@ -1,0 +1,1685 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 138.125, 64.875" name="CooperativeSystemModel">
+  <DataContextMoniker Name="/CooperativeSystemModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6067af48-a369-4d8e-a359-9ae7657e014d" absoluteBounds="21.625, 7.5, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/SavingsDepositInterestRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e59bb4c-8d2b-4423-a3b8-254f48fda109" absoluteBounds="21.64, 7.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a14ad5f5-245f-4d1a-8f23-fe1f09dfbb77" absoluteBounds="38.125, 5.75, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DTIMEDPLoanServiceRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e2e3529-2062-4d1b-ae1e-c1ef974ab798" absoluteBounds="38.14, 6.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="829596a7-9045-42f1-b5d9-a38d8411d2aa" absoluteBounds="40.625, 5.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DividendPatronageRatio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="daa46769-cfcb-4b24-b78a-8c70590cb3a6" absoluteBounds="40.64, 6.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bcab4828-2d0d-4201-b87d-f285784c3951" absoluteBounds="21.625, 5.75, 2.125, 1.5785953776041666">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TimeDepositInterestRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cabc90b-cf13-4209-b315-b86cb9b7f332" absoluteBounds="21.64, 6.21, 2.0949999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9d059ba-6673-4c62-8804-a983df404083" absoluteBounds="69.75, 20.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/AvailedService" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4985a5f-7497-4c12-adb3-eb9d8b0f051c" absoluteBounds="69.765, 21.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b52255c8-6927-4b04-8ba5-908e3708cd1c" absoluteBounds="69.75, 23.625, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Dependent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1044aa06-5a0b-454b-9862-a13a079f7d1b" absoluteBounds="69.765, 24.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dcc79dcc-0ea8-46de-aed5-8b0f64b14447" absoluteBounds="69.75, 26, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Relation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5e5488d-1820-44fc-aa63-85709bc746b9" absoluteBounds="69.765, 26.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(70.75 : 26); (70.75 : 25.5881982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Relation/Relation_Dependent" />
+      <nodes>
+        <classShapeMoniker Id="dcc79dcc-0ea8-46de-aed5-8b0f64b14447" />
+        <classShapeMoniker Id="b52255c8-6927-4b04-8ba5-908e3708cd1c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6ce97b64-dc8f-4514-84f5-d9c43bd66c48" absoluteBounds="59.375, 20.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/MembershipCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cc32f87-aa04-4eb4-94d3-3044c49dd01f" absoluteBounds="59.39, 21.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34aa320c-18cd-4bbd-a2c6-f3ab3177b5c6" absoluteBounds="59.375, 23.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/MaritalStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2bc6e89-795c-4008-8b7a-5d9e12d8a0e8" absoluteBounds="59.39, 23.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ae14c34-da6d-41fd-b083-bf4ad8ff8849" absoluteBounds="59.375, 24.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/AccountStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8dac0c2a-306c-4e6b-8229-b6107c25efbe" absoluteBounds="59.39, 25.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0dfa2035-a5a0-4fd8-958a-b1078c40767c" absoluteBounds="59.375, 18.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/MembershipCategoryService" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce816d89-e2ee-4a80-8458-ff096f9ac737" absoluteBounds="59.39, 18.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(60.375 : 20.75); (60.375 : 19.5689925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/MembershipCategory/MembershipCategory_MembershipCategoryService" />
+      <nodes>
+        <classShapeMoniker Id="6ce97b64-dc8f-4514-84f5-d9c43bd66c48" />
+        <classShapeMoniker Id="0dfa2035-a5a0-4fd8-958a-b1078c40767c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bc1f5dcb-2edd-48d0-882d-608771bea779" absoluteBounds="65.375, 18.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/ServiceCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31f78244-6d1d-4e3b-86ac-54f301b0cf38" absoluteBounds="65.39, 18.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ad46f184-c99b-446f-912e-00e26193a32c" absoluteBounds="53, 32.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CapitalShare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="127d9433-079e-4a71-9e2d-e478ee29f4f5" absoluteBounds="53.015, 33.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5e7d9eec-7709-43e0-82f7-d0e8eaff9393" absoluteBounds="55.375, 38.5, 2, 1.770896809895838">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CapitalShareDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f0c5e10-0d1d-4c68-a4aa-0b4f95eb0c13" absoluteBounds="55.39, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(55 : 33.2219962565104); (56.375 : 33.2219962565104); (56.375 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CapitalShare/CapitalShare_CapitalShareDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="ad46f184-c99b-446f-912e-00e26193a32c" />
+        <classShapeMoniker Id="5e7d9eec-7709-43e0-82f7-d0e8eaff9393" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="71c4454e-472e-4559-a4db-1179d66c9711" absoluteBounds="60.125, 38.5, 2, 1.770896809895838">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CapitalShareReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="166dbc8d-9e75-4ace-b74f-92341758e0dd" absoluteBounds="60.14, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(55 : 33.5517468847656); (56.2916666666667 : 33.5517468847656 : JumpStart); (56.4583333333333 : 33.5517468847656 : JumpEnd); (58.6666666666667 : 33.5517468847656 : JumpStart); (58.8333333333333 : 33.5517468847656 : JumpEnd); (61.125 : 33.5517468847656); (61.125 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CapitalShare/CapitalShare_CapitalShareReceipt" />
+      <nodes>
+        <classShapeMoniker Id="ad46f184-c99b-446f-912e-00e26193a32c" />
+        <classShapeMoniker Id="71c4454e-472e-4559-a4db-1179d66c9711" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b68f35a9-9dbf-4856-801c-fe51838b615d" absoluteBounds="72.75, 32.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/SavingsDeposit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe880236-c7af-4c90-a75c-e29f5fd076ce" absoluteBounds="72.765, 33.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef8f5bc6-5b28-400f-b5f9-8628466d86ed" absoluteBounds="70.375, 38.5, 2, 1.770896809895838">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/SavingsDepositDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d407d1d6-08cd-4d2b-a9f7-ec27dd6767ff" absoluteBounds="70.39, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(72.75 : 33.4777692682457); (70.78125 : 33.4777692682457); (70.78125 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/SavingsDeposit/SavingsDeposit_SavingsDepositDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="b68f35a9-9dbf-4856-801c-fe51838b615d" />
+        <classShapeMoniker Id="ef8f5bc6-5b28-400f-b5f9-8628466d86ed" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="699ac113-2f93-46e0-a228-fef9266ea033" absoluteBounds="77.5, 38.5, 2, 1.770896809895838">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/SavingsDepositReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc6de987-8ff0-407b-b0d2-689f6d09078d" absoluteBounds="77.515, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(74.75 : 33.2219962565104); (78.5 : 33.2219962565104); (78.5 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/SavingsDeposit/SavingsDeposit_SavingsDepositReceipt" />
+      <nodes>
+        <classShapeMoniker Id="b68f35a9-9dbf-4856-801c-fe51838b615d" />
+        <classShapeMoniker Id="699ac113-2f93-46e0-a228-fef9266ea033" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c6805927-895c-4490-9636-50292d2418b9" absoluteBounds="61, 48.25, 2, 1.193992513020838">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/MembershipFeeReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8b9e0e0-d9b7-4be8-89e7-3a6302df10fa" absoluteBounds="61.015, 48.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="266bcf9b-e579-425c-9485-94740086fc46" absoluteBounds="67.5, 60.875, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5c3e5d7-98ae-4222-be17-70afdfb732a7" absoluteBounds="67.515, 61.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d630d4a1-d019-4726-93e6-dfe32e1e0b90" absoluteBounds="69.875, 60.875, 2, 1.193992513020838">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/UserCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46157d09-97a4-4585-9e15-471344b0d9ec" absoluteBounds="69.89, 61.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(69.875 : 61.4719962565104); (69.5 : 61.4719962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/UserCategory/UserCategory_User" />
+      <nodes>
+        <classShapeMoniker Id="d630d4a1-d019-4726-93e6-dfe32e1e0b90" />
+        <classShapeMoniker Id="266bcf9b-e579-425c-9485-94740086fc46" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="fb1a0ef1-7e57-4302-bd9a-94440e1a72a3" absoluteBounds="59.375, 22.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/SexType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0dea456b-005b-4dbe-aa28-2c80abb96a80" absoluteBounds="59.39, 22.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ae1dd60-e289-447a-9f0b-d524fa66ee2d" absoluteBounds="29.75, 5.75, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanDeductionType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="422f3817-66c5-43c3-957c-766c1842a94b" absoluteBounds="29.765, 6.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e649681-e9b4-4f22-bc91-d6d6b8d0a9fd" absoluteBounds="33.125, 7.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanCollectionFeeRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa8c1cb1-fb80-4eb4-bf8e-f57624ad5d88" absoluteBounds="33.14, 8.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(30.75 : 6.94399251302083); (30.75 : 8.44314697265625); (30.9322929166667 : 8.44314697265625 : JumpStart); (31.0989595833333 : 8.44314697265625 : JumpEnd); (31.4635454166667 : 8.44314697265625 : JumpStart); (31.6302120833333 : 8.44314697265625 : JumpEnd); (33.125 : 8.44314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/LoanDeductionType/LoanDeductionType_LoanCollectionFeeRate" />
+      <nodes>
+        <classShapeMoniker Id="1ae1dd60-e289-447a-9f0b-d524fa66ee2d" />
+        <classShapeMoniker Id="0e649681-e9b4-4f22-bc91-d6d6b8d0a9fd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4415deb5-95ab-4d05-86cb-385f7f5d3a36" absoluteBounds="33.125, 9.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanGuaranteeFundRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51a17d4d-85f4-44d5-b29f-4176bec804f6" absoluteBounds="33.14, 9.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(31.2812525 : 6.94399251302083); (31.2812525 : 9.94314697265625); (31.4635454166667 : 9.94314697265625 : JumpStart); (31.6302120833333 : 9.94314697265625 : JumpEnd); (33.125 : 9.94314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/LoanDeductionType/LoanDeductionType_LoanGuaranteeFundRate" />
+      <nodes>
+        <classShapeMoniker Id="1ae1dd60-e289-447a-9f0b-d524fa66ee2d" />
+        <classShapeMoniker Id="4415deb5-95ab-4d05-86cb-385f7f5d3a36" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bae886d2-8148-4181-aefd-a4ce321f4b02" absoluteBounds="33.125, 12.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanInterestRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6fbeac0d-6916-423b-940e-2f3c9fb85d6e" absoluteBounds="33.14, 12.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(30.2187475 : 6.94399251302083); (30.2187475 : 12.9431469726563); (33.125 : 12.9431469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/LoanDeductionType/LoanDeductionType_LoanInterestRate" />
+      <nodes>
+        <classShapeMoniker Id="1ae1dd60-e289-447a-9f0b-d524fa66ee2d" />
+        <classShapeMoniker Id="bae886d2-8148-4181-aefd-a4ce321f4b02" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="20beb53b-47cc-442b-b08e-7764bf2dae4b" absoluteBounds="33.125, 10.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanServiceFeeRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de2e061a-f9d3-4c24-989d-3ebba5a79929" absoluteBounds="33.14, 11.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(31.54687875 : 6.94399251302083); (31.54687875 : 11.4431469726563); (33.125 : 11.4431469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/LoanDeductionType/LoanDeductionType_LoanServiceFeeRate" />
+      <nodes>
+        <classShapeMoniker Id="1ae1dd60-e289-447a-9f0b-d524fa66ee2d" />
+        <classShapeMoniker Id="20beb53b-47cc-442b-b08e-7764bf2dae4b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5931d471-4c45-4c3d-90af-9e4dd70acf65" absoluteBounds="26.375, 5.75, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/ApplianceLoanServiceRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d2729f4-7118-4a7c-8068-fe1e334efbae" absoluteBounds="26.39, 6.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(29.75 : 6.34699625651042); (28.375 : 6.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/LoanDeductionType/LoanDeductionType_ApplianceLoanServiceRate" />
+      <nodes>
+        <classShapeMoniker Id="1ae1dd60-e289-447a-9f0b-d524fa66ee2d" />
+        <classShapeMoniker Id="5931d471-4c45-4c3d-90af-9e4dd70acf65" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="30bb3c80-42dc-42ae-b99f-96072604d8c8" absoluteBounds="26.375, 7.75, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/EasyLoanServiceRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d1a45c9-0dce-4c65-9d2c-5c687f863984" absoluteBounds="26.39, 8.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(29.95312125 : 6.94399251302083); (29.95312125 : 9.07817260742187); (28.375 : 9.07817260742187)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/LoanDeductionType/LoanDeductionType_EasyLoanServiceRate" />
+      <nodes>
+        <classShapeMoniker Id="1ae1dd60-e289-447a-9f0b-d524fa66ee2d" />
+        <classShapeMoniker Id="30bb3c80-42dc-42ae-b99f-96072604d8c8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="da2c4b7d-b340-4135-b9ea-e5d8c9c59206" absoluteBounds="26.375, 9.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/EmergencyLoanServiceRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9faf0888-3c1a-4129-83c0-1b087a47fb72" absoluteBounds="26.39, 10.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(30.48437375 : 6.94399251302083); (30.48437375 : 10.6931469726563); (30.3020808333333 : 10.6931469726563 : JumpStart); (30.1354141666667 : 10.6931469726563 : JumpEnd); (28.375 : 10.6931469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/LoanDeductionType/LoanDeductionType_EmergencyLoanServiceRate" />
+      <nodes>
+        <classShapeMoniker Id="1ae1dd60-e289-447a-9f0b-d524fa66ee2d" />
+        <classShapeMoniker Id="da2c4b7d-b340-4135-b9ea-e5d8c9c59206" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1a9b7231-47a1-418a-adb7-d4172914fb45" absoluteBounds="21.625, 8.875, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TimeDepositMinimumAmount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e32554de-fbe1-42b0-965c-55a601fd29ea" absoluteBounds="21.64, 9.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d0f537a6-cabe-4325-9fe3-2a267c68da12" absoluteBounds="21.625, 10.25, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/SavingsDepositMaintainingBalance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cbaa3c70-09cc-44e8-aa83-b9677164ce78" absoluteBounds="21.64, 10.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bde463c2-744b-47a0-9c7f-d060aa924d3d" absoluteBounds="21.625, 11.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CapitalShareMinimumAmount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7b468387-be92-4e11-82ef-68f6d478ab74" absoluteBounds="21.64, 12.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e07aabed-1f35-47e3-af34-c9f20ea30c83" absoluteBounds="33.125, 5.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanCapitalBuildupRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffd129c1-bf69-49d6-a216-4a4ba39fa878" absoluteBounds="33.14, 6.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(31.75 : 6.34699625651042); (33.125 : 6.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/LoanDeductionType/LoanDeductionType_LoanCapitalBuildupRate" />
+      <nodes>
+        <classShapeMoniker Id="1ae1dd60-e289-447a-9f0b-d524fa66ee2d" />
+        <classShapeMoniker Id="e07aabed-1f35-47e3-af34-c9f20ea30c83" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="887d1363-f81a-4500-add5-60567d1db725" absoluteBounds="42.875, 32.625, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/PensionPlanAvailOption" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d4b3622-1004-4898-b466-7dc87842505f" absoluteBounds="42.89, 33.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e5e95b9-f2d1-43b1-9e1e-7a52e2b3ed34" absoluteBounds="72.75, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/SavingsDepositInterestAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f695839-98a3-4310-89d2-cdf6d7864f2c" absoluteBounds="72.765, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(74.03125 : 33.8189925130208); (74.03125 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/SavingsDeposit/SavingsDeposit_SavingsDepositInterestAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="b68f35a9-9dbf-4856-801c-fe51838b615d" />
+        <classShapeMoniker Id="6e5e95b9-f2d1-43b1-9e1e-7a52e2b3ed34" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="33d63811-39a8-4bcc-9b74-4eaa174b4836" absoluteBounds="44.625, 6, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/NetSurplus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec7beeba-755a-4047-beab-3ee3a26689e6" absoluteBounds="44.64, 6.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="84a95b19-0ea9-4a17-ae17-cf905b4f185c" absoluteBounds="135.5, 23.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Quarter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd5f7428-1f39-41e8-8492-88958ba92984" absoluteBounds="135.515, 24.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ab952287-2f2b-4697-8242-0a5b41e7c8bf" absoluteBounds="135.5, 21.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Month" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6db70ca-3ba6-42b1-b6ad-59b29b521326" absoluteBounds="135.515, 22.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(136.5 : 23.625); (136.5 : 23.1362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Quarter/Quarter_Month" />
+      <nodes>
+        <classShapeMoniker Id="84a95b19-0ea9-4a17-ae17-cf905b4f185c" />
+        <classShapeMoniker Id="ab952287-2f2b-4697-8242-0a5b41e7c8bf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="07180813-a91f-4390-9156-46e3f917b613" absoluteBounds="61, 45, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/OtherReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0062afc1-900c-4d7a-8e1f-d0469f20a710" absoluteBounds="61.015, 45.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df1fd592-d0e2-4274-b06a-1bde2d0b70ca" absoluteBounds="61, 46.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/MiscellaneousIncomeReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="40403c2a-ca89-4c5b-9850-0670eb7e72f0" absoluteBounds="61.015, 47.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff3191d0-9224-4123-92d2-355a16b986d3" absoluteBounds="61, 52.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/OtherDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de14ac2b-1a2d-4353-94fb-b155b94c0112" absoluteBounds="61.015, 53.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e263f036-2d49-4126-818d-48564fa83857" absoluteBounds="61, 54.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/MiscellaneousIncomeDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80313e80-e9d1-4754-93f2-9c1d6294849b" absoluteBounds="61.015, 54.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41a1f017-70e9-4876-ba3c-e42d281f6155" absoluteBounds="65.5, 50.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="363057a6-88df-4bcf-a573-425585af4901" absoluteBounds="65.515, 50.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(65.5 : 50.7649829390462); (56.375 : 50.7649829390462); (56.375 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_CapitalShareDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="5e7d9eec-7709-43e0-82f7-d0e8eaff9393" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.5 : 51.3854484049479); (71.375 : 51.3854484049479); (71.375 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_SavingsDepositDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="ef8f5bc6-5b28-400f-b5f9-8628466d86ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 52.0964134586589); (62 : 52.0964134586589); (62 : 52.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_OtherDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="ff3191d0-9224-4123-92d2-355a16b986d3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.5 : 52.2708968098958); (66.5 : 55.0681469726563); (63 : 55.0681469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_MiscellaneousIncomeDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="e263f036-2d49-4126-818d-48564fa83857" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(69.03125 : 60.875); (69.03125 : 52.0223545988973); (68.5989558333333 : 52.0223545988973 : JumpStart); (68.4322891666667 : 52.0223545988973 : JumpEnd); (67.5 : 52.0223545988973)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/User/User_CashDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="266bcf9b-e579-425c-9485-94740086fc46" />
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" absoluteBounds="65.5, 42.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CashReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d3dfe295-5044-4a85-acb9-cccd2aef2279" absoluteBounds="65.515, 43.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(66.320310625 : 42.625); (66.320310625 : 39.3854484049479); (62.125 : 39.3854484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_CapitalShareReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="71c4454e-472e-4559-a4db-1179d66c9711" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.5 : 43.0068481585693); (71.2916666666667 : 43.0068481585693 : JumpStart); (71.4583333333333 : 43.0068481585693 : JumpEnd); (73.6666666666667 : 43.0068481585693 : JumpStart); (73.8333333333333 : 43.0068481585693 : JumpEnd); (76.0416666666667 : 43.0068481585693 : JumpStart); (76.2083333333333 : 43.0068481585693 : JumpEnd); (78.5 : 43.0068481585693); (78.5 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_SavingsDepositReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="699ac113-2f93-46e0-a228-fef9266ea033" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.968748 : 44.3958968098958); (65.968748 : 48.8469962565104); (65.4583333333333 : 48.8469962565104 : JumpStart); (65.2916666666667 : 48.8469962565104 : JumpEnd); (65.2395833333333 : 48.8469962565104 : JumpStart); (64.9166666666667 : 48.8469962565104 : JumpEnd); (63 : 48.8469962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_MembershipFeeReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="c6805927-895c-4490-9636-50292d2418b9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 44.2214134586589); (65.4583333333333 : 44.2214134586589 : JumpStart); (65.2916666666667 : 44.2214134586589 : JumpEnd); (65.2395833333333 : 44.2214134586589 : JumpStart); (64.9166666666667 : 44.2214134586589 : JumpEnd); (62 : 44.2214134586589); (62 : 45)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_OtherReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="07180813-a91f-4390-9156-46e3f917b613" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.5 : 44.3958968098958); (66.5 : 47.3181469726563); (63 : 47.3181469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_MiscellaneousIncomeReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="df1fd592-d0e2-4274-b06a-1bde2d0b70ca" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(68.5156225 : 60.875); (68.5156225 : 43.7462150391134); (67.5 : 43.7462150391134)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/User/User_CashReceipt" />
+      <nodes>
+        <classShapeMoniker Id="266bcf9b-e579-425c-9485-94740086fc46" />
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a6e07bb0-cf61-4beb-aa92-9b4a6b5a9560" absoluteBounds="14.25, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ea23a13-6d64-47a4-9ad3-c8a0f8b2a329" absoluteBounds="14.265, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(65.5 : 43.8585250458273); (65.2395833333333 : 43.8585250458273 : JumpStart); (64.9166666666667 : 43.8585250458273 : JumpEnd); (56.4583333333333 : 43.8585250458273 : JumpStart); (56.2916666666667 : 43.8585250458273 : JumpEnd); (54.0833333333333 : 43.8585250458273 : JumpStart); (53.9166666666667 : 43.8585250458273 : JumpEnd); (39.4583333333333 : 43.8585250458273 : JumpStart); (39.2916666666667 : 43.8585250458273 : JumpEnd); (37.0833333333333 : 43.8585250458273 : JumpStart); (36.9166666666667 : 43.8585250458273 : JumpEnd); (27.7395833333333 : 43.8585250458273 : JumpStart); (27.5729166666667 : 43.8585250458273 : JumpEnd); (24.5833333333333 : 43.8585250458273 : JumpStart); (24.4166666666667 : 43.8585250458273 : JumpEnd); (15.25 : 43.8585250458273); (15.25 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_LoanReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="a6e07bb0-cf61-4beb-aa92-9b4a6b5a9560" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="271228a1-b683-4e6b-8692-d311d3dc305f" absoluteBounds="11.875, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4404a91-fa7d-4de0-926a-1c295f72c48f" absoluteBounds="11.89, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(65.5 : 51.7409309318034); (24.5833333333333 : 51.7409309318034 : JumpStart); (24.4166666666667 : 51.7409309318034 : JumpEnd); (12.875 : 51.7409309318034); (12.875 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_LoanDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="271228a1-b683-4e6b-8692-d311d3dc305f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="31c66e01-64dc-4688-9acb-cb036968cb08" absoluteBounds="133.125, 25.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/QuarterlyInterestComputation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37c4fd24-5c76-4523-87c3-fccbed4a7030" absoluteBounds="133.14, 26.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0e09be59-1d64-4989-b7a3-88bd23bbf872" absoluteBounds="133.125, 28.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/AverageMonthlyBalance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9a04465-f682-413d-af0a-34cb83ca92e5" absoluteBounds="133.14, 28.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(134.125 : 27.5208968098958); (134.125 : 28.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/QuarterlyInterestComputation/QuarterlyInterestComputation_AverageMonthlyBalance" />
+      <nodes>
+        <classShapeMoniker Id="31c66e01-64dc-4688-9acb-cb036968cb08" />
+        <classShapeMoniker Id="0e09be59-1d64-4989-b7a3-88bd23bbf872" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="128223f0-3577-4cdc-b354-0ffcc3a0c68f" absoluteBounds="111, 28.5, 2.25, 2.3478011067708335">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DividendShareItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="361f9638-9406-42ab-8162-439b489af770" absoluteBounds="111.015, 28.96, 2.2199999999999998, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c92fced-ff2e-49b6-b470-4b1956c09a7f" absoluteBounds="123.125, 25.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/PatronageComputation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6e6d9d6-f03b-4d18-a063-49a8a7559bcc" absoluteBounds="123.14, 26.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="702f600c-1179-45e0-926d-8f90097221c0" absoluteBounds="123.125, 28.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/PatronageItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96df8f64-ea1c-446f-a08b-5c9fb9550358" absoluteBounds="123.14, 28.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(124.125 : 27.5208968098958); (124.125 : 28.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PatronageComputation/PatronageComputation_PatronageItem" />
+      <nodes>
+        <classShapeMoniker Id="4c92fced-ff2e-49b6-b470-4b1956c09a7f" />
+        <classShapeMoniker Id="702f600c-1179-45e0-926d-8f90097221c0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="44abb97b-dd6a-4144-8d88-ca60bb279009" absoluteBounds="48.25, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CapitalShareDividendAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="efdc2e15-30d7-4120-ace5-707a12967831" absoluteBounds="48.265, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(53 : 33.5517468847656); (51.7083333333333 : 33.5517468847656 : JumpStart); (51.5416666666667 : 33.5517468847656 : JumpEnd); (49.25 : 33.5517468847656); (49.25 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CapitalShare/CapitalShare_CapitalShareDividendAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="ad46f184-c99b-446f-912e-00e26193a32c" />
+        <classShapeMoniker Id="44abb97b-dd6a-4144-8d88-ca60bb279009" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3082b404-e49a-460a-bb97-90bd2c8639cf" absoluteBounds="50.625, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CapitalSharePatronageRefundAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0d51ff5-c28b-42b3-9dd7-832a096c7b27" absoluteBounds="50.64, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(53 : 32.8922456282552); (51.625 : 32.8922456282552); (51.625 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CapitalShare/CapitalShare_CapitalSharePatronageRefundAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="ad46f184-c99b-446f-912e-00e26193a32c" />
+        <classShapeMoniker Id="3082b404-e49a-460a-bb97-90bd2c8639cf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e2e1f2e4-3226-454a-a899-2a170ecd69d5" absoluteBounds="9.5, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanDividendAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25003630-780f-415e-8ed1-ae85ef876180" absoluteBounds="9.515, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eb572130-504e-4bf1-86ca-d0deb08dc47d" absoluteBounds="75.125, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/SavingsDepositDividendAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="211732e4-c52b-4774-96ae-51ef8a798a5f" absoluteBounds="75.14, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(74.75 : 33.5517468847656); (76.125 : 33.5517468847656); (76.125 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/SavingsDeposit/SavingsDeposit_SavingsDepositDividendAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="b68f35a9-9dbf-4856-801c-fe51838b615d" />
+        <classShapeMoniker Id="eb572130-504e-4bf1-86ca-d0deb08dc47d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="960aae89-95de-43d9-8c6e-4f6d4bb17866" absoluteBounds="114, 25.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/YearlyDividend" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84a5fde0-8864-4f6f-b2da-bfcbf036bb5f" absoluteBounds="114.015, 26.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(46.625 : 6.43212094238281); (115 : 6.43212094238281); (115 : 25.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/NetSurplus/NetSurplus_YearlyDividend" />
+      <nodes>
+        <classShapeMoniker Id="33d63811-39a8-4bcc-9b74-4eaa174b4836" />
+        <classShapeMoniker Id="960aae89-95de-43d9-8c6e-4f6d4bb17866" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1c27c85c-1494-4d27-9415-5d55861ca25e" absoluteBounds="126, 25.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/YearlyPatronage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e1014cf-8247-4c46-b31a-893200b68711" absoluteBounds="126.015, 26.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(126 : 26.6354484049479); (125.125 : 26.6354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/YearlyPatronage/YearlyPatronage_PatronageComputation" />
+      <nodes>
+        <classShapeMoniker Id="1c27c85c-1494-4d27-9415-5d55861ca25e" />
+        <classShapeMoniker Id="4c92fced-ff2e-49b6-b470-4b1956c09a7f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(46.625 : 6.84430922770182); (114.916666666667 : 6.84430922770182 : JumpStart); (115.083333333333 : 6.84430922770182 : JumpEnd); (127 : 6.84430922770182); (127 : 25.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/NetSurplus/NetSurplus_YearlyPatronage" />
+      <nodes>
+        <classShapeMoniker Id="33d63811-39a8-4bcc-9b74-4eaa174b4836" />
+        <classShapeMoniker Id="1c27c85c-1494-4d27-9415-5d55861ca25e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1e409336-1e34-4d44-b674-875c2d16c66f" absoluteBounds="135.875, 25.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/QuarterlyInterest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f7768db5-6e53-4155-8a51-80f01af0db88" absoluteBounds="135.89, 26.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(135.875 : 26.6354484049479); (135.125 : 26.6354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/QuarterlyInterest/QuarterlyInterest_QuarterlyInterestComputation" />
+      <nodes>
+        <classShapeMoniker Id="1e409336-1e34-4d44-b674-875c2d16c66f" />
+        <classShapeMoniker Id="31c66e01-64dc-4688-9acb-cb036968cb08" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(136.6875 : 24.8189925130208); (136.6875 : 25.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Quarter/Quarter_QuarterlyInterest" />
+      <nodes>
+        <classShapeMoniker Id="84a95b19-0ea9-4a17-ae17-cf905b4f185c" />
+        <classShapeMoniker Id="1e409336-1e34-4d44-b674-875c2d16c66f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cabf6fa1-5cf9-4243-894e-ecf21401d79b" absoluteBounds="53, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CapitalShareInterestRebateAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d241afae-114b-41bf-bcc7-783d1dd1fcc9" absoluteBounds="53.015, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(54 : 33.8189925130208); (54 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CapitalShare/CapitalShare_CapitalShareInterestRebateAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="ad46f184-c99b-446f-912e-00e26193a32c" />
+        <classShapeMoniker Id="cabf6fa1-5cf9-4243-894e-ecf21401d79b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="be2cd366-ef79-4fa7-bc06-860eb439776a" absoluteBounds="38.125, 10, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DeathAidFundType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aec95251-693c-4877-9f33-6e17a5d0ea11" absoluteBounds="38.14, 10.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f59bb054-9275-4eaf-9ebe-9f4bfa89a057" absoluteBounds="38.125, 8.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DeathAidFundSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ef94d42-61d7-41f4-8f03-943bc0789bb9" absoluteBounds="38.14, 8.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b603f7f-ff75-4c41-b871-66e20a371297" absoluteBounds="40.625, 8.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TulunganFundSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="930774c9-e8fc-484e-82fd-86d97ff302d9" absoluteBounds="40.64, 8.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ebb5aa98-b96f-4378-827a-22cb22cbfd77" absoluteBounds="18.125, 5.75, 2.375, 2.7324039713541666">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CollegeInsurancePlanSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf5aabc1-d046-4788-8fe8-6a6f5684f5a6" absoluteBounds="18.14, 6.21, 2.3449999999999998, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="471852a2-1a5e-4fc7-8bb3-86055797689f" absoluteBounds="33.125, 14.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/PaymentMode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="10bddd99-dfa8-4880-88aa-904491b327c4" absoluteBounds="33.14, 14.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(34.125 : 14.25); (34.125 : 13.6362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PaymentMode/PaymentMode_LoanInterestRate" />
+      <nodes>
+        <classShapeMoniker Id="471852a2-1a5e-4fc7-8bb3-86055797689f" />
+        <classShapeMoniker Id="bae886d2-8148-4181-aefd-a4ce321f4b02" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b8542d75-e642-4cb0-a588-2ff178295658" absoluteBounds="37, 14.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/ServicePaymentMode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29929e14-d4bf-4e41-aab6-b749e85ffbbd" absoluteBounds="37.015, 14.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(35.125 : 14.8469962565104); (37 : 14.8469962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PaymentMode/PaymentMode_ServicePaymentMode" />
+      <nodes>
+        <classShapeMoniker Id="471852a2-1a5e-4fc7-8bb3-86055797689f" />
+        <classShapeMoniker Id="b8542d75-e642-4cb0-a588-2ff178295658" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b86a85e1-a50f-41fc-83ee-98fcee484cc7" absoluteBounds="65.375, 16.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Service" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53b9be28-ebb4-4ba2-a3e7-b46e548b66bf" absoluteBounds="65.39, 16.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(67.375 : 16.9431469726563); (70.75 : 16.9431469726563); (70.75 : 20.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Service/Service_AvailedService" />
+      <nodes>
+        <classShapeMoniker Id="b86a85e1-a50f-41fc-83ee-98fcee484cc7" />
+        <classShapeMoniker Id="d9d059ba-6673-4c62-8804-a983df404083" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.375 : 16.7542339794922); (60.375 : 16.7542339794922); (60.375 : 18.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Service/Service_MembershipCategoryService" />
+      <nodes>
+        <classShapeMoniker Id="b86a85e1-a50f-41fc-83ee-98fcee484cc7" />
+        <classShapeMoniker Id="0dfa2035-a5a0-4fd8-958a-b1078c40767c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.375 : 17.6362939453125); (67.75 : 18.0112939453125); (122.75 : 18.0112939453125); (122.75 : 28); (123.125 : 28.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Service/Service_PatronageItem" />
+      <nodes>
+        <classShapeMoniker Id="b86a85e1-a50f-41fc-83ee-98fcee484cc7" />
+        <classShapeMoniker Id="702f600c-1179-45e0-926d-8f90097221c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.375 : 16.25); (66.375 : 14.8469962565104); (39 : 14.8469962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Service/Service_ServicePaymentMode" />
+      <nodes>
+        <classShapeMoniker Id="b86a85e1-a50f-41fc-83ee-98fcee484cc7" />
+        <classShapeMoniker Id="b8542d75-e642-4cb0-a588-2ff178295658" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.3437475 : 18.375); (66.3437475 : 17.6362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/ServiceCategory/ServiceCategory_Service" />
+      <nodes>
+        <classShapeMoniker Id="bc1f5dcb-2edd-48d0-882d-608771bea779" />
+        <classShapeMoniker Id="b86a85e1-a50f-41fc-83ee-98fcee484cc7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8490024a-1d43-47cc-83ea-b004452e6846" absoluteBounds="14.875, 5.75, 2.375, 2.5401025390625">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/PensionPlanSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6158e37d-605d-4d73-9635-5e41ed97a84d" absoluteBounds="14.89, 6.21, 2.3449999999999998, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3798989c-567b-40b2-ad87-875b44da24d0" absoluteBounds="57.75, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CapitalShareBuildup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0405688-502c-4316-a17a-a83ac8fe16f0" absoluteBounds="57.765, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(55 : 33.0092348187764); (58.75 : 33.0092348187764); (58.75 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CapitalShare/CapitalShare_CapitalShareBuildup" />
+      <nodes>
+        <classShapeMoniker Id="ad46f184-c99b-446f-912e-00e26193a32c" />
+        <classShapeMoniker Id="3798989c-567b-40b2-ad87-875b44da24d0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 51.2077071415202); (65.4583333333333 : 51.2077071415202 : JumpStart); (65.2916666666667 : 51.2077071415202 : JumpEnd); (65.2395833333333 : 51.2077071415202 : JumpStart); (64.9166666666667 : 51.2077071415202 : JumpEnd); (58.75 : 51.2077071415202); (58.75 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_CapitalShareBuildup" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="3798989c-567b-40b2-ad87-875b44da24d0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f3c121a8-b44f-4120-b820-4185582a8108" absoluteBounds="26.375, 13.875, 2.25, 1.5785953776041666">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="300cd297-b1a4-4cfc-a7e3-9cb396c6ad71" absoluteBounds="26.39, 14.335, 2.2199999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45390150-bcdc-41b0-8837-c77a2717b689" absoluteBounds="7.125, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d68e5b0-0071-4213-b271-02e29f9d018d" absoluteBounds="7.1400000000000006, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03aad002-55b9-4dab-aa0c-67e613667058" absoluteBounds="26.25, 32.5, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CollegeInsurancePlan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb1f70de-f6ea-4bc0-b4a6-550fe75d4655" absoluteBounds="26.265, 32.96, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(33.42773109375 : 16.4054996744792); (33.42773109375 : 33.6326020735677); (31.0989595833333 : 33.6326020735677 : JumpStart); (30.9322929166667 : 33.6326020735677 : JumpEnd); (28.25 : 33.6326020735677)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PaymentMode/PaymentMode_CollegeInsurancePlan" />
+      <nodes>
+        <classShapeMoniker Id="471852a2-1a5e-4fc7-8bb3-86055797689f" />
+        <classShapeMoniker Id="03aad002-55b9-4dab-aa0c-67e613667058" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(70.546875 : 27.1939925130208); (70.546875 : 32.53125); (28.25 : 32.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Relation/Relation_CollegeInsurancePlan" />
+      <nodes>
+        <classShapeMoniker Id="dcc79dcc-0ea8-46de-aed5-8b0f64b14447" />
+        <classShapeMoniker Id="03aad002-55b9-4dab-aa0c-67e613667058" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="96ebe938-b0bf-475f-82a9-436117e82bd5" absoluteBounds="23.75, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CollegeInsurancePlanAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c9997927-98dd-4e72-a795-b0ab3b5e7ea0" absoluteBounds="23.765, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(26.25 : 35.0337516663069); (24.75 : 35.0337516663069); (24.75 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CollegeInsurancePlan/CollegeInsurancePlan_CollegeInsurancePlanAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="03aad002-55b9-4dab-aa0c-67e613667058" />
+        <classShapeMoniker Id="96ebe938-b0bf-475f-82a9-436117e82bd5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ce019394-af0c-4a3d-979e-3ba2ac5055db" absoluteBounds="26.25, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CollegeInsurancePlanDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f998aad-1d53-4a2f-a67c-d13da836f29b" absoluteBounds="26.265, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(65.5 : 51.4743190366618); (27.65625 : 51.4743190366618); (27.65625 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_CollegeInsurancePlanDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="ce019394-af0c-4a3d-979e-3ba2ac5055db" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(27.25 : 37.1554182942708); (27.25 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CollegeInsurancePlan/CollegeInsurancePlan_CollegeInsurancePlanDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="03aad002-55b9-4dab-aa0c-67e613667058" />
+        <classShapeMoniker Id="ce019394-af0c-4a3d-979e-3ba2ac5055db" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8fdbb3ad-b2f5-4532-99ad-1b290eaf3794" absoluteBounds="28.75, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CollegeInsurancePlanReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="498cd425-3986-451c-bc42-19ed1069d858" absoluteBounds="28.765, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(65.5 : 42.7031225); (56.4583333333333 : 42.7031225 : JumpStart); (56.2916666666667 : 42.7031225 : JumpEnd); (29.75 : 42.7031225); (29.75 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_CollegeInsurancePlanReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="8fdbb3ad-b2f5-4532-99ad-1b290eaf3794" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(28.25 : 35.016018211263); (29.75 : 35.016018211263); (29.75 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CollegeInsurancePlan/CollegeInsurancePlan_CollegeInsurancePlanReceipt" />
+      <nodes>
+        <classShapeMoniker Id="03aad002-55b9-4dab-aa0c-67e613667058" />
+        <classShapeMoniker Id="8fdbb3ad-b2f5-4532-99ad-1b290eaf3794" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f8e7d520-a784-4ccf-bfdb-a174c1053c75" absoluteBounds="33.625, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/PensionPlanAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d88836e0-ca83-42d9-a0ef-768d30d382fe" absoluteBounds="33.64, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7aa75238-5b50-4a18-94af-df2e279149e2" absoluteBounds="36, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/PensionPlanDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dab7eece-39f1-42dc-adb2-f3742e3ed2fe" absoluteBounds="36.015, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(65.5 : 50.9863450402832); (37 : 50.9863450402832); (37 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_PensionPlanDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="7aa75238-5b50-4a18-94af-df2e279149e2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="43740ae4-578c-47fd-8e1e-e5060194b3d6" absoluteBounds="38.375, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/PensionPlanInterestAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffbfbba5-66c0-40a3-954f-e4cbbd227ee8" absoluteBounds="38.39, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b1c99b4-e608-4bfa-95e6-3e9715019f0a" absoluteBounds="40.75, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/PensionPlanReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37092ec7-a7c0-41df-bd18-ce3ef38edfc1" absoluteBounds="40.765, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(65.5 : 43.4956366329957); (65.4583333333333 : 43.4956366329957 : JumpStart); (65.2916666666667 : 43.4956366329957 : JumpEnd); (65.2395833333333 : 43.4956366329957 : JumpStart); (64.9166666666667 : 43.4956366329957 : JumpEnd); (58.8333333333333 : 43.4956366329957 : JumpStart); (58.6666666666667 : 43.4956366329957 : JumpEnd); (56.4583333333333 : 43.4956366329957 : JumpStart); (56.2916666666667 : 43.4956366329957 : JumpEnd); (54.0833333333333 : 43.4956366329957 : JumpStart); (53.9166666666667 : 43.4956366329957 : JumpEnd); (49.3333333333333 : 43.4956366329957 : JumpStart); (49.1666666666667 : 43.4956366329957 : JumpEnd); (46.8020833333333 : 43.4956366329957 : JumpStart); (46.6354166666667 : 43.4956366329957 : JumpEnd); (41.75 : 43.4956366329957); (41.75 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_PensionPlanReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="9b1c99b4-e608-4bfa-95e6-3e9715019f0a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="89db8518-99ce-4ad1-a542-d7b10c492f1f" absoluteBounds="37.25, 32.625, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/PensionPlan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2635b66e-5ca5-44a4-8547-8a1905ab98e7" absoluteBounds="37.265, 33.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(37.25 : 34.4719555664063); (34.70898359375 : 34.4719555664063); (34.70898359375 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PensionPlan/PensionPlan_PensionPlanAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="89db8518-99ce-4ad1-a542-d7b10c492f1f" />
+        <classShapeMoniker Id="f8e7d520-a784-4ccf-bfdb-a174c1053c75" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(37.625 : 36.3189111328125); (37.625 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PensionPlan/PensionPlan_PensionPlanDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="89db8518-99ce-4ad1-a542-d7b10c492f1f" />
+        <classShapeMoniker Id="7aa75238-5b50-4a18-94af-df2e279149e2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(38.8125 : 36.3189111328125); (38.8125 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PensionPlan/PensionPlan_PensionPlanInterestAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="89db8518-99ce-4ad1-a542-d7b10c492f1f" />
+        <classShapeMoniker Id="43740ae4-578c-47fd-8e1e-e5060194b3d6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(39.25 : 34.4719555664063); (41.75 : 34.4719555664063); (41.75 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PensionPlan/PensionPlan_PensionPlanReceipt" />
+      <nodes>
+        <classShapeMoniker Id="89db8518-99ce-4ad1-a542-d7b10c492f1f" />
+        <classShapeMoniker Id="9b1c99b4-e608-4bfa-95e6-3e9715019f0a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(34.282227890625 : 16.4054996744792); (34.282227890625 : 35.4266858496094); (34.6256502604167 : 35.4266858496094 : JumpStart); (34.7923169270833 : 35.4266858496094 : JumpEnd); (37.25 : 35.4266858496094)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PaymentMode/PaymentMode_PensionPlan" />
+      <nodes>
+        <classShapeMoniker Id="471852a2-1a5e-4fc7-8bb3-86055797689f" />
+        <classShapeMoniker Id="89db8518-99ce-4ad1-a542-d7b10c492f1f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(42.875 : 33.4859777832031); (39.25 : 33.4859777832031)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PensionPlanAvailOption/PensionPlanAvailOption_PensionPlan" />
+      <nodes>
+        <classShapeMoniker Id="887d1363-f81a-4500-add5-60567d1db725" />
+        <classShapeMoniker Id="89db8518-99ce-4ad1-a542-d7b10c492f1f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b13bf53a-812c-43a2-a563-4986df7876bb" absoluteBounds="45.875, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/CapitalShareAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a28ec8a-d06f-4194-80f0-9ab6f70cb343" absoluteBounds="45.89, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(53 : 33.2219962565104); (46.875 : 33.2219962565104); (46.875 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CapitalShare/CapitalShare_CapitalShareAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="ad46f184-c99b-446f-912e-00e26193a32c" />
+        <classShapeMoniker Id="b13bf53a-812c-43a2-a563-4986df7876bb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="adc55a44-ccea-45f4-ab1e-0aa6053e6ef9" absoluteBounds="68, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/SavingsDepositAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61572dc1-92d1-46d6-ac70-9d2a491eb20c" absoluteBounds="68.015, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(72.75 : 32.8182680117352); (69 : 32.8182680117352); (69 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/SavingsDeposit/SavingsDeposit_SavingsDepositAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="b68f35a9-9dbf-4856-801c-fe51838b615d" />
+        <classShapeMoniker Id="adc55a44-ccea-45f4-ab1e-0aa6053e6ef9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5418cba3-bb88-4599-a2ab-a6ff08af8e76" absoluteBounds="84.875, 32.625, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TimeDeposit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a218ad4c-e129-4ccf-b594-3534ff49b742" absoluteBounds="84.89, 33.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a7a57d09-cfc7-4145-b934-bd99cf69cf6c" absoluteBounds="87.25, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TimeDepositAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c3afd01-ba2e-4540-9630-2d2181f5c80d" absoluteBounds="87.265, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(86.875 : 34.0873527018229); (88.25 : 34.0873527018229); (88.25 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/TimeDeposit/TimeDeposit_TimeDepositAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="5418cba3-bb88-4599-a2ab-a6ff08af8e76" />
+        <classShapeMoniker Id="a7a57d09-cfc7-4145-b934-bd99cf69cf6c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="124a6038-6f70-4ded-9189-a60a7e9ceedb" absoluteBounds="84.875, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TimeDepositDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6385443-a3be-46ea-8938-b45dd9ca3bb3" absoluteBounds="84.89, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(67.5 : 51.0299658780925); (86.03125 : 51.0299658780925); (86.03125 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_TimeDepositDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="124a6038-6f70-4ded-9189-a60a7e9ceedb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(85.875 : 35.5497054036458); (85.875 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/TimeDeposit/TimeDeposit_TimeDepositDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="5418cba3-bb88-4599-a2ab-a6ff08af8e76" />
+        <classShapeMoniker Id="124a6038-6f70-4ded-9189-a60a7e9ceedb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a752aa6d-6c2c-4fc6-b1a8-c7035c273ffe" absoluteBounds="82.5, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TimeDepositReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13c4649b-38e9-4263-a289-5a777b521d4c" absoluteBounds="82.515, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(67.5 : 44.093477201945); (71.2916666666667 : 44.093477201945 : JumpStart); (71.4583333333333 : 44.093477201945 : JumpEnd); (73.6666666666667 : 44.093477201945 : JumpStart); (73.8333333333333 : 44.093477201945 : JumpEnd); (76.0416666666667 : 44.093477201945 : JumpStart); (76.2083333333333 : 44.093477201945 : JumpEnd); (83.5 : 44.093477201945); (83.5 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_TimeDepositReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="a752aa6d-6c2c-4fc6-b1a8-c7035c273ffe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(84.875 : 33.6967702518718); (83.5 : 33.6967702518718); (83.5 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/TimeDeposit/TimeDeposit_TimeDepositReceipt" />
+      <nodes>
+        <classShapeMoniker Id="5418cba3-bb88-4599-a2ab-a6ff08af8e76" />
+        <classShapeMoniker Id="a752aa6d-6c2c-4fc6-b1a8-c7035c273ffe" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="daa2f063-d5f1-419d-b688-cd6f1d28e82d" absoluteBounds="94.125, 32.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TulunganFund" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b485e14a-d543-457a-9b04-067cd85dee3e" absoluteBounds="94.14, 33.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d8c0597d-21c4-4785-81f7-947acaa1dddf" absoluteBounds="91.75, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TulunganFundReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7584655-48a6-49bd-8202-b3d09173dc88" absoluteBounds="91.765, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(67.5 : 43.3989528762817); (71.2916666666667 : 43.3989528762817 : JumpStart); (71.4583333333333 : 43.3989528762817 : JumpEnd); (73.6666666666667 : 43.3989528762817 : JumpStart); (73.8333333333333 : 43.3989528762817 : JumpEnd); (85.9479166666667 : 43.3989528762817 : JumpStart); (86.1145833333333 : 43.3989528762817 : JumpEnd); (92.75 : 43.3989528762817); (92.75 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_TulunganFundReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="d8c0597d-21c4-4785-81f7-947acaa1dddf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(94.125 : 33.3469962565104); (92.75 : 33.3469962565104); (92.75 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/TulunganFund/TulunganFund_TulunganFundReceipt" />
+      <nodes>
+        <classShapeMoniker Id="daa2f063-d5f1-419d-b688-cd6f1d28e82d" />
+        <classShapeMoniker Id="d8c0597d-21c4-4785-81f7-947acaa1dddf" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e7bf9805-4dd0-4257-8cd0-99d8713f6ccd" absoluteBounds="94.125, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TulunganFundDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0700697f-ee5f-4678-a452-c2875ab2debb" absoluteBounds="94.14, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(67.5 : 51.7113073878987); (68.4322891666667 : 51.7113073878987 : JumpStart); (68.5989558333333 : 51.7113073878987 : JumpEnd); (69.4322916666667 : 51.7113073878987 : JumpStart); (69.5989583333333 : 51.7113073878987 : JumpEnd); (73.6666666666667 : 51.7113073878987 : JumpStart); (73.8333333333333 : 51.7113073878987 : JumpEnd); (76.0416666666667 : 51.7113073878987 : JumpStart); (76.2083333333333 : 51.7113073878987 : JumpEnd); (95.125 : 51.7113073878987); (95.125 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_TulunganFundDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="e7bf9805-4dd0-4257-8cd0-99d8713f6ccd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(95.125 : 33.9439925130208); (95.125 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/TulunganFund/TulunganFund_TulunganFundDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="daa2f063-d5f1-419d-b688-cd6f1d28e82d" />
+        <classShapeMoniker Id="e7bf9805-4dd0-4257-8cd0-99d8713f6ccd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4073f97b-fda3-44f9-9e5f-d15be1d37665" absoluteBounds="96.5, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/TulunganFundAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9661459-e938-4a7d-a2c1-18ea0af990e7" absoluteBounds="96.515, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(96.125 : 33.3469962565104); (97.5 : 33.3469962565104); (97.5 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/TulunganFund/TulunganFund_TulunganFundAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="daa2f063-d5f1-419d-b688-cd6f1d28e82d" />
+        <classShapeMoniker Id="4073f97b-fda3-44f9-9e5f-d15be1d37665" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d18553c6-a3bf-4a53-96fb-f41cd1246f45" absoluteBounds="103.375, 32.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DeathAidFund" />
+      <nestedChildShapes>
+        <elementListCompartment Id="497ed877-365a-4ca2-b09f-1a63301c0037" absoluteBounds="103.39, 33.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c4c9169d-5202-405e-bba0-38b0ed4c88be" absoluteBounds="103.25, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DeathAidFundDisbursement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5aa6993a-691e-44c1-a713-ac0e0e738307" absoluteBounds="103.265, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(67.5 : 50.7337304390462); (71.2916666666667 : 50.7337304390462 : JumpStart); (71.4583333333333 : 50.7337304390462 : JumpEnd); (73.6666666666667 : 50.7337304390462 : JumpStart); (73.8333333333333 : 50.7337304390462 : JumpEnd); (76.0416666666667 : 50.7337304390462 : JumpStart); (76.2083333333333 : 50.7337304390462 : JumpEnd); (85.9479166666667 : 50.7337304390462 : JumpStart); (86.1145833333333 : 50.7337304390462 : JumpEnd); (97.4166666666667 : 50.7337304390462 : JumpStart); (97.5833333333333 : 50.7337304390462 : JumpEnd); (104.25 : 50.7337304390462); (104.25 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashDisbursement/CashDisbursement_DeathAidFundDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+        <classShapeMoniker Id="c4c9169d-5202-405e-bba0-38b0ed4c88be" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(104.3125 : 33.9439925130208); (104.3125 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/DeathAidFund/DeathAidFund_DeathAidFundDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="d18553c6-a3bf-4a53-96fb-f41cd1246f45" />
+        <classShapeMoniker Id="c4c9169d-5202-405e-bba0-38b0ed4c88be" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3f8bc623-b827-4c99-829d-a4344f3a0664" absoluteBounds="100.875, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DeathAidFundReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="255932d5-42bd-4e57-abb1-ca5b1107f156" absoluteBounds="100.89, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(67.5 : 42.7846715792846); (69.4322916666667 : 42.7846715792846 : JumpStart); (69.5989583333333 : 42.7846715792846 : JumpEnd); (71.2916666666667 : 42.7846715792846 : JumpStart); (71.4583333333333 : 42.7846715792846 : JumpEnd); (73.6666666666667 : 42.7846715792846 : JumpStart); (73.8333333333333 : 42.7846715792846 : JumpEnd); (76.0416666666667 : 42.7846715792846 : JumpStart); (76.2083333333333 : 42.7846715792846 : JumpEnd); (78.4166666666667 : 42.7846715792846 : JumpStart); (78.5833333333333 : 42.7846715792846 : JumpEnd); (83.4166666666667 : 42.7846715792846 : JumpStart); (83.5833333333333 : 42.7846715792846 : JumpEnd); (85.9479166666667 : 42.7846715792846 : JumpStart); (86.1145833333333 : 42.7846715792846 : JumpEnd); (92.6666666666667 : 42.7846715792846 : JumpStart); (92.8333333333333 : 42.7846715792846 : JumpEnd); (97.4166666666667 : 42.7846715792846 : JumpStart); (97.5833333333333 : 42.7846715792846 : JumpEnd); (101.875 : 42.7846715792846); (101.875 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_DeathAidFundReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="3f8bc623-b827-4c99-829d-a4344f3a0664" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(103.375 : 33.3469962565104); (101.875 : 33.3469962565104); (101.875 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/DeathAidFund/DeathAidFund_DeathAidFundReceipt" />
+      <nodes>
+        <classShapeMoniker Id="d18553c6-a3bf-4a53-96fb-f41cd1246f45" />
+        <classShapeMoniker Id="3f8bc623-b827-4c99-829d-a4344f3a0664" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="44cd9512-80a4-4ed4-b573-9e3799f9df50" absoluteBounds="105.625, 38.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DeathAidFundAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03d340bf-70f6-41c8-96c1-bdd95f35fc4a" absoluteBounds="105.64, 38.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(105.375 : 33.3469962565104); (106.625 : 33.3469962565104); (106.625 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/DeathAidFund/DeathAidFund_DeathAidFundAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="d18553c6-a3bf-4a53-96fb-f41cd1246f45" />
+        <classShapeMoniker Id="44cd9512-80a4-4ed4-b573-9e3799f9df50" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" absoluteBounds="65.5, 58.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Adjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e40e53f-0760-4125-81f4-551993a6ee24" absoluteBounds="65.515, 58.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(67.5 : 59.1354484049479); (73.75 : 59.1354484049479); (73.75 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_SavingsDepositInterestAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="6e5e95b9-f2d1-43b1-9e1e-7a52e2b3ed34" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 59.8060327093099); (49.25 : 59.8060327093099); (49.25 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_CapitalShareDividendAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="44abb97b-dd6a-4144-8d88-ca60bb279009" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 58.25); (65.375 : 58.125); (65.375 : 40.6458968098958); (65.2395833333333 : 40.6458968098958 : JumpStart); (64.9166666666667 : 40.6458968098958 : JumpEnd); (56.4583333333333 : 40.6458968098958 : JumpStart); (56.2916666666667 : 40.6458968098958 : JumpEnd); (54.0833333333333 : 40.6458968098958 : JumpStart); (53.9166666666667 : 40.6458968098958 : JumpEnd); (53 : 40.6458968098958); (52.625 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_CapitalSharePatronageRefundAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="3082b404-e49a-460a-bb97-90bd2c8639cf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 58.421871125); (24.5833333333333 : 58.421871125 : JumpStart); (24.4166666666667 : 58.421871125 : JumpEnd); (10.5 : 58.421871125); (10.5 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_LoanDividendAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="e2e1f2e4-3226-454a-a899-2a170ecd69d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.5 : 58.661471702474); (73.6666666666667 : 58.661471702474 : JumpStart); (73.8333333333333 : 58.661471702474 : JumpEnd); (76.125 : 58.661471702474); (76.125 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_SavingsDepositDividendAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="eb572130-504e-4bf1-86ca-d0deb08dc47d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.5 : 59.6094251074219); (115 : 59.6094251074219); (115 : 27.7131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_YearlyDividend" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="960aae89-95de-43d9-8c6e-4f6d4bb17866" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.5 : 58.424483351237); (68.4322891666667 : 58.424483351237 : JumpStart); (68.5989558333333 : 58.424483351237 : JumpEnd); (68.9479166666667 : 58.424483351237 : JumpStart); (69.1145833333333 : 58.424483351237 : JumpEnd); (73.6666666666667 : 58.424483351237 : JumpStart); (73.8333333333333 : 58.424483351237 : JumpEnd); (76.0416666666667 : 58.424483351237 : JumpStart); (76.2083333333333 : 58.424483351237 : JumpEnd); (97.4166666666667 : 58.424483351237 : JumpStart); (97.5833333333333 : 58.424483351237 : JumpEnd); (114.916666666667 : 58.424483351237 : JumpStart); (115.083333333333 : 58.424483351237 : JumpEnd); (136.875 : 58.424483351237); (136.875 : 27.7131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_QuarterlyInterest" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="1e409336-1e34-4d44-b674-875c2d16c66f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 58.890623375); (65.2395833333333 : 58.890623375 : JumpStart); (65.0729166666667 : 58.890623375 : JumpEnd); (54 : 58.890623375); (54 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_CapitalShareInterestRebateAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="cabf6fa1-5cf9-4243-894e-ecf21401d79b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 59.343750875); (8.125 : 59.343750875); (8.125 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_LoanAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="45390150-bcdc-41b0-8837-c77a2717b689" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 59.117187125); (24.5 : 59.117187125); (24.5 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_CollegeInsurancePlanAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="96ebe938-b0bf-475f-82a9-436117e82bd5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 59.6673481590169); (35.28125 : 59.6673481590169); (35.28125 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_PensionPlanAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="f8e7d520-a784-4ccf-bfdb-a174c1053c75" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 58.5390591875); (65.2395833333333 : 58.5390591875 : JumpStart); (65.0729166666667 : 58.5390591875 : JumpEnd); (54.0833333333333 : 58.5390591875 : JumpStart); (53.9166666666667 : 58.5390591875 : JumpEnd); (39.375 : 58.5390591875); (39.375 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_PensionPlanInterestAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="43740ae4-578c-47fd-8e1e-e5060194b3d6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.5 : 58.71484128125); (65.2395833333333 : 58.71484128125 : JumpStart); (65.0729166666667 : 58.71484128125 : JumpEnd); (54.0833333333333 : 58.71484128125 : JumpStart); (53.9166666666667 : 58.71484128125 : JumpEnd); (46.71875 : 58.71484128125); (46.71875 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_CapitalShareAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="b13bf53a-812c-43a2-a563-4986df7876bb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.5 : 58.8984600537109); (68.4322891666667 : 58.8984600537109 : JumpStart); (68.5989558333333 : 58.8984600537109 : JumpEnd); (68.9479166666667 : 58.8984600537109 : JumpStart); (69.1145833333333 : 58.8984600537109 : JumpEnd); (69.515625 : 58.8984600537109); (69.515625 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_SavingsDepositAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="adc55a44-ccea-45f4-ab1e-0aa6053e6ef9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.5 : 59.3724367561849); (68.4322891666667 : 59.3724367561849 : JumpStart); (68.5989558333333 : 59.3724367561849 : JumpEnd); (68.9479166666667 : 59.3724367561849 : JumpStart); (69.1145833333333 : 59.3724367561849 : JumpEnd); (88.25 : 59.3724367561849); (88.25 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_TimeDepositAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="a7a57d09-cfc7-4145-b934-bd99cf69cf6c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.5 : 59.8464134586589); (97.5 : 59.8464134586589); (97.5 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_TulunganFundAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="4073f97b-fda3-44f9-9e5f-d15be1d37665" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.5 : 58.3059891756185); (68.4322891666667 : 58.3059891756185 : JumpStart); (68.5989558333333 : 58.3059891756185 : JumpEnd); (68.9479166666667 : 58.3059891756185 : JumpStart); (69.1145833333333 : 58.3059891756185 : JumpEnd); (69.4322916666667 : 58.3059891756185 : JumpStart); (69.5989583333333 : 58.3059891756185 : JumpEnd); (73.6666666666667 : 58.3059891756185 : JumpStart); (73.8333333333333 : 58.3059891756185 : JumpEnd); (76.0416666666667 : 58.3059891756185 : JumpStart); (76.2083333333333 : 58.3059891756185 : JumpEnd); (88.1666666666667 : 58.3059891756185 : JumpStart); (88.3333333333333 : 58.3059891756185 : JumpEnd); (97.4166666666667 : 58.3059891756185 : JumpStart); (97.5833333333333 : 58.3059891756185 : JumpEnd); (106.625 : 58.3059891756185); (106.625 : 40.2708968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_DeathAidFundAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="44cd9512-80a4-4ed4-b573-9e3799f9df50" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(68.00780875 : 60.875); (68.00780875 : 59.9649076342773); (67.5 : 59.9649076342773)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/User/User_Adjustment" />
+      <nodes>
+        <classShapeMoniker Id="266bcf9b-e579-425c-9485-94740086fc46" />
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="75d6aa88-b258-48dc-9331-cc397dba34d8" absoluteBounds="63.125, 62.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/MiscellaneousIncomeAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5455c8e-ca3c-4455-813c-d1b8c870e450" absoluteBounds="63.14, 62.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(66.72656375 : 60.0208968098958); (66.72656375 : 63.0681469726563); (65.125 : 63.0681469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_MiscellaneousIncomeAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="75d6aa88-b258-48dc-9331-cc397dba34d8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8f958906-d072-416c-bfb9-84edd5732de8" absoluteBounds="63.125, 60.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/OtherAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="996f80c4-28b3-4623-839b-05a57de7ebc1" absoluteBounds="63.14, 61.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(65.9531225 : 60.0208968098958); (65.9531225 : 61.4431469726563); (65.125 : 61.4431469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Adjustment/Adjustment_OtherAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+        <classShapeMoniker Id="8f958906-d072-416c-bfb9-84edd5732de8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0374e96f-3607-489a-b501-3393d18406ca" absoluteBounds="111, 25.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DividendComputation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7f24c11-8b75-4226-bf0f-c85680c3819b" absoluteBounds="111.015, 26.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(112 : 27.9054996744792); (112 : 28.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/DividendComputation/DividendComputation_DividendShareItem" />
+      <nodes>
+        <classShapeMoniker Id="0374e96f-3607-489a-b501-3393d18406ca" />
+        <classShapeMoniker Id="128223f0-3577-4cdc-b354-0ffcc3a0c68f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(67.375 : 16.5653209863282); (112 : 16.5653209863282); (112 : 25.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Service/Service_DividendComputation" />
+      <nodes>
+        <classShapeMoniker Id="b86a85e1-a50f-41fc-83ee-98fcee484cc7" />
+        <classShapeMoniker Id="0374e96f-3607-489a-b501-3393d18406ca" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(114 : 26.7315991210938); (113 : 26.7315991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/YearlyDividend/YearlyDividend_DividendComputation" />
+      <nodes>
+        <classShapeMoniker Id="960aae89-95de-43d9-8c6e-4f6d4bb17866" />
+        <classShapeMoniker Id="0374e96f-3607-489a-b501-3393d18406ca" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5627e389-9e39-4075-9f2b-39b28a967b3b" absoluteBounds="14.875, 8.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba0b8bdd-b7f9-4dc7-b137-79e7b0fa3584" absoluteBounds="14.89, 9.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6171a27f-4d5f-4efb-8441-dc36f686871c" absoluteBounds="59.375, 26.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/EducationalAttainment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="68d3b448-d12a-4500-842c-fae14890c64b" absoluteBounds="59.39, 26.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5eac5048-d0bd-474d-9d08-f02b4285b22c" absoluteBounds="70, 63.25, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0191dccf-af33-4751-a377-75cc0c0a4eed" absoluteBounds="70.015, 63.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="65f9a7fe-93e5-47f0-b52d-02a7b877983d" absoluteBounds="69.75, 22, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Picture" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2876dec2-2507-45af-b617-c3d50ccf26b3" absoluteBounds="69.765, 22.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="757de462-5768-4aea-974e-b5861c41533c" absoluteBounds="67.625, 63.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/UsersRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b77f34a2-162f-4211-80aa-e002bc8fb256" absoluteBounds="67.64, 63.709999999999994, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(70 : 63.8469962565104); (69.625 : 63.8469962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Role/Role_UsersRole" />
+      <nodes>
+        <classShapeMoniker Id="5eac5048-d0bd-474d-9d08-f02b4285b22c" />
+        <classShapeMoniker Id="757de462-5768-4aea-974e-b5861c41533c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(68.5625 : 62.8381982421875); (68.5625 : 63.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/User/User_UsersRole" />
+      <nodes>
+        <classShapeMoniker Id="266bcf9b-e579-425c-9485-94740086fc46" />
+        <classShapeMoniker Id="757de462-5768-4aea-974e-b5861c41533c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" absoluteBounds="64.625, 20.5, 2, 10.232159830729165">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Member" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ed2b03a-d67a-4858-9657-e94e00ddb1d4" absoluteBounds="64.64, 20.96, 1.9700000000000002, 9.6721598307291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(66.625 : 21.2219962565104); (69.75 : 21.2219962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_AvailedService" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="d9d059ba-6673-4c62-8804-a983df404083" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.625 : 24.6065991210938); (69.75 : 24.6065991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_Dependent" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="b52255c8-6927-4b04-8ba5-908e3708cd1c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.625 : 30.7321598307292); (65.625 : 32.7858649093882); (65.5520833333333 : 32.7858649093882 : JumpStart); (65.3854166666667 : 32.7858649093882 : JumpEnd); (64.8645808333333 : 32.7858649093882 : JumpStart); (64.6979141666667 : 32.7858649093882 : JumpEnd); (55 : 32.7858649093882)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_CapitalShare" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="ad46f184-c99b-446f-912e-00e26193a32c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.1562525 : 30.7321598307292); (66.1562525 : 33.1480186399905); (72.75 : 33.1480186399905)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_SavingsDeposit" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="b68f35a9-9dbf-4856-801c-fe51838b615d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65 : 30.7321598307292); (65 : 51.9186721952312); (65.0729166666667 : 51.9186721952312 : JumpStart); (65.2395833333333 : 51.9186721952312 : JumpEnd); (65.5 : 51.9186721952312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_CashDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="41a1f017-70e9-4876-ba3c-e42d281f6155" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.89062625 : 30.7321598307292); (65.89062625 : 42.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_CashReceipt" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.625 : 23.5056469726563); (111.916666666667 : 23.5056469726563 : JumpStart); (112.083333333333 : 23.5056469726563 : JumpEnd); (114.916666666667 : 23.5056469726563 : JumpStart); (115.083333333333 : 23.5056469726563 : JumpEnd); (122.666666666667 : 23.5056469726563 : JumpStart); (122.833333333333 : 23.5056469726563 : JumpEnd); (124.041666666667 : 23.5056469726563 : JumpStart); (124.208333333333 : 23.5056469726563 : JumpEnd); (126.916666666667 : 23.5056469726563 : JumpStart); (127.083333333333 : 23.5056469726563 : JumpEnd); (134.125 : 23.5056469726563); (134.125 : 25.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_QuarterlyInterestComputation" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="31c66e01-64dc-4688-9acb-cb036968cb08" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.625 : 20.53125); (122.666666666667 : 20.53125 : JumpStart); (122.833333333333 : 20.53125 : JumpEnd); (124.125 : 20.53125); (124.125 : 25.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_PatronageComputation" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="4c92fced-ff2e-49b6-b470-4b1956c09a7f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.3125 : 30.7321598307292); (65.3125 : 36.7684147135417); (56.4583333333333 : 36.7684147135417 : JumpStart); (56.2916666666667 : 36.7684147135417 : JumpEnd); (54.0833333333333 : 36.7684147135417 : JumpStart); (53.9166666666667 : 36.7684147135417 : JumpEnd); (51.7083333333333 : 36.7684147135417 : JumpStart); (51.5416666666667 : 36.7684147135417 : JumpEnd); (46.9583333333333 : 36.7684147135417 : JumpStart); (46.7916666666667 : 36.7684147135417 : JumpEnd); (34.7923169270833 : 36.7684147135417 : JumpStart); (34.6256502604167 : 36.7684147135417 : JumpEnd); (33.9383128255208 : 36.7684147135417 : JumpStart); (33.7716461588542 : 36.7684147135417 : JumpEnd); (31.0989595833333 : 36.7684147135417 : JumpStart); (30.9322929166667 : 36.7684147135417 : JumpEnd); (29.8333333333333 : 36.7684147135417 : JumpStart); (29.6666666666667 : 36.7684147135417 : JumpEnd); (28.25 : 36.7684147135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_CollegeInsurancePlan" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="03aad002-55b9-4dab-aa0c-67e613667058" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.42187875 : 30.7321598307292); (66.42187875 : 35.4848046875); (65.5520833333333 : 35.4848046875 : JumpStart); (65.0729166666667 : 35.4848046875 : JumpEnd); (56.4583333333333 : 35.4848046875 : JumpStart); (56.2916666666667 : 35.4848046875 : JumpEnd); (54.0833333333333 : 35.4848046875 : JumpStart); (53.9166666666667 : 35.4848046875 : JumpEnd); (51.7083333333333 : 35.4848046875 : JumpStart); (51.5416666666667 : 35.4848046875 : JumpEnd); (46.9583333333333 : 35.4848046875 : JumpStart); (46.7916666666667 : 35.4848046875 : JumpEnd); (41.8333333333333 : 35.4848046875 : JumpStart); (41.6666666666667 : 35.4848046875 : JumpEnd); (39.25 : 35.4848046875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_PensionPlan" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="89db8518-99ce-4ad1-a542-d7b10c492f1f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(64.7812475 : 30.7321598307292); (64.7812475 : 34.6831486002604); (65.3854166666667 : 34.6831486002604 : JumpStart); (65.5520833333333 : 34.6831486002604 : JumpEnd); (84.875 : 34.6831486002604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_TimeDeposit" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="5418cba3-bb88-4599-a2ab-a6ff08af8e76" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.625 : 28.994326171875); (70.4635416666667 : 28.994326171875 : JumpStart); (70.6302083333333 : 28.994326171875 : JumpEnd); (95.125 : 28.994326171875); (95.125 : 32.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_TulunganFund" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="daa2f063-d5f1-419d-b688-cd6f1d28e82d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.625 : 29.8944955013021); (70.4635416666667 : 29.8944955013021 : JumpStart); (70.6302083333333 : 29.8944955013021 : JumpEnd); (95.0416666666667 : 29.8944955013021 : JumpStart); (95.2083333333333 : 29.8944955013021 : JumpEnd); (104.375 : 29.8944955013021); (104.375 : 32.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_DeathAidFund" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="d18553c6-a3bf-4a53-96fb-f41cd1246f45" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.15625 : 30.7321598307292); (65.15625 : 59.5055495170084); (65.5 : 59.5055495170084)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_Adjustment" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="87b7a02c-6320-4a01-8ffb-bc1b3da4b9e6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.625 : 27.58099609375); (70.4635416666667 : 27.58099609375 : JumpStart); (70.6302083333333 : 27.58099609375 : JumpEnd); (111 : 27.58099609375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_DividendComputation" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="0374e96f-3607-489a-b501-3393d18406ca" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(64.625 : 27.1354484049479); (61.375 : 27.1354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_EducationalAttainment" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="6171a27f-4d5f-4efb-8441-dc36f686871c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(66.625 : 22.6931469726563); (69.75 : 22.6931469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_Picture" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="65f9a7fe-93e5-47f0-b52d-02a7b877983d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(61.375 : 25.4719962565104); (64.625 : 25.4719962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/AccountStatus/AccountStatus_Member" />
+      <nodes>
+        <classShapeMoniker Id="6ae14c34-da6d-41fd-b083-bf4ad8ff8849" />
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(61.375 : 24.0969962565104); (64.625 : 24.0969962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/MaritalStatus/MaritalStatus_Member" />
+      <nodes>
+        <classShapeMoniker Id="34aa320c-18cd-4bbd-a2c6-f3ab3177b5c6" />
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(61.375 : 21.3469962565104); (64.625 : 21.3469962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/MembershipCategory/MembershipCategory_Member" />
+      <nodes>
+        <classShapeMoniker Id="6ce97b64-dc8f-4514-84f5-d9c43bd66c48" />
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(61.375 : 22.7219962565104); (64.625 : 22.7219962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/SexType/SexType_Member" />
+      <nodes>
+        <classShapeMoniker Id="fb1a0ef1-7e57-4302-bd9a-94440e1a72a3" />
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="098ea6d9-cd0c-48ed-95ff-2500b3d15aeb" absoluteBounds="26.375, 12, 2.875, 1.5785953776041666">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/FineComputationRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b528cc03-16ad-4178-a24f-a32f1ca84653" absoluteBounds="26.39, 12.46, 2.8449999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1fc31d37-26e5-4d7f-a8bd-3e44b3bb487f" absoluteBounds="16.75, 38.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DelinquentFineReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="916792e5-ef2c-409f-af45-7c31648711d1" absoluteBounds="16.765, 38.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(65.5 : 43.0993795664978); (65.2395833333333 : 43.0993795664978 : JumpStart); (64.9166666666667 : 43.0993795664978 : JumpEnd); (56.4583333333333 : 43.0993795664978 : JumpStart); (56.2916666666667 : 43.0993795664978 : JumpEnd); (54.0833333333333 : 43.0993795664978 : JumpStart); (53.9166666666667 : 43.0993795664978 : JumpEnd); (46.8020833333333 : 43.0993795664978 : JumpStart); (46.6354166666667 : 43.0993795664978 : JumpEnd); (39.4583333333333 : 43.0993795664978 : JumpStart); (39.2916666666667 : 43.0993795664978 : JumpEnd); (37.0833333333333 : 43.0993795664978 : JumpStart); (36.9166666666667 : 43.0993795664978 : JumpEnd); (35.3645833333333 : 43.0993795664978 : JumpStart); (35.1979166666667 : 43.0993795664978 : JumpEnd); (27.7395833333333 : 43.0993795664978 : JumpStart); (27.5729166666667 : 43.0993795664978 : JumpEnd); (24.5833333333333 : 43.0993795664978 : JumpStart); (24.4166666666667 : 43.0993795664978 : JumpEnd); (17.75 : 43.0993795664978); (17.75 : 40.6554996744792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_DelinquentFineReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="1fc31d37-26e5-4d7f-a8bd-3e44b3bb487f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f8c51f1a-31c0-4b87-837e-be9780f1cfcd" absoluteBounds="19.25, 38.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LatePaymentFineReceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2b563a8-4459-4b23-8b14-3df102b2bb50" absoluteBounds="19.265, 38.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(66.9414078125 : 42.625); (66.9414078125 : 40.4896468098958); (66.4036439583333 : 40.4896468098958 : JumpStart); (66.2369772916667 : 40.4896468098958 : JumpEnd); (56.4583333333333 : 40.4896468098958 : JumpStart); (56.2916666666667 : 40.4896468098958 : JumpEnd); (24.5833333333333 : 40.4896468098958 : JumpStart); (24.4166666666667 : 40.4896468098958 : JumpEnd); (21.25 : 40.4896468098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/CashReceipt/CashReceipt_LatePaymentFineReceipt" />
+      <nodes>
+        <classShapeMoniker Id="70bbb6da-8eac-4e15-961e-d4a24c584c02" />
+        <classShapeMoniker Id="f8c51f1a-31c0-4b87-837e-be9780f1cfcd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="14b0f95f-c1e0-4e5a-b2bd-b81509a1e14d" absoluteBounds="11.25, 5.625, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/AgingLoanItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f392c7db-de62-4773-95b3-353731587bea" absoluteBounds="11.265, 6.085, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06d0083a-d8be-414c-be16-26ffe3620793" absoluteBounds="8.5, 6, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/AgingLoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d11fa69a-b821-44a4-b8b6-badc1a88e9be" absoluteBounds="8.515, 6.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.5 : 6.69314697265625); (11.25 : 6.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/AgingLoan/AgingLoan_AgingLoanItem" />
+      <nodes>
+        <classShapeMoniker Id="06d0083a-d8be-414c-be16-26ffe3620793" />
+        <classShapeMoniker Id="14b0f95f-c1e0-4e5a-b2bd-b81509a1e14d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5732c593-24e3-48e6-9e7b-1e85d30f8434" absoluteBounds="11.25, 10.625, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DelinquentLoanItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1350f94-ea2e-46b4-874c-961d6864aaf3" absoluteBounds="11.265, 11.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d94914eb-2603-4a33-afdc-8ac751ed02bb" absoluteBounds="8.5, 11.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/DelinquentLoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3682f4e-96d6-4fff-ac56-97a2df4b6841" absoluteBounds="8.515, 12.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.5 : 12.3181469726563); (11.25 : 12.3181469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/DelinquentLoan/DelinquentLoan_DelinquentLoanItem" />
+      <nodes>
+        <classShapeMoniker Id="d94914eb-2603-4a33-afdc-8ac751ed02bb" />
+        <classShapeMoniker Id="5732c593-24e3-48e6-9e7b-1e85d30f8434" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" absoluteBounds="13, 32.5, 2, 5.8092268880208326">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/Loan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad2d3997-0d06-4882-8c02-31e40509007e" absoluteBounds="13.015, 32.96, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.625 : 38.3092268880208); (14.625 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Loan/Loan_LoanReceipt" />
+      <nodes>
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+        <classShapeMoniker Id="a6e07bb0-cf61-4beb-aa92-9b4a6b5a9560" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.4375 : 38.3092268880208); (13.4375 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Loan/Loan_LoanDisbursement" />
+      <nodes>
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+        <classShapeMoniker Id="271228a1-b683-4e6b-8692-d311d3dc305f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13 : 35.4046134440104); (10.5 : 35.4046134440104); (10.5 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Loan/Loan_LoanDividendAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+        <classShapeMoniker Id="e2e1f2e4-3226-454a-a899-2a170ecd69d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13 : 36.8881726660156); (10.5833333333333 : 36.8881726660156 : JumpStart); (10.4166666666667 : 36.8881726660156 : JumpEnd); (8.125 : 36.8881726660156); (8.125 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Loan/Loan_LoanAdjustment" />
+      <nodes>
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+        <classShapeMoniker Id="45390150-bcdc-41b0-8837-c77a2717b689" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15 : 37.278017578125); (18.34375 : 37.278017578125); (18.34375 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Loan/Loan_DelinquentFineReceipt" />
+      <nodes>
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+        <classShapeMoniker Id="1fc31d37-26e5-4d7f-a8bd-3e44b3bb487f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(15 : 37.8248747330729); (18.2604166666667 : 37.8248747330729 : JumpStart); (18.4270833333333 : 37.8248747330729 : JumpEnd); (20.25 : 37.8248747330729); (20.25 : 38.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Loan/Loan_LatePaymentFineReceipt" />
+      <nodes>
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+        <classShapeMoniker Id="f8c51f1a-31c0-4b87-837e-be9780f1cfcd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(31.01562625 : 6.94399251302083); (31.01562625 : 37.551446155599); (29.8333333333333 : 37.551446155599 : JumpStart); (29.6666666666667 : 37.551446155599 : JumpEnd); (15 : 37.551446155599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/LoanDeductionType/LoanDeductionType_Loan" />
+      <nodes>
+        <classShapeMoniker Id="1ae1dd60-e289-447a-9f0b-d524fa66ee2d" />
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.46875 : 30.7321598307292); (65.46875 : 38.0983033105469); (29.8333333333333 : 38.0983033105469 : JumpStart); (29.6666666666667 : 38.0983033105469 : JumpEnd); (15 : 38.0983033105469)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Member/Member_Loan" />
+      <nodes>
+        <classShapeMoniker Id="3de74a49-8487-4a9e-995c-6d23e7d2e977" />
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(33.8549794921875 : 16.4054996744792); (33.8549794921875 : 37.414731866862); (31.0989595833333 : 37.414731866862 : JumpStart); (30.9322929166667 : 37.414731866862 : JumpEnd); (29.8333333333333 : 37.414731866862 : JumpStart); (29.6666666666667 : 37.414731866862 : JumpEnd); (18.4270833333333 : 37.414731866862 : JumpStart); (18.2604166666667 : 37.414731866862 : JumpEnd); (15 : 37.414731866862)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/PaymentMode/PaymentMode_Loan" />
+      <nodes>
+        <classShapeMoniker Id="471852a2-1a5e-4fc7-8bb3-86055797689f" />
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(65.375 : 17.2265164624024); (60.4583333333333 : 17.2265164624024 : JumpStart); (60.2916666666667 : 17.2265164624024 : JumpEnd); (33.9383128255208 : 17.2265164624024 : JumpStart); (33.7716461588542 : 17.2265164624024 : JumpEnd); (33.5110644270833 : 17.2265164624024 : JumpStart); (33.3443977604167 : 17.2265164624024 : JumpEnd); (31.0989595833333 : 17.2265164624024 : JumpStart); (30.9322929166667 : 17.2265164624024 : JumpEnd); (14 : 17.2265164624024); (14 : 32.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Service/Service_Loan" />
+      <nodes>
+        <classShapeMoniker Id="b86a85e1-a50f-41fc-83ee-98fcee484cc7" />
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7f0c6b8b-57e7-45c1-99f1-ccbea5aada46" absoluteBounds="16.375, 32.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/CooperativeSystemModelDataContext/LoanNotice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f50dd86f-389a-47ba-86e8-e80dc49381a5" absoluteBounds="16.39, 32.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(15 : 34.0585034179688); (16.375 : 34.0585034179688)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CooperativeSystemModelDataContext/Loan/Loan_LoanNotice" />
+      <nodes>
+        <classShapeMoniker Id="5bfd2471-eef4-4a85-903a-0fd6fdb5938c" />
+        <classShapeMoniker Id="7f0c6b8b-57e7-45c1-99f1-ccbea5aada46" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

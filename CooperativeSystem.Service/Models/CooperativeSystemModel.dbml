@@ -1,0 +1,1366 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="csdb_prod" Class="CooperativeSystemModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=csdb_prod;Persist Security Info=True;User ID=sa" SettingsObjectName="CooperativeSystem.Service.Properties.Settings" SettingsPropertyName="csdb_prodConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="Savings.SavingsDepositInterestRates" Member="SavingsDepositInterestRates">
+    <Type Name="SavingsDepositInterestRate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InterestRate" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Loans.DTIMEDPLoanServiceRates" Member="DTIMEDPLoanServiceRates">
+    <Type Name="DTIMEDPLoanServiceRate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServiceFeeRate" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="CollectionFeeRate" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="LoanGuaranteeFundRate" Type="System.Decimal" DbType="Decimal(4,3) NOT NULL" CanBeNull="false" />
+      <Column Name="CapitalBuildupRate" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="InterestRate" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DividendPatronageRatio" Member="DividendPatronageRatios">
+    <Type Name="DividendPatronageRatio">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DividendRatio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PatronageRatio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Savings.TimeDepositInterestRates" Member="TimeDepositInterestRates">
+    <Type Name="TimeDepositInterestRate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BelowFiftyThousand" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="FiftyToNinetyNineThousand" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AboveNinetyNineThousand" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Member.AvailedServices" Member="AvailedServices">
+    <Type Name="AvailedService">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Service_AvailedService" Member="Service" ThisKey="ServiceID" OtherKey="ServiceID" Type="Service" IsForeignKey="true" />
+      <Association Name="Member_AvailedService" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Member.Dependents" Member="Dependents">
+    <Type Name="Dependent">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LineNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="RelationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Relation_Dependent" Member="Relation" ThisKey="RelationID" OtherKey="RelationID" Type="Relation" IsForeignKey="true" />
+      <Association Name="Member_Dependent" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.Relations" Member="Relations">
+    <Type Name="Relation">
+      <Column Name="RelationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RelationName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Relation_Dependent" Member="Dependents" ThisKey="RelationID" OtherKey="RelationID" Type="Dependent" />
+      <Association Name="Relation_CollegeInsurancePlan" Member="CollegeInsurancePlans" ThisKey="RelationID" OtherKey="RelationID" Type="CollegeInsurancePlan" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.MembershipCategories" Member="MembershipCategories">
+    <Type Name="MembershipCategory">
+      <Column Name="MembershipCategoryID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MembershipCategoryName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="MembershipCategory_MembershipCategoryService" Member="MembershipCategoryServices" ThisKey="MembershipCategoryID" OtherKey="MembershipCategoryID" Type="MembershipCategoryService" />
+      <Association Name="MembershipCategory_Member" Member="Members" ThisKey="MembershipCategoryID" OtherKey="MembershipCategoryID" Type="Member" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.MaritalStatuses" Member="MaritalStatus">
+    <Type Name="MaritalStatus">
+      <Column Name="MaritalStatusID" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaritalStatusName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="MaritalStatus_Member" Member="Members" ThisKey="MaritalStatusID" OtherKey="MaritalStatusID" Type="Member" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.AccountStatuses" Member="AccountStatus">
+    <Type Name="AccountStatus">
+      <Column Name="AccountStatusID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccountStatusName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="AccountStatus_Member" Member="Members" ThisKey="AccountStatusID" OtherKey="AccountStatusID" Type="Member" />
+    </Type>
+  </Table>
+  <Table Name="Link.MembershipCategoryServices" Member="MembershipCategoryServices">
+    <Type Name="MembershipCategoryService">
+      <Column Name="MembershipCategoryID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceID" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MembershipCategory_MembershipCategoryService" Member="MembershipCategory" ThisKey="MembershipCategoryID" OtherKey="MembershipCategoryID" Type="MembershipCategory" IsForeignKey="true" />
+      <Association Name="Service_MembershipCategoryService" Member="Service" ThisKey="ServiceID" OtherKey="ServiceID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.ServiceCategories" Member="ServiceCategories">
+    <Type Name="ServiceCategory">
+      <Column Name="ServiceCategoryID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceCategoryName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="ServiceCategory_Service" Member="Services" ThisKey="ServiceCategoryID" OtherKey="ServiceCategoryID" Type="Service" />
+    </Type>
+  </Table>
+  <Table Name="Savings.CapitalShares" Member="CapitalShares">
+    <Type Name="CapitalShare">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CurrentBalance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CapitalShare_CapitalShareDisbursement" Member="CapitalShareDisbursements" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShareDisbursement" />
+      <Association Name="CapitalShare_CapitalShareReceipt" Member="CapitalShareReceipts" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShareReceipt" />
+      <Association Name="CapitalShare_CapitalShareDividendAdjustment" Member="CapitalShareDividendAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShareDividendAdjustment" />
+      <Association Name="CapitalShare_CapitalSharePatronageRefundAdjustment" Member="CapitalSharePatronageRefundAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalSharePatronageRefundAdjustment" />
+      <Association Name="CapitalShare_CapitalShareInterestRebateAdjustment" Member="CapitalShareInterestRebateAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShareInterestRebateAdjustment" />
+      <Association Name="CapitalShare_CapitalShareBuildup" Member="CapitalShareBuildups" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShareBuildup" />
+      <Association Name="CapitalShare_CapitalShareAdjustment" Member="CapitalShareAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShareAdjustment" />
+      <Association Name="Member_CapitalShare" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.CapitalShareDisbursements" Member="CapitalShareDisbursements">
+    <Type Name="CapitalShareDisbursement">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CapitalShare_CapitalShareDisbursement" Member="CapitalShare" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShare" IsForeignKey="true" />
+      <Association Name="CashDisbursement_CapitalShareDisbursement" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.CapitalShareReceipts" Member="CapitalShareReceipts">
+    <Type Name="CapitalShareReceipt">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CapitalShare_CapitalShareReceipt" Member="CapitalShare" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShare" IsForeignKey="true" />
+      <Association Name="CashReceipt_CapitalShareReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.SavingsDeposits" Member="SavingsDeposits">
+    <Type Name="SavingsDeposit">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CurrentBalance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="SavingsDeposit_SavingsDepositDisbursement" Member="SavingsDepositDisbursements" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDepositDisbursement" />
+      <Association Name="SavingsDeposit_SavingsDepositReceipt" Member="SavingsDepositReceipts" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDepositReceipt" />
+      <Association Name="SavingsDeposit_SavingsDepositInterestAdjustment" Member="SavingsDepositInterestAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDepositInterestAdjustment" />
+      <Association Name="SavingsDeposit_SavingsDepositDividendAdjustment" Member="SavingsDepositDividendAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDepositDividendAdjustment" />
+      <Association Name="SavingsDeposit_SavingsDepositAdjustment" Member="SavingsDepositAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDepositAdjustment" />
+      <Association Name="Member_SavingsDeposit" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.SavingsDepositDisbursements" Member="SavingsDepositDisbursements">
+    <Type Name="SavingsDepositDisbursement">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="SavingsDeposit_SavingsDepositDisbursement" Member="SavingsDeposit" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDeposit" IsForeignKey="true" />
+      <Association Name="CashDisbursement_SavingsDepositDisbursement" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.SavingsDepositReceipts" Member="SavingsDepositReceipts">
+    <Type Name="SavingsDepositReceipt">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="SavingsDeposit_SavingsDepositReceipt" Member="SavingsDeposit" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDeposit" IsForeignKey="true" />
+      <Association Name="CashReceipt_SavingsDepositReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MembershipFeeReceipts" Member="MembershipFeeReceipts">
+    <Type Name="MembershipFeeReceipt">
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashReceipt_MembershipFeeReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="[User].Users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserPassword" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="UserCategoryID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="User_CashDisbursement" Member="CashDisbursements" ThisKey="UserID" OtherKey="UserID" Type="CashDisbursement" />
+      <Association Name="User_CashReceipt" Member="CashReceipts" ThisKey="UserID" OtherKey="UserID" Type="CashReceipt" />
+      <Association Name="User_Adjustment" Member="Adjustments" ThisKey="UserID" OtherKey="UserID" Type="Adjustment" />
+      <Association Name="User_UsersRole" Member="UsersRoles" ThisKey="UserID" OtherKey="UserID" Type="UsersRole" />
+      <Association Name="UserCategory_User" Member="UserCategory" ThisKey="UserCategoryID" OtherKey="UserCategoryID" Type="UserCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.UserCategories" Member="UserCategories">
+    <Type Name="UserCategory">
+      <Column Name="UserCategoryID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserCategoryName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="UserCategory_User" Member="Users" ThisKey="UserCategoryID" OtherKey="UserCategoryID" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.SexTypes" Member="SexTypes">
+    <Type Name="SexType">
+      <Column Name="SexTypeID" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SexTypeName" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="SexType_Member" Member="Members" ThisKey="SexTypeID" OtherKey="SexTypeID" Type="Member" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.LoanDeductionTypes" Member="LoanDeductionTypes">
+    <Type Name="LoanDeductionType">
+      <Column Name="LoanDeductionTypeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LoanDeductionTypeName" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="LoanDeductionType_LoanCollectionFeeRate" Member="LoanCollectionFeeRate" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanCollectionFeeRate" Cardinality="One" />
+      <Association Name="LoanDeductionType_LoanGuaranteeFundRate" Member="LoanGuaranteeFundRate" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanGuaranteeFundRate" Cardinality="One" />
+      <Association Name="LoanDeductionType_LoanInterestRate" Member="LoanInterestRates" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanInterestRate" />
+      <Association Name="LoanDeductionType_LoanServiceFeeRate" Member="LoanServiceFeeRate" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanServiceFeeRate" Cardinality="One" />
+      <Association Name="LoanDeductionType_ApplianceLoanServiceRate" Member="ApplianceLoanServiceRate" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="ApplianceLoanServiceRate" Cardinality="One" />
+      <Association Name="LoanDeductionType_EasyLoanServiceRate" Member="EasyLoanServiceRate" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="EasyLoanServiceRate" Cardinality="One" />
+      <Association Name="LoanDeductionType_EmergencyLoanServiceRate" Member="EmergencyLoanServiceRate" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="EmergencyLoanServiceRate" Cardinality="One" />
+      <Association Name="LoanDeductionType_LoanCapitalBuildupRate" Member="LoanCapitalBuildupRate" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanCapitalBuildupRate" Cardinality="One" />
+      <Association Name="LoanDeductionType_Loan" Member="Loans" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="Loan" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanCollectionFeeRates" Member="LoanCollectionFeeRates">
+    <Type Name="LoanCollectionFeeRate">
+      <Column Name="LoanDeductionTypeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OneToFiveMonths" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SixToTenMonths" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Association Name="LoanDeductionType_LoanCollectionFeeRate" Member="LoanDeductionType" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanDeductionType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanGuaranteeFundRates" Member="LoanGuaranteeFundRates">
+    <Type Name="LoanGuaranteeFundRate">
+      <Column Name="LoanDeductionTypeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OneToFiveMonths" Type="System.Decimal" DbType="Decimal(4,3) NOT NULL" CanBeNull="false" />
+      <Column Name="SixToTenMonths" Type="System.Decimal" DbType="Decimal(4,3) NOT NULL" CanBeNull="false" />
+      <Association Name="LoanDeductionType_LoanGuaranteeFundRate" Member="LoanDeductionType" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanDeductionType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanInterestRates" Member="LoanInterestRates">
+    <Type Name="LoanInterestRate">
+      <Column Name="PaymentModeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LoanDeductionTypeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="InterestRate" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Association Name="LoanDeductionType_LoanInterestRate" Member="LoanDeductionType" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanDeductionType" IsForeignKey="true" />
+      <Association Name="PaymentMode_LoanInterestRate" Member="PaymentMode" ThisKey="PaymentModeID" OtherKey="PaymentModeID" Type="PaymentMode" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanServiceFeeRates" Member="LoanServiceFeeRates">
+    <Type Name="LoanServiceFeeRate">
+      <Column Name="LoanDeductionTypeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OneToFiveMonths" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SixToTenMonths" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Association Name="LoanDeductionType_LoanServiceFeeRate" Member="LoanDeductionType" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanDeductionType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.ApplianceLoanServiceRates" Member="ApplianceLoanServiceRates">
+    <Type Name="ApplianceLoanServiceRate">
+      <Column Name="LoanDeductionTypeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaximumAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CollectionFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CapitalBuildup" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Interest" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="LoanDeductionType_ApplianceLoanServiceRate" Member="LoanDeductionType" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanDeductionType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.EasyLoanServiceRates" Member="EasyLoanServiceRates">
+    <Type Name="EasyLoanServiceRate">
+      <Column Name="LoanDeductionTypeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaximumAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CollectionFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CapitalBuildup" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Interest" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="LoanDeductionType_EasyLoanServiceRate" Member="LoanDeductionType" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanDeductionType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.EmergencyLoanServiceRates" Member="EmergencyLoanServiceRates">
+    <Type Name="EmergencyLoanServiceRate">
+      <Column Name="LoanDeductionTypeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaximumAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CollectionFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CapitalBuildup" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Interest" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="LoanDeductionType_EmergencyLoanServiceRate" Member="LoanDeductionType" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanDeductionType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.TimeDepositMinimumAmount" Member="TimeDepositMinimumAmounts">
+    <Type Name="TimeDepositMinimumAmount">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Savings.SavingsDepositMaintainingBalance" Member="SavingsDepositMaintainingBalances">
+    <Type Name="SavingsDepositMaintainingBalance">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Savings.CapitalShareMinimumAmount" Member="CapitalShareMinimumAmounts">
+    <Type Name="CapitalShareMinimumAmount">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanCapitalBuildupRates" Member="LoanCapitalBuildupRates">
+    <Type Name="LoanCapitalBuildupRate">
+      <Column Name="LoanDeductionTypeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BelowFiveThousand" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="FiveThousandAndAbove" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ShareBelowFifteenThousand" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ShareFifteenThousandAndAbove" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Association Name="LoanDeductionType_LoanCapitalBuildupRate" Member="LoanDeductionType" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanDeductionType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.PensionPlanAvailOption" Member="PensionPlanAvailOptions">
+    <Type Name="PensionPlanAvailOption">
+      <Column Name="AvailOptionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AvailOptionName" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Column Name="AvailOptionDescription" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AwardAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AgingPeriod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WithMonthlyPension" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PensionPlanAvailOption_PensionPlan" Member="PensionPlans" ThisKey="AvailOptionID" OtherKey="AvailOptionID" Type="PensionPlan" />
+    </Type>
+  </Table>
+  <Table Name="Savings.SavingsDepositInterestAdjustments" Member="SavingsDepositInterestAdjustments">
+    <Type Name="SavingsDepositInterestAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="SavingsDeposit_SavingsDepositInterestAdjustment" Member="SavingsDeposit" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDeposit" IsForeignKey="true" />
+      <Association Name="Adjustment_SavingsDepositInterestAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NetSurpluses" Member="NetSurplus">
+    <Type Name="NetSurplus">
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="NetSurplus_YearlyDividend" Member="YearlyDividend" ThisKey="Year" OtherKey="Year" Type="YearlyDividend" Cardinality="One" />
+      <Association Name="NetSurplus_YearlyPatronage" Member="YearlyPatronage" ThisKey="Year" OtherKey="Year" Type="YearlyPatronage" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.Quarters" Member="Quarters">
+    <Type Name="Quarter">
+      <Column Name="QuarterID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Quarter_Month" Member="Months" ThisKey="QuarterID" OtherKey="QuarterID" Type="Month" />
+      <Association Name="Quarter_QuarterlyInterest" Member="QuarterlyInterests" ThisKey="QuarterID" OtherKey="QuarterID" Type="QuarterlyInterest" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.Months" Member="Months">
+    <Type Name="Month">
+      <Column Name="MonthID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QuarterID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Quarter_Month" Member="Quarter" ThisKey="QuarterID" OtherKey="QuarterID" Type="Quarter" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OtherReceipts" Member="OtherReceipts">
+    <Type Name="OtherReceipt">
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="CashReceipt_OtherReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MiscellaneousIncomeReceipts" Member="MiscellaneousIncomeReceipts">
+    <Type Name="MiscellaneousIncomeReceipt">
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="CashReceipt_MiscellaneousIncomeReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OtherDisbursements" Member="OtherDisbursements">
+    <Type Name="OtherDisbursement">
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="CashDisbursement_OtherDisbursement" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MiscellaneousIncomeDisbursements" Member="MiscellaneousIncomeDisbursements">
+    <Type Name="MiscellaneousIncomeDisbursement">
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="CashDisbursement_MiscellaneousIncomeDisbursement" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Link.CashDisbursements" Member="CashDisbursements">
+    <Type Name="CashDisbursement">
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CashDisbursementVoucher" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DisbursementDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="CashDisbursement_CapitalShareDisbursement" Member="CapitalShareDisbursements" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CapitalShareDisbursement" />
+      <Association Name="CashDisbursement_SavingsDepositDisbursement" Member="SavingsDepositDisbursements" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="SavingsDepositDisbursement" />
+      <Association Name="CashDisbursement_OtherDisbursement" Member="OtherDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="OtherDisbursement" Cardinality="One" />
+      <Association Name="CashDisbursement_MiscellaneousIncomeDisbursement" Member="MiscellaneousIncomeDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="MiscellaneousIncomeDisbursement" Cardinality="One" />
+      <Association Name="CashDisbursement_LoanDisbursement" Member="LoanDisbursements" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="LoanDisbursement" />
+      <Association Name="CashDisbursement_CapitalShareBuildup" Member="CapitalShareBuildups" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CapitalShareBuildup" />
+      <Association Name="CashDisbursement_CollegeInsurancePlanDisbursement" Member="CollegeInsurancePlanDisbursements" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CollegeInsurancePlanDisbursement" />
+      <Association Name="CashDisbursement_PensionPlanDisbursement" Member="PensionPlanDisbursements" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="PensionPlanDisbursement" />
+      <Association Name="CashDisbursement_TimeDepositDisbursement" Member="TimeDepositDisbursements" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="TimeDepositDisbursement" />
+      <Association Name="CashDisbursement_TulunganFundDisbursement" Member="TulunganFundDisbursements" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="TulunganFundDisbursement" />
+      <Association Name="CashDisbursement_DeathAidFundDisbursement" Member="DeathAidFundDisbursements" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="DeathAidFundDisbursement" />
+      <Association Name="User_CashDisbursement" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="Member_CashDisbursement" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Link.CashReceipts" Member="CashReceipts">
+    <Type Name="CashReceipt">
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OfficialReceiptNumber" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="CashReceipt_CapitalShareReceipt" Member="CapitalShareReceipts" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CapitalShareReceipt" />
+      <Association Name="CashReceipt_SavingsDepositReceipt" Member="SavingsDepositReceipts" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="SavingsDepositReceipt" />
+      <Association Name="CashReceipt_MembershipFeeReceipt" Member="MembershipFeeReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="MembershipFeeReceipt" Cardinality="One" />
+      <Association Name="CashReceipt_OtherReceipt" Member="OtherReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="OtherReceipt" Cardinality="One" />
+      <Association Name="CashReceipt_MiscellaneousIncomeReceipt" Member="MiscellaneousIncomeReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="MiscellaneousIncomeReceipt" Cardinality="One" />
+      <Association Name="CashReceipt_LoanReceipt" Member="LoanReceipts" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="LoanReceipt" />
+      <Association Name="CashReceipt_CollegeInsurancePlanReceipt" Member="CollegeInsurancePlanReceipts" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CollegeInsurancePlanReceipt" />
+      <Association Name="CashReceipt_PensionPlanReceipt" Member="PensionPlanReceipts" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="PensionPlanReceipt" />
+      <Association Name="CashReceipt_TimeDepositReceipt" Member="TimeDepositReceipts" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="TimeDepositReceipt" />
+      <Association Name="CashReceipt_TulunganFundReceipt" Member="TulunganFundReceipts" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="TulunganFundReceipt" />
+      <Association Name="CashReceipt_DeathAidFundReceipt" Member="DeathAidFundReceipts" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="DeathAidFundReceipt" />
+      <Association Name="CashReceipt_DelinquentFineReceipt" Member="DelinquentFineReceipts" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="DelinquentFineReceipt" />
+      <Association Name="CashReceipt_LatePaymentFineReceipt" Member="LatePaymentFineReceipts" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="LatePaymentFineReceipt" />
+      <Association Name="User_CashReceipt" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="Member_CashReceipt" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanReceipts" Member="LoanReceipts">
+    <Type Name="LoanReceipt">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashReceipt_LoanReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+      <Association Name="Loan_LoanReceipt" Member="Loan" ThisKey="LoanID" OtherKey="LoanID" Type="Loan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanDisbursements" Member="LoanDisbursements">
+    <Type Name="LoanDisbursement">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashDisbursement_LoanDisbursement" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" />
+      <Association Name="Loan_LoanDisbursement" Member="Loan" ThisKey="LoanID" OtherKey="LoanID" Type="Loan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.QuarterlyInterestComputations" Member="QuarterlyInterestComputations">
+    <Type Name="QuarterlyInterestComputation">
+      <Column Name="QuarterlyInterestComputationID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuarterlyInterestID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LowestAverageMonthlyBalance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Interest" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="QuarterlyInterestComputation_AverageMonthlyBalance" Member="AverageMonthlyBalances" ThisKey="QuarterlyInterestComputationID" OtherKey="QuarterlyInterestComputationID" Type="AverageMonthlyBalance" />
+      <Association Name="QuarterlyInterest_QuarterlyInterestComputation" Member="QuarterlyInterest" ThisKey="QuarterlyInterestID" OtherKey="QuaterlyInterestID" Type="QuarterlyInterest" IsForeignKey="true" />
+      <Association Name="Member_QuarterlyInterestComputation" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.AverageMonthlyBalances" Member="AverageMonthlyBalances">
+    <Type Name="AverageMonthlyBalance">
+      <Column Name="AverageMonthlyBalanceID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuarterlyInterestComputationID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="QuarterlyInterestComputation_AverageMonthlyBalance" Member="QuarterlyInterestComputation" ThisKey="QuarterlyInterestComputationID" OtherKey="QuarterlyInterestComputationID" Type="QuarterlyInterestComputation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.DividendShareItems" Member="DividendShareItems">
+    <Type Name="DividendShareItem">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DividendComputationID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionType" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MoneyValue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfDaysUnchanged" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="DividendComputation_DividendShareItem" Member="DividendComputation" ThisKey="DividendComputationID" OtherKey="DividendComputationID" Type="DividendComputation" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.PatronageComputations" Member="PatronageComputations">
+    <Type Name="PatronageComputation">
+      <Column Name="PatronageComputationID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AveragePatronage" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PatronageRefund" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="PatronageComputation_PatronageItem" Member="PatronageItems" ThisKey="PatronageComputationID" OtherKey="PatronageComputationID" Type="PatronageItem" />
+      <Association Name="YearlyPatronage_PatronageComputation" Member="YearlyPatronage" ThisKey="Year" OtherKey="Year" Type="YearlyPatronage" IsForeignKey="true" />
+      <Association Name="Member_PatronageComputation" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.PatronageItems" Member="PatronageItems">
+    <Type Name="PatronageItem">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PatronageComputationID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LoanServiceID" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MoneyValue" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfDaysUnchanged" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="PatronageComputation_PatronageItem" Member="PatronageComputation" ThisKey="PatronageComputationID" OtherKey="PatronageComputationID" Type="PatronageComputation" IsForeignKey="true" />
+      <Association Name="Service_PatronageItem" Member="Service" ThisKey="LoanServiceID" OtherKey="ServiceID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.CapitalShareDividendAdjustments" Member="CapitalShareDividendAdjustments">
+    <Type Name="CapitalShareDividendAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CapitalShare_CapitalShareDividendAdjustment" Member="CapitalShare" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShare" IsForeignKey="true" />
+      <Association Name="Adjustment_CapitalShareDividendAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.CapitalSharePatronageRefundAdjustments" Member="CapitalSharePatronageRefundAdjustments">
+    <Type Name="CapitalSharePatronageRefundAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CapitalShare_CapitalSharePatronageRefundAdjustment" Member="CapitalShare" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShare" IsForeignKey="true" />
+      <Association Name="Adjustment_CapitalSharePatronageRefundAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanDividendAdjustment" Member="LoanDividendAdjustments">
+    <Type Name="LoanDividendAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Adjustment_LoanDividendAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+      <Association Name="Loan_LoanDividendAdjustment" Member="Loan" ThisKey="LoanID" OtherKey="LoanID" Type="Loan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.SavingsDepositDividendAdjustment" Member="SavingsDepositDividendAdjustments">
+    <Type Name="SavingsDepositDividendAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="SavingsDeposit_SavingsDepositDividendAdjustment" Member="SavingsDeposit" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDeposit" IsForeignKey="true" />
+      <Association Name="Adjustment_SavingsDepositDividendAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.YearlyDividends" Member="YearlyDividends">
+    <Type Name="YearlyDividend">
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DividendRatio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalAverageShare" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalDividendForDistribution" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Posted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="YearlyDividend_DividendComputation" Member="DividendComputations" ThisKey="Year" OtherKey="Year" Type="DividendComputation" />
+      <Association Name="NetSurplus_YearlyDividend" Member="NetSurplus" ThisKey="Year" OtherKey="Year" Type="NetSurplus" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Adjustment_YearlyDividend" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.YearlyPatronages" Member="YearlyPatronages">
+    <Type Name="YearlyPatronage">
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PatronageRatio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalAveragePatronage" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPatronageForRefund" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Posted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="YearlyPatronage_PatronageComputation" Member="PatronageComputations" ThisKey="Year" OtherKey="Year" Type="PatronageComputation" />
+      <Association Name="NetSurplus_YearlyPatronage" Member="NetSurplus" ThisKey="Year" OtherKey="Year" Type="NetSurplus" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.QuarterlyInterests" Member="QuarterlyInterests">
+    <Type Name="QuarterlyInterest">
+      <Column Name="QuaterlyInterestID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuarterID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InterestRate" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Posted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="QuarterlyInterest_QuarterlyInterestComputation" Member="QuarterlyInterestComputations" ThisKey="QuaterlyInterestID" OtherKey="QuarterlyInterestID" Type="QuarterlyInterestComputation" />
+      <Association Name="Quarter_QuarterlyInterest" Member="Quarter" ThisKey="QuarterID" OtherKey="QuarterID" Type="Quarter" IsForeignKey="true" />
+      <Association Name="Adjustment_QuarterlyInterest" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.CapitalShareInterestRebateAdjustments" Member="CapitalShareInterestRebateAdjustments">
+    <Type Name="CapitalShareInterestRebateAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CapitalShare_CapitalShareInterestRebateAdjustment" Member="CapitalShare" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShare" IsForeignKey="true" />
+      <Association Name="Adjustment_CapitalShareInterestRebateAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.DeathAidFundTypes" Member="DeathAidFundTypes">
+    <Type Name="DeathAidFundType">
+      <Column Name="Id" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PerMemberAid" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.DeathAidFundSettings" Member="DeathAidFundSettings">
+    <Type Name="DeathAidFundSetting">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PerMemberYearlyContribution" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.TulunganFundSettings" Member="TulunganFundSettings">
+    <Type Name="TulunganFundSetting">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PerMemberYearlyContribution" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ReuiredMinimumShare" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AwardForShareBelowFifteenThousand" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AwardForShareFifteenThousandAndAbove" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Plans.CollegeInsurancePlanSettings" Member="CollegeInsurancePlanSettings">
+    <Type Name="CollegeInsurancePlanSetting">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Terms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgingPeriod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentCompletionAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AwardAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmortizationDaily" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmortizationWeekly" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmortizationSemiMonthly" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmortizationMonthly" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmortizationYearly" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.PaymentModes" Member="PaymentModes">
+    <Type Name="PaymentMode">
+      <Column Name="PaymentModeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PaymentModeName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Days" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GracePeriod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LoanPaymentsPerMonth" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CIPContributionsPerMonth" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PensionPlanContributionsPerMonth" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="PaymentMode_LoanInterestRate" Member="LoanInterestRates" ThisKey="PaymentModeID" OtherKey="PaymentModeID" Type="LoanInterestRate" />
+      <Association Name="PaymentMode_ServicePaymentMode" Member="ServicePaymentModes" ThisKey="PaymentModeID" OtherKey="PaymentModeID" Type="ServicePaymentMode" />
+      <Association Name="PaymentMode_CollegeInsurancePlan" Member="CollegeInsurancePlans" ThisKey="PaymentModeID" OtherKey="PaymentModeID" Type="CollegeInsurancePlan" />
+      <Association Name="PaymentMode_PensionPlan" Member="PensionPlans" ThisKey="PaymentModeID" OtherKey="PaymentModeID" Type="PensionPlan" />
+      <Association Name="PaymentMode_Loan" Member="Loans" ThisKey="PaymentModeID" OtherKey="PaymentModeID" Type="Loan" />
+    </Type>
+  </Table>
+  <Table Name="Link.ServicePaymentModes" Member="ServicePaymentModes">
+    <Type Name="ServicePaymentMode">
+      <Column Name="ServiceID" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PaymentModeID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="PaymentMode_ServicePaymentMode" Member="PaymentMode" ThisKey="PaymentModeID" OtherKey="PaymentModeID" Type="PaymentMode" IsForeignKey="true" />
+      <Association Name="Service_ServicePaymentMode" Member="Service" ThisKey="ServiceID" OtherKey="ServiceID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Lookup.Services" Member="Services">
+    <Type Name="Service">
+      <Column Name="ServiceID" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ServiceCategoryID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Service_AvailedService" Member="AvailedServices" ThisKey="ServiceID" OtherKey="ServiceID" Type="AvailedService" />
+      <Association Name="Service_MembershipCategoryService" Member="MembershipCategoryServices" ThisKey="ServiceID" OtherKey="ServiceID" Type="MembershipCategoryService" />
+      <Association Name="Service_PatronageItem" Member="PatronageItems" ThisKey="ServiceID" OtherKey="LoanServiceID" Type="PatronageItem" />
+      <Association Name="Service_ServicePaymentMode" Member="ServicePaymentModes" ThisKey="ServiceID" OtherKey="ServiceID" Type="ServicePaymentMode" />
+      <Association Name="Service_DividendComputation" Member="DividendComputations" ThisKey="ServiceID" OtherKey="DepositoryServiceID" Type="DividendComputation" />
+      <Association Name="Service_Loan" Member="Loans" ThisKey="ServiceID" OtherKey="LoanServiceID" Type="Loan" />
+      <Association Name="ServiceCategory_Service" Member="ServiceCategory" ThisKey="ServiceCategoryID" OtherKey="ServiceCategoryID" Type="ServiceCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.PensionPlanSettings" Member="PensionPlanSettings">
+    <Type Name="PensionPlanSetting">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Terms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgingPeriod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentCompletionAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmortizationDaily" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmortizationWeekly" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmortizationSemiMonthly" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmortizationMonthly" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AmortizationYearly" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Savings.CapitalShareBuildups" Member="CapitalShareBuildups">
+    <Type Name="CapitalShareBuildup">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CapitalShare_CapitalShareBuildup" Member="CapitalShare" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShare" IsForeignKey="true" />
+      <Association Name="CashDisbursement_CapitalShareBuildup" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanSettings" Member="LoanSettings">
+    <Type Name="LoanSetting">
+      <Column Name="LoanSettingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RenewablePaidPercentage" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="RegularLoanMaxPrecentage" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="RebateExemptedTerms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanAdjustments" Member="LoanAdjustments">
+    <Type Name="LoanAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Adjustment_LoanAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+      <Association Name="Loan_LoanAdjustment" Member="Loan" ThisKey="LoanID" OtherKey="LoanID" Type="Loan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.CollegeInsurancePlans" Member="CollegeInsurancePlans">
+    <Type Name="CollegeInsurancePlan">
+      <Column Name="CollegeInsurancePlanID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserLastName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserFirstName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserMiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="RelationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApplicationDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentModeID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Terms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgingPeriod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaturityDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Amortization" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentCompletionDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PaymentCompletionAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AwardAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Consumed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ConsummationDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CurrentBalance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CollegeInsurancePlan_CollegeInsurancePlanAdjustment" Member="CollegeInsurancePlanAdjustments" ThisKey="CollegeInsurancePlanID" OtherKey="CollegeInsurancePlanID" Type="CollegeInsurancePlanAdjustment" />
+      <Association Name="CollegeInsurancePlan_CollegeInsurancePlanDisbursement" Member="CollegeInsurancePlanDisbursements" ThisKey="CollegeInsurancePlanID" OtherKey="CollegeInsurancePlanID" Type="CollegeInsurancePlanDisbursement" />
+      <Association Name="CollegeInsurancePlan_CollegeInsurancePlanReceipt" Member="CollegeInsurancePlanReceipts" ThisKey="CollegeInsurancePlanID" OtherKey="CollegeInsurancePlanID" Type="CollegeInsurancePlanReceipt" />
+      <Association Name="PaymentMode_CollegeInsurancePlan" Member="PaymentMode" ThisKey="PaymentModeID" OtherKey="PaymentModeID" Type="PaymentMode" IsForeignKey="true" />
+      <Association Name="Relation_CollegeInsurancePlan" Member="Relation" ThisKey="RelationID" OtherKey="RelationID" Type="Relation" IsForeignKey="true" />
+      <Association Name="Member_CollegeInsurancePlan" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.CollegeInsurancePlanAdjustments" Member="CollegeInsurancePlanAdjustments">
+    <Type Name="CollegeInsurancePlanAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CollegeInsurancePlanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CollegeInsurancePlan_CollegeInsurancePlanAdjustment" Member="CollegeInsurancePlan" ThisKey="CollegeInsurancePlanID" OtherKey="CollegeInsurancePlanID" Type="CollegeInsurancePlan" IsForeignKey="true" />
+      <Association Name="Adjustment_CollegeInsurancePlanAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.CollegeInsurancePlanDisbursements" Member="CollegeInsurancePlanDisbursements">
+    <Type Name="CollegeInsurancePlanDisbursement">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CollegeInsurancePlanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashDisbursement_CollegeInsurancePlanDisbursement" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" />
+      <Association Name="CollegeInsurancePlan_CollegeInsurancePlanDisbursement" Member="CollegeInsurancePlan" ThisKey="CollegeInsurancePlanID" OtherKey="CollegeInsurancePlanID" Type="CollegeInsurancePlan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.CollegeInsurancePlanReceipts" Member="CollegeInsurancePlanReceipts">
+    <Type Name="CollegeInsurancePlanReceipt">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CollegeInsurancePlanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashReceipt_CollegeInsurancePlanReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+      <Association Name="CollegeInsurancePlan_CollegeInsurancePlanReceipt" Member="CollegeInsurancePlan" ThisKey="CollegeInsurancePlanID" OtherKey="CollegeInsurancePlanID" Type="CollegeInsurancePlan" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.PensionPlanAdjustments" Member="PensionPlanAdjustments">
+    <Type Name="PensionPlanAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="PensionPlan_PensionPlanAdjustment" Member="PensionPlan" ThisKey="MemberID" OtherKey="MemberID" Type="PensionPlan" IsForeignKey="true" />
+      <Association Name="Adjustment_PensionPlanAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.PensionPlanDisbursements" Member="PensionPlanDisbursements">
+    <Type Name="PensionPlanDisbursement">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashDisbursement_PensionPlanDisbursement" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" />
+      <Association Name="PensionPlan_PensionPlanDisbursement" Member="PensionPlan" ThisKey="MemberID" OtherKey="MemberID" Type="PensionPlan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.PensionPlanInterestAdjustments" Member="PensionPlanInterestAdjustments">
+    <Type Name="PensionPlanInterestAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="PensionPlan_PensionPlanInterestAdjustment" Member="PensionPlan" ThisKey="MemberID" OtherKey="MemberID" Type="PensionPlan" IsForeignKey="true" />
+      <Association Name="Adjustment_PensionPlanInterestAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.PensionPlanReceipts" Member="PensionPlanReceipts">
+    <Type Name="PensionPlanReceipt">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashReceipt_PensionPlanReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+      <Association Name="PensionPlan_PensionPlanReceipt" Member="PensionPlan" ThisKey="MemberID" OtherKey="MemberID" Type="PensionPlan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Plans.PensionPlans" Member="PensionPlans">
+    <Type Name="PensionPlan">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ApplicationDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentModeID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Terms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgingPeriod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaturityDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Amortization" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentCompletionDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PaymentCompletionAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="AwardAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MonthlyPension" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="AvailOptionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Consumed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ConsummationDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CurrentBalance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="PensionPlan_PensionPlanAdjustment" Member="PensionPlanAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="PensionPlanAdjustment" />
+      <Association Name="PensionPlan_PensionPlanDisbursement" Member="PensionPlanDisbursements" ThisKey="MemberID" OtherKey="MemberID" Type="PensionPlanDisbursement" />
+      <Association Name="PensionPlan_PensionPlanInterestAdjustment" Member="PensionPlanInterestAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="PensionPlanInterestAdjustment" />
+      <Association Name="PensionPlan_PensionPlanReceipt" Member="PensionPlanReceipts" ThisKey="MemberID" OtherKey="MemberID" Type="PensionPlanReceipt" />
+      <Association Name="PaymentMode_PensionPlan" Member="PaymentMode" ThisKey="PaymentModeID" OtherKey="PaymentModeID" Type="PaymentMode" IsForeignKey="true" />
+      <Association Name="PensionPlanAvailOption_PensionPlan" Member="PensionPlanAvailOption" ThisKey="AvailOptionID" OtherKey="AvailOptionID" Type="PensionPlanAvailOption" IsForeignKey="true" />
+      <Association Name="Member_PensionPlan" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.CapitalShareAdjustments" Member="CapitalShareAdjustments">
+    <Type Name="CapitalShareAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CapitalShare_CapitalShareAdjustment" Member="CapitalShare" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShare" IsForeignKey="true" />
+      <Association Name="Adjustment_CapitalShareAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.SavingsDepositAdjustments" Member="SavingsDepositAdjustments">
+    <Type Name="SavingsDepositAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="SavingsDeposit_SavingsDepositAdjustment" Member="SavingsDeposit" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDeposit" IsForeignKey="true" />
+      <Association Name="Adjustment_SavingsDepositAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.TimeDeposits" Member="TimeDeposits">
+    <Type Name="TimeDeposit">
+      <Column Name="TimeDepositID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DepositDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TimeDepositAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="InterestRate" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Interest" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Terms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaturityDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Consumed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ConsummationDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CurrentBalance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="TimeDeposit_TimeDepositAdjustment" Member="TimeDepositAdjustments" ThisKey="TimeDepositID" OtherKey="TimeDepositID" Type="TimeDepositAdjustment" />
+      <Association Name="TimeDeposit_TimeDepositDisbursement" Member="TimeDepositDisbursements" ThisKey="TimeDepositID" OtherKey="TimeDepositID" Type="TimeDepositDisbursement" />
+      <Association Name="TimeDeposit_TimeDepositReceipt" Member="TimeDepositReceipts" ThisKey="TimeDepositID" OtherKey="TimeDepositID" Type="TimeDepositReceipt" />
+      <Association Name="Member_TimeDeposit" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.TimeDepositAdjustments" Member="TimeDepositAdjustments">
+    <Type Name="TimeDepositAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TimeDepositID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="TimeDeposit_TimeDepositAdjustment" Member="TimeDeposit" ThisKey="TimeDepositID" OtherKey="TimeDepositID" Type="TimeDeposit" IsForeignKey="true" />
+      <Association Name="Adjustment_TimeDepositAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.TimeDepositDisbursements" Member="TimeDepositDisbursements">
+    <Type Name="TimeDepositDisbursement">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TimeDepositID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashDisbursement_TimeDepositDisbursement" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" />
+      <Association Name="TimeDeposit_TimeDepositDisbursement" Member="TimeDeposit" ThisKey="TimeDepositID" OtherKey="TimeDepositID" Type="TimeDeposit" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.TimeDepositReceipts" Member="TimeDepositReceipts">
+    <Type Name="TimeDepositReceipt">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TimeDepositID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashReceipt_TimeDepositReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+      <Association Name="TimeDeposit_TimeDepositReceipt" Member="TimeDeposit" ThisKey="TimeDepositID" OtherKey="TimeDepositID" Type="TimeDeposit" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.TulunganFunds" Member="TulunganFunds">
+    <Type Name="TulunganFund">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CurrentBalance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="TulunganFund_TulunganFundReceipt" Member="TulunganFundReceipts" ThisKey="MemberID" OtherKey="MemberID" Type="TulunganFundReceipt" />
+      <Association Name="TulunganFund_TulunganFundDisbursement" Member="TulunganFundDisbursements" ThisKey="MemberID" OtherKey="MemberID" Type="TulunganFundDisbursement" />
+      <Association Name="TulunganFund_TulunganFundAdjustment" Member="TulunganFundAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="TulunganFundAdjustment" />
+      <Association Name="Member_TulunganFund" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.TulunganFundReceipts" Member="TulunganFundReceipts">
+    <Type Name="TulunganFundReceipt">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashReceipt_TulunganFundReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+      <Association Name="TulunganFund_TulunganFundReceipt" Member="TulunganFund" ThisKey="MemberID" OtherKey="MemberID" Type="TulunganFund" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.TulunganFundDisbursements" Member="TulunganFundDisbursements">
+    <Type Name="TulunganFundDisbursement">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashDisbursement_TulunganFundDisbursement" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" />
+      <Association Name="TulunganFund_TulunganFundDisbursement" Member="TulunganFund" ThisKey="MemberID" OtherKey="MemberID" Type="TulunganFund" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.TulunganFundAdjustments" Member="TulunganFundAdjustments">
+    <Type Name="TulunganFundAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="TulunganFund_TulunganFundAdjustment" Member="TulunganFund" ThisKey="MemberID" OtherKey="MemberID" Type="TulunganFund" IsForeignKey="true" />
+      <Association Name="Adjustment_TulunganFundAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.DeathAidFunds" Member="DeathAidFunds">
+    <Type Name="DeathAidFund">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CurrentBalance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="DeathAidFund_DeathAidFundDisbursement" Member="DeathAidFundDisbursements" ThisKey="MemberID" OtherKey="MemberID" Type="DeathAidFundDisbursement" />
+      <Association Name="DeathAidFund_DeathAidFundReceipt" Member="DeathAidFundReceipts" ThisKey="MemberID" OtherKey="MemberID" Type="DeathAidFundReceipt" />
+      <Association Name="DeathAidFund_DeathAidFundAdjustment" Member="DeathAidFundAdjustments" ThisKey="MemberID" OtherKey="MemberID" Type="DeathAidFundAdjustment" />
+      <Association Name="Member_DeathAidFund" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.DeathAidFundDisbursements" Member="DeathAidFundDisbursements">
+    <Type Name="DeathAidFundDisbursement">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisbursementID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashDisbursement_DeathAidFundDisbursement" Member="CashDisbursement" ThisKey="DisbursementID" OtherKey="DisbursementID" Type="CashDisbursement" IsForeignKey="true" />
+      <Association Name="DeathAidFund_DeathAidFundDisbursement" Member="DeathAidFund" ThisKey="MemberID" OtherKey="MemberID" Type="DeathAidFund" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.DeathAidFundReceipts" Member="DeathAidFundReceipts">
+    <Type Name="DeathAidFundReceipt">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="CashReceipt_DeathAidFundReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+      <Association Name="DeathAidFund_DeathAidFundReceipt" Member="DeathAidFund" ThisKey="MemberID" OtherKey="MemberID" Type="DeathAidFund" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SpecialFunds.DeathAidFundAdjustments" Member="DeathAidFundAdjustments">
+    <Type Name="DeathAidFundAdjustment">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="DeathAidFund_DeathAidFundAdjustment" Member="DeathAidFund" ThisKey="MemberID" OtherKey="MemberID" Type="DeathAidFund" IsForeignKey="true" />
+      <Association Name="Adjustment_DeathAidFundAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Link.Adjustments" Member="Adjustments">
+    <Type Name="Adjustment">
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdjustmentJournalVoucher" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="AdjustmentDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="Adjustment_SavingsDepositInterestAdjustment" Member="SavingsDepositInterestAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="SavingsDepositInterestAdjustment" />
+      <Association Name="Adjustment_CapitalShareDividendAdjustment" Member="CapitalShareDividendAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="CapitalShareDividendAdjustment" />
+      <Association Name="Adjustment_CapitalSharePatronageRefundAdjustment" Member="CapitalSharePatronageRefundAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="CapitalSharePatronageRefundAdjustment" />
+      <Association Name="Adjustment_LoanDividendAdjustment" Member="LoanDividendAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="LoanDividendAdjustment" />
+      <Association Name="Adjustment_SavingsDepositDividendAdjustment" Member="SavingsDepositDividendAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="SavingsDepositDividendAdjustment" />
+      <Association Name="Adjustment_YearlyDividend" Member="YearlyDividends" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="YearlyDividend" />
+      <Association Name="Adjustment_QuarterlyInterest" Member="QuarterlyInterests" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="QuarterlyInterest" />
+      <Association Name="Adjustment_CapitalShareInterestRebateAdjustment" Member="CapitalShareInterestRebateAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="CapitalShareInterestRebateAdjustment" />
+      <Association Name="Adjustment_LoanAdjustment" Member="LoanAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="LoanAdjustment" />
+      <Association Name="Adjustment_CollegeInsurancePlanAdjustment" Member="CollegeInsurancePlanAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="CollegeInsurancePlanAdjustment" />
+      <Association Name="Adjustment_PensionPlanAdjustment" Member="PensionPlanAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="PensionPlanAdjustment" />
+      <Association Name="Adjustment_PensionPlanInterestAdjustment" Member="PensionPlanInterestAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="PensionPlanInterestAdjustment" />
+      <Association Name="Adjustment_CapitalShareAdjustment" Member="CapitalShareAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="CapitalShareAdjustment" />
+      <Association Name="Adjustment_SavingsDepositAdjustment" Member="SavingsDepositAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="SavingsDepositAdjustment" />
+      <Association Name="Adjustment_TimeDepositAdjustment" Member="TimeDepositAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="TimeDepositAdjustment" />
+      <Association Name="Adjustment_TulunganFundAdjustment" Member="TulunganFundAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="TulunganFundAdjustment" />
+      <Association Name="Adjustment_DeathAidFundAdjustment" Member="DeathAidFundAdjustments" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="DeathAidFundAdjustment" />
+      <Association Name="Adjustment_MiscellaneousIncomeAdjustment" Member="MiscellaneousIncomeAdjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="MiscellaneousIncomeAdjustment" Cardinality="One" />
+      <Association Name="Adjustment_OtherAdjustment" Member="OtherAdjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="OtherAdjustment" Cardinality="One" />
+      <Association Name="User_Adjustment" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+      <Association Name="Member_Adjustment" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MiscellaneousIncomeAdjustments" Member="MiscellaneousIncomeAdjustments">
+    <Type Name="MiscellaneousIncomeAdjustment">
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="Adjustment_MiscellaneousIncomeAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OtherAdjustments" Member="OtherAdjustments">
+    <Type Name="OtherAdjustment">
+      <Column Name="AdjustmentID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Remarks" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="Adjustment_OtherAdjustment" Member="Adjustment" ThisKey="AdjustmentID" OtherKey="AdjustmentID" Type="Adjustment" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Savings.DividendComputations" Member="DividendComputations">
+    <Type Name="DividendComputation">
+      <Column Name="DividendComputationID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DepositoryServiceID" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="AverageShare" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Dividend" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Creditable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="DividendComputation_DividendShareItem" Member="DividendShareItems" ThisKey="DividendComputationID" OtherKey="DividendComputationID" Type="DividendShareItem" />
+      <Association Name="Service_DividendComputation" Member="Service" ThisKey="DepositoryServiceID" OtherKey="ServiceID" Type="Service" IsForeignKey="true" />
+      <Association Name="YearlyDividend_DividendComputation" Member="YearlyDividend" ThisKey="Year" OtherKey="Year" Type="YearlyDividend" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Member_DividendComputation" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Application" Member="Applications">
+    <Type Name="Application">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExpirationDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OrganizationName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="TelephoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Member.EducationalAttainments" Member="EducationalAttainments">
+    <Type Name="EducationalAttainment">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LineNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="School" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Member_EducationalAttainment" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="[User].Roles" Member="Roles">
+    <Type Name="Role">
+      <Column Name="RoleID" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Role_UsersRole" Member="UsersRoles" ThisKey="RoleID" OtherKey="RoleID" Type="UsersRole" />
+    </Type>
+  </Table>
+  <Table Name="Member.Pictures" Member="Pictures">
+    <Type Name="Picture">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Image" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Signature" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Member_Picture" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="[User].UsersRoles" Member="UsersRoles">
+    <Type Name="UsersRole">
+      <Column Name="UserRoleID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="RoleID" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Association Name="Role_UsersRole" Member="Role" ThisKey="RoleID" OtherKey="RoleID" Type="Role" IsForeignKey="true" />
+      <Association Name="User_UsersRole" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Member.Members" Member="Members">
+    <Type Name="Member">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountNumber" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="AccountStatusID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="MembershipCategoryID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ApplicationDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="WithdrawalDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceOfBirth" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="MaritalStatusID" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SexTypeID" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MobilePhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MotherMaidenName" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="LanguageDialects" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="HighestEducationalAttainment" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Occupation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Employer" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="MonthlySalary" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="OfficeAddress" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="OfficePhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpouseLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpouseFirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpouseMiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpouseOccupation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpouseContactNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpouseEmployer" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpouseOfficeAddress" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="SpouseOfficePhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NearestRelativeLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NearestRelativeFirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NearestRelativeMiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NearestRelativeContactNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MotherLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MotherFirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MotherMiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MotherContactNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MotherOccupation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MotherAddress" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="FatherLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FatherFirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FatherMiddleName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FatherContactNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FatherOccupation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FatherAddress" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Association Name="Member_AvailedService" Member="AvailedServices" ThisKey="MemberID" OtherKey="MemberID" Type="AvailedService" />
+      <Association Name="Member_Dependent" Member="Dependents" ThisKey="MemberID" OtherKey="MemberID" Type="Dependent" />
+      <Association Name="Member_CapitalShare" Member="CapitalShare" ThisKey="MemberID" OtherKey="MemberID" Type="CapitalShare" Cardinality="One" />
+      <Association Name="Member_SavingsDeposit" Member="SavingsDeposit" ThisKey="MemberID" OtherKey="MemberID" Type="SavingsDeposit" Cardinality="One" />
+      <Association Name="Member_CashDisbursement" Member="CashDisbursements" ThisKey="MemberID" OtherKey="MemberID" Type="CashDisbursement" />
+      <Association Name="Member_CashReceipt" Member="CashReceipts" ThisKey="MemberID" OtherKey="MemberID" Type="CashReceipt" />
+      <Association Name="Member_QuarterlyInterestComputation" Member="QuarterlyInterestComputations" ThisKey="MemberID" OtherKey="MemberID" Type="QuarterlyInterestComputation" />
+      <Association Name="Member_PatronageComputation" Member="PatronageComputations" ThisKey="MemberID" OtherKey="MemberID" Type="PatronageComputation" />
+      <Association Name="Member_CollegeInsurancePlan" Member="CollegeInsurancePlans" ThisKey="MemberID" OtherKey="MemberID" Type="CollegeInsurancePlan" />
+      <Association Name="Member_PensionPlan" Member="PensionPlan" ThisKey="MemberID" OtherKey="MemberID" Type="PensionPlan" Cardinality="One" />
+      <Association Name="Member_TimeDeposit" Member="TimeDeposits" ThisKey="MemberID" OtherKey="MemberID" Type="TimeDeposit" />
+      <Association Name="Member_TulunganFund" Member="TulunganFund" ThisKey="MemberID" OtherKey="MemberID" Type="TulunganFund" Cardinality="One" />
+      <Association Name="Member_DeathAidFund" Member="DeathAidFund" ThisKey="MemberID" OtherKey="MemberID" Type="DeathAidFund" Cardinality="One" />
+      <Association Name="Member_Adjustment" Member="Adjustments" ThisKey="MemberID" OtherKey="MemberID" Type="Adjustment" />
+      <Association Name="Member_DividendComputation" Member="DividendComputations" ThisKey="MemberID" OtherKey="MemberID" Type="DividendComputation" />
+      <Association Name="Member_EducationalAttainment" Member="EducationalAttainments" ThisKey="MemberID" OtherKey="MemberID" Type="EducationalAttainment" />
+      <Association Name="Member_Picture" Member="Picture" ThisKey="MemberID" OtherKey="MemberID" Type="Picture" Cardinality="One" />
+      <Association Name="Member_Loan" Member="Loans" ThisKey="MemberID" OtherKey="MemberID" Type="Loan" />
+      <Association Name="AccountStatus_Member" Member="AccountStatus" ThisKey="AccountStatusID" OtherKey="AccountStatusID" Type="AccountStatus" IsForeignKey="true" />
+      <Association Name="MaritalStatus_Member" Member="MaritalStatus" ThisKey="MaritalStatusID" OtherKey="MaritalStatusID" Type="MaritalStatus" IsForeignKey="true" />
+      <Association Name="MembershipCategory_Member" Member="MembershipCategory" ThisKey="MembershipCategoryID" OtherKey="MembershipCategoryID" Type="MembershipCategory" IsForeignKey="true" />
+      <Association Name="SexType_Member" Member="SexType" ThisKey="SexTypeID" OtherKey="SexTypeID" Type="SexType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.FineComputationRate" Member="FineComputationRates">
+    <Type Name="FineComputationRate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="EmergencyLoanFine" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="EmergencyLoanFineComputationBase" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.DelinquentFineReceipts" Member="DelinquentFineReceipts">
+    <Type Name="DelinquentFineReceipt">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ComputedAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Condone" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PreviousUnpaid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="CashReceipt_DelinquentFineReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+      <Association Name="Loan_DelinquentFineReceipt" Member="Loan" ThisKey="LoanID" OtherKey="LoanID" Type="Loan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LatePaymentFineReceipts" Member="LatePaymentFineReceipts">
+    <Type Name="LatePaymentFineReceipt">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiptID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ComputedAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Condone" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PreviousUnpaid" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Association Name="CashReceipt_LatePaymentFineReceipt" Member="CashReceipt" ThisKey="ReceiptID" OtherKey="ReceiptID" Type="CashReceipt" IsForeignKey="true" />
+      <Association Name="Loan_LatePaymentFineReceipt" Member="Loan" ThisKey="LoanID" OtherKey="LoanID" Type="Loan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.AgingLoanItems" Member="AgingLoanItems">
+    <Type Name="AgingLoanItem">
+      <Column Name="AgingLoanItemID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AgingLoanID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="AgeInDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AgeInMonths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AgeGroupInDays" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoanType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LoanHasAged" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CurrentPayables" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="OutstandingBalance" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="AgedPayables" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="GoodPayables" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="LatePaymentFine" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="DelinquentCharge" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="LoanDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastPaymentDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="AgingLoan_AgingLoanItem" Member="AgingLoan" ThisKey="AgingLoanID" OtherKey="AgingLoanID" Type="AgingLoan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.AgingLoans" Member="AgingLoans">
+    <Type Name="AgingLoan">
+      <Column Name="AgingLoanID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Period" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="AgingLoan_AgingLoanItem" Member="AgingLoanItems" ThisKey="AgingLoanID" OtherKey="AgingLoanID" Type="AgingLoanItem" />
+    </Type>
+  </Table>
+  <Table Name="Loans.DelinquentLoanItems" Member="DelinquentLoanItems">
+    <Type Name="DelinquentLoanItem">
+      <Column Name="DelinquentLoanItemID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DelinquentLoanID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="LoanType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OutstandingBalance" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="DelinquentCharge" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="LatePaymentFine" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="CapitalShare" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="SavingsDeposit" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TimeDeposit" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="NetExposure" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="LoanDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastPayment" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="DelinquentLoan_DelinquentLoanItem" Member="DelinquentLoan" ThisKey="DelinquentLoanID" OtherKey="DelinquentLoanID" Type="DelinquentLoan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.DelinquentLoans" Member="DelinquentLoans">
+    <Type Name="DelinquentLoan">
+      <Column Name="DelinquentLoanID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Period" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="DelinquentLoan_DelinquentLoanItem" Member="DelinquentLoanItems" ThisKey="DelinquentLoanID" OtherKey="DelinquentLoanID" Type="DelinquentLoanItem" />
+    </Type>
+  </Table>
+  <Table Name="Loans.Loans" Member="Loans">
+    <Type Name="Loan">
+      <Column Name="LoanID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanServiceID" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LoanDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentModeID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="LoanDeductionTypeID" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Terms" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastPaymentDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="NextPaymentDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SettlementDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Amortization" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PreviousOutstandingBalance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="LoanAmount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ServiceFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CollectionFee" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CapitalBuildup" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="LoanGuaranteeFund" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="InterestRate" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Interest" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentBalance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Settled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UnpaidLatePaymentCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="UnpaidDelinquentCharge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="UnpaidPayables" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="IsLatePaymentChargeCalculationCompleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Loan_LoanReceipt" Member="LoanReceipts" ThisKey="LoanID" OtherKey="LoanID" Type="LoanReceipt" />
+      <Association Name="Loan_LoanDisbursement" Member="LoanDisbursements" ThisKey="LoanID" OtherKey="LoanID" Type="LoanDisbursement" />
+      <Association Name="Loan_LoanDividendAdjustment" Member="LoanDividendAdjustments" ThisKey="LoanID" OtherKey="LoanID" Type="LoanDividendAdjustment" />
+      <Association Name="Loan_LoanAdjustment" Member="LoanAdjustments" ThisKey="LoanID" OtherKey="LoanID" Type="LoanAdjustment" />
+      <Association Name="Loan_DelinquentFineReceipt" Member="DelinquentFineReceipts" ThisKey="LoanID" OtherKey="LoanID" Type="DelinquentFineReceipt" />
+      <Association Name="Loan_LatePaymentFineReceipt" Member="LatePaymentFineReceipts" ThisKey="LoanID" OtherKey="LoanID" Type="LatePaymentFineReceipt" />
+      <Association Name="Loan_LoanNotice" Member="LoanNotices" ThisKey="LoanID" OtherKey="LoanID" Type="LoanNotice" />
+      <Association Name="LoanDeductionType_Loan" Member="LoanDeductionType" ThisKey="LoanDeductionTypeID" OtherKey="LoanDeductionTypeID" Type="LoanDeductionType" IsForeignKey="true" />
+      <Association Name="Member_Loan" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+      <Association Name="PaymentMode_Loan" Member="PaymentMode" ThisKey="PaymentModeID" OtherKey="PaymentModeID" Type="PaymentMode" IsForeignKey="true" />
+      <Association Name="Service_Loan" Member="Service" ThisKey="LoanServiceID" OtherKey="ServiceID" Type="Service" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="Loans.LoanNotices" Member="LoanNotices">
+    <Type Name="LoanNotice">
+      <Column Name="LoanNoticeID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PreviousIssueDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="IssueDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="IssueAddress" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="IssueTo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="LoanDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="AmountDue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Fine" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Charge" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="Loan_LoanNotice" Member="Loan" ThisKey="LoanID" OtherKey="LoanID" Type="Loan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="Member.uspFindMembers" Method="FindMembers">
+    <Parameter Name="AccountNumber" Parameter="accountNumber" Type="System.String" DbType="Char(13)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="MiddleName" Parameter="middleName" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="uspFindMembersResult">
+      <Column Name="MemberID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AccountNumber" Type="System.String" DbType="Char(13) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MembershipCategoryName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

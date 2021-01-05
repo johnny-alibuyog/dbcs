@@ -1,0 +1,5 @@
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\WebApplication1\bin\WebApplication1.dll
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\WebApplication1\bin\WebApplication1.pdb
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\WebApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\WebApplication1\obj\Debug\WebApplication1.dll
+D:\[Work Space]\development\cs\source code\Cooperative System - C# MVP Linq\CooperativeSystem.Sandbox\WebApplication1\obj\Debug\WebApplication1.pdb

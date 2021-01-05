@@ -1,0 +1,10 @@
+using System;
+using System.Data.Linq;
+using System.Linq;
+using CooperativeSystem.Service.Presenters.Lookups.AccountStatuses;
+using CooperativeSystem.Service.Presenters.Lookups.DeductionTypes;
+using CooperativeSystem.Service.Presenters.Lookups.MaritalStatuses;
+using CooperativeSystem.Service.Presenters.Lookups.MembershipCategories;
+using CooperativeSystem.Service.Presenters.Lookups.SexTypes;
+using CooperativeSystem.Service.Presenters.Lookups.UserCategories;
+using CooperativeSystem.Service.Utilities;

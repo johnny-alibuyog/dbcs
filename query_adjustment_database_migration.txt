@@ -1,0 +1,93 @@
+use csdb_prod;
+go
+
+alter table Link.Adjustments drop constraint FK_Adjustments_CashReceipts;
+alter table Link.Adjustments drop column ReceiptId;
+go
+
+alter table Loans.LoanAdjustments drop column NewAmount;
+alter table Loans.LoanAdjustments drop column OriginalAmount;
+delete from Loans.LoanAdjustments;
+alter table Loans.LoanAdjustments add Amount money default 0 not null;
+alter table Loans.LoanAdjustments add Balance money default 0 not null;
+go
+
+alter table Plans.CollegeInsurancePlans add CurrentBalance money default 0 not null;
+alter table Plans.CollegeInsurancePlanAdjustments drop column NewAmount;
+alter table Plans.CollegeInsurancePlanAdjustments drop column OriginalAmount;
+delete from Plans.CollegeInsurancePlanAdjustments;
+alter table Plans.CollegeInsurancePlanAdjustments add Amount money default 0 not null;
+alter table Plans.CollegeInsurancePlanAdjustments add Balance money default 0 not null;
+alter table Plans.CollegeInsurancePlanDisbursements add Balance money default 0 not null;
+alter table Plans.CollegeInsurancePlanReceipts add Balance money default 0 not null;
+go
+
+alter table Plans.PensionPlans add CurrentBalance money default 0 not null;
+alter table Plans.PensionPlanAdjustments drop column NewAmount;
+alter table Plans.PensionPlanAdjustments drop column OriginalAmount;
+delete from Plans.PensionPlanAdjustments;
+alter table Plans.PensionPlanAdjustments add Amount money default 0 not null;
+alter table Plans.PensionPlanAdjustments add Balance money default 0 not null;
+alter table Plans.PensionPlanDisbursements add Balance money default 0 not null;
+alter table Plans.PensionPlanInterestAdjustments add Balance money default 0 not null;
+alter table Plans.PensionPlanReceipts add Balance money default 0 not null;
+go
+
+alter table Savings.CapitalShareAdjustments drop column NewAmount;
+alter table Savings.CapitalShareAdjustments drop column OriginalAmount;
+delete from Savings.CapitalShareAdjustments;
+alter table Savings.CapitalShareAdjustments add Amount money default 0 not null;
+alter table Savings.CapitalShareAdjustments add Balance money default 0 not null;
+go
+
+alter table Savings.SavingsDepositAdjustments drop column NewAmount;
+alter table Savings.SavingsDepositAdjustments drop column OriginalAmount;
+delete from Savings.SavingsDepositAdjustments;
+alter table Savings.SavingsDepositAdjustments add Amount money default 0 not null;
+alter table Savings.SavingsDepositAdjustments add Balance money default 0 not null;
+go
+
+alter table Savings.TimeDeposits add CurrentBalance money default 0 not null;
+alter table Savings.TimeDepositAdjustments drop column NewAmount;
+alter table Savings.TimeDepositAdjustments drop column OriginalAmount;
+delete from Savings.TimeDepositAdjustments;
+alter table Savings.TimeDepositAdjustments add Amount money default 0 not null;
+alter table Savings.TimeDepositAdjustments add Balance money default 0 not null;
+alter table Savings.TimeDepositDisbursements add Balance money default 0 not null;
+alter table Savings.TimeDepositReceipts add Balance money default 0 not null;
+go
+
+--alter table SpecialFunds.TulunganFunds add CurrentBalance money default 0 not null;
+alter table SpecialFunds.TulunganFundAdjustments drop column NewAmount;
+alter table SpecialFunds.TulunganFundAdjustments drop column OriginalAmount;
+delete from SpecialFunds.TulunganFundAdjustments;
+alter table SpecialFunds.TulunganFundAdjustments add Amount money default 0 not null;
+alter table SpecialFunds.TulunganFundAdjustments add Balance money default 0 not null;
+alter table SpecialFunds.TulunganFundDisbursements add Balance money default 0 not null;
+alter table SpecialFunds.TulunganFundReceipts add Balance money default 0 not null;
+go
+
+--alter table SpecialFunds.DeathAidFunds add CurrentBalance money default 0 not null;
+alter table SpecialFunds.DeathAidFundAdjustments drop column NewAmount;
+alter table SpecialFunds.DeathAidFundAdjustments drop column OriginalAmount;
+delete from SpecialFunds.DeathAidFundAdjustments;
+alter table SpecialFunds.DeathAidFundAdjustments add Amount money default 0 not null;
+alter table SpecialFunds.DeathAidFundAdjustments add Balance money default 0 not null;
+alter table SpecialFunds.DeathAidFundReceipts add Balance money default 0 not null;
+alter table SpecialFunds.DeathAidFundDisbursements add Balance money default 0 not null;
+go
+
+alter table dbo.MiscellaneousIncomeAdjustments drop column NewAmount;
+alter table dbo.MiscellaneousIncomeAdjustments drop column OriginalAmount;
+delete from dbo.MiscellaneousIncomeAdjustments;
+alter table dbo.MiscellaneousIncomeAdjustments add Amount money default 0 not null;
+alter table dbo.MiscellaneousIncomeAdjustments add Remarks varchar(250);
+go
+
+alter table dbo.OtherAdjustments drop column NewAmount;
+alter table dbo.OtherAdjustments drop column OriginalAmount;
+delete from dbo.OtherAdjustments;
+alter table dbo.OtherAdjustments add Amount money default 0 not null;
+alter table dbo.OtherAdjustments add Remarks varchar(250);
+go
+
